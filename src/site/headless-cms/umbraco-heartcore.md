@@ -27,7 +27,7 @@ This not only covers the backend, which is kept updated and secure, but also the
 
 Of course this also means that all the new features that are added along the way will be automatically added to your projects ([see roadmap for upcoming features](https://umbraco.com/products/roadmap/)).
 
-<img class="simple" src="/img/cms/umbraco-heartcore-backoffice.png" alt="Umbraco Heartcore" />
+<img class="simple" src="img/cms/umbraco-heartcore-backoffice.png" alt="Umbraco Heartcore" />
 
 ### Smooth editing experience
 
@@ -37,7 +37,7 @@ Since the beginning it has kept improving and all the best content management fe
 
 The editor experience is called **Infinite Editing**, which helps reduce interruptions in your workflow. Infinite Editing allows you to create, manage and publish content - anything from multilingual content to rich media such as images and videos - without ever losing track of the context.
 
-<img class="simple" src="/img/cms/umbraco-heartcore-channels.png" alt="Umbraco Heartcore" />
+<img class="simple" src="img/cms/umbraco-heartcore-channels.png" alt="Umbraco Heartcore" />
 
 ### CDN included in all projects
 
@@ -45,7 +45,7 @@ To ensure that users get the best user experience every time they visit your fro
 
 The CDN is taken care of (just like the managed API and backend), so you don't have to worry about yet another service to manage. And best of all - CDN is included in all pricing tiers. No matter the size of your project and your other needs, you'll always have a rock-solid CDN to power your content.
 
-<img class="simple" src="/img/cms/umbraco-heartcore-cdn.png" alt="Umbraco Heartcore" />
+<img class="simple" src="img/cms/umbraco-heartcore-cdn.png" alt="Umbraco Heartcore" />
 
 ### Webhooks lets you integrate with anything
 
@@ -53,7 +53,7 @@ Webhooks allow you to set up triggers in Umbraco Heartcore that will send a POST
 
 With Webhooks being part of Heartcore, you can hookup to Ecommerce, Line of business apps, build Environments or anything else that you'll need. This enables you to use all the best-of-breed tools you love, without compromising on your workflows.
 
-<img class="simple" src="/img/cms/umbraco-heartcore-webhooks.gif" alt="Umbraco Heartcore" />
+<img class="simple" src="img/cms/umbraco-heartcore-webhooks.gif" alt="Umbraco Heartcore" />
 
 ### Front-end agnostic
 

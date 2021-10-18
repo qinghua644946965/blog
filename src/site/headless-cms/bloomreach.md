@@ -24,7 +24,7 @@ Keep your existing powerful architecture and avoid the additional costs of chang
 
 Every site has different needs. brXM offers the full spectrum of delivery, from "owning the glass" to headless delivery, and anything in between. For even more flexibility Bloomreach offers a hybrid approach where you can pick and choose various delivery models for different parts of the site.
 
-<img class="simple" src="/img/cms/bloomreach_delivery_options.png" alt="Bloomreach Delivery Options" />
+<img class="simple" src="img/cms/bloomreach_delivery_options.png" alt="Bloomreach Delivery Options" />
 
 ### Enterprise-grade
 

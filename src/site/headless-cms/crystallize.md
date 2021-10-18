@@ -15,13 +15,13 @@ images:
     - path: /img/cms/crystallize-fast-graphql-api.png
 ---
 
-<img class="simple" src="/img/cms/crystallize-beautiful-editorial-ui.png" alt="Crystallize Admin UI" />
+<img class="simple" src="img/cms/crystallize-beautiful-editorial-ui.png" alt="Crystallize Admin UI" />
 
 ## Bring your own frontend
 
 Build your own tailor made frontend or get started with our open source JAMStack boilerplate:
 
-<img class="simple" src="/img/cms/crystallize-JAMStack-ecommerce-boilerplate.png" alt="Furniture Shop on Crystallize" />
+<img class="simple" src="img/cms/crystallize-JAMStack-ecommerce-boilerplate.png" alt="Furniture Shop on Crystallize" />
 
 ```bash
 npx @crystallize/cli <project-name>
@@ -41,7 +41,7 @@ Ideal for [JAMStack & React](https://crystallize.com/blog/beautiful-and-fast-jam
 
 All created content is accessible via a [GraphQL API](https://crystallize.com/blog/realtime-pim-api-for-super-fast-ecommerce).
 
-<img class="simple" src="/img/cms/crystallize-fast-graphql-api.png" alt="GraphQL API on Crystallize" />
+<img class="simple" src="img/cms/crystallize-fast-graphql-api.png" alt="GraphQL API on Crystallize" />
 
 ### Scalable cloud
 
@@ -55,7 +55,7 @@ Model content your way using [shapes](https://crystallize.com/learn/concepts/pim
 
 Rich taxonomies with [topic maps](https://crystallize.com/learn/concepts/pim/topic-map) allow for building great navigation and semantic linking between content and products.
 
-<img class="simple" src="/img/cms/crystallize-topic-maps-taxonomies.png" alt="Topics taxonomies on Crystallize" />
+<img class="simple" src="img/cms/crystallize-topic-maps-taxonomies.png" alt="Topics taxonomies on Crystallize" />
 
 #### Multilingual
 

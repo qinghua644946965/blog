@@ -75,7 +75,7 @@ Rapidly spec your backend with all the primitive and advanced field types you ne
 - Fits your git-based workflow & CI
 - Automatic db migrations with Prisma
 
-<img src="/img/cms/keystone-js-schema-example.png" alt="Code example of Keystone configuration schema" />
+<img src="img/cms/keystone-js-schema-example.png" alt="Code example of Keystone configuration schema" />
 
 ### 2. Customise your content story
 
@@ -87,7 +87,7 @@ A flexible and intuitive editing environment that does what your schema says: Ke
 - Next-gen rich text WYSIWYG
 - BYO custom React components
 
-<img src="/img/cms/keystone-admin-ui.png" alt="Example of Keystone Admin UI editing environment" />
+<img src="img/cms/keystone-admin-ui.png" alt="Example of Keystone Admin UI editing environment" />
 
 ### 3. Query your data
 
@@ -99,7 +99,7 @@ Get what you need, fast. Keystone's GraphQL API gives you session management, ac
 - Evolve with bespoke logic for your app
 - Integrate microservices & external APIs
 
-<img src="/img/cms/keystone-graphQL-playground.png" alt="Example of Keystone's build in GraphQL playground" />
+<img src="img/cms/keystone-graphQL-playground.png" alt="Example of Keystone's build in GraphQL playground" />
 
 ### 4. Deploy anywhere
 

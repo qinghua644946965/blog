@@ -15,7 +15,7 @@ images:
 
 [Flamelink](https://flamelink.io) is a realtime, headless CMS for Firebase. Flamelink offers Coders and Content Managers an easy-to-use interface to add, manage and update content seamlessly integrated with their Firebase project. This lets Developers do what they do best — write white-hot code, while Content Managers can play around with content to their hearts desire.
 
-<img src="/img/cms/flamelink-navigation.png" title="Flamelink Navigation">
+<img src="img/cms/flamelink-navigation.png" title="Flamelink Navigation">
 
 ## Powered by Google's Firebase
 

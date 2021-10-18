@@ -33,8 +33,8 @@ Airship CMS takes care of everything on the server-side for you, letting you foc
 
 Airship CMS allows you to easily model and create a schema for your project. Plan out your project structure and dynamic content areas, then quickly build your data architecture in minutes. Check out some use cases [https://airshipcms.io/use-cases](https://airshipcms.io/use-cases)
 
-<img src="/img/cms/airship-cms8.png" alt="Custom Order Flow Schema"/>
-<img src="/img/cms/airship-cms9.png" alt="Marketing Website Schema"/>
+<img src="img/cms/airship-cms8.png" alt="Custom Order Flow Schema"/>
+<img src="img/cms/airship-cms9.png" alt="Marketing Website Schema"/>
 
 ## Airship caches your assets & secures your server
 We routinely audit, upgrade, and patch our servers for known vulnerabilities. Assets are hosted on many edge servers to provide the fastest load times.
