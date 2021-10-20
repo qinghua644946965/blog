@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>时间 on 华 的博客</title>
+    <link>https://%E5%8D%8E.site/tags/%E6%97%B6%E9%97%B4/</link>
+    <description>Recent content in 时间 on 华 的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <copyright>&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;知识共享许可协议&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;本作品采用&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;进行许可。&lt;br /&gt;&lt;br /&gt;背景使用了 &lt;a href=&#34;https://www.pexels.com/zh-cn/&#34; target=&#34;_blank&#34;&gt;Pexels&lt;/a&gt; 上 &lt;a href=&#34;https://www.pexels.com/zh-cn/@minan1398&#34; target=&#34;_blank&#34;&gt;Min An&lt;/a&gt; 拍摄的&lt;a href=&#34;https://www.pexels.com/zh-cn/photo/1454794/&#34; target=&#34;_blank&#34;&gt;图片&lt;/a&gt;。</copyright>
+    <lastBuildDate>Wed, 20 Oct 2021 09:03:31 +0800</lastBuildDate><atom:link href="https://%E5%8D%8E.site/tags/%E6%97%B6%E9%97%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript 格式日期 yyyy-mm-dd hh mm ss 代码示例</title>
+      <link>https://%E5%8D%8E.site/posts/javascript-%E6%A0%BC%E5%BC%8F%E6%97%A5%E6%9C%9F-yyyy-mm-dd-hh-mm-ss-%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B/</link>
+      <pubDate>Wed, 20 Oct 2021 09:03:31 +0800</pubDate>
+      
+      <guid>https://%E5%8D%8E.site/posts/javascript-%E6%A0%BC%E5%BC%8F%E6%97%A5%E6%9C%9F-yyyy-mm-dd-hh-mm-ss-%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B/</guid>
+      <description>&lt;p&gt;javascript 将日期格式化为 yyyy-mm-dd hh mm ss.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
