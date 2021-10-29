@@ -1,0 +1,2735 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  Leetcode 题解 - 搜索 - 
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html"></a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; </span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>micro-services</label></li>
+
+          
+            <li><a title="迁移到微服务综述" href="16354990520938.html">迁移到微服务综述</a></li>
+          
+            <li><a title="微服务" href="16354990521017.html">微服务</a></li>
+          
+            <li><a title="什么是微服务？微服务之间是如何独立通讯的？" href="16354990521127.html">什么是微服务？微服务之间是如何独立通讯的？</a></li>
+          
+            <li><a title="微服务技术栈" href="16354990521195.html">微服务技术栈</a></li>
+          
+            <li><a title="微服务治理策略" href="16354990521247.html">微服务治理策略</a></li>
+          
+            <li><a title="服务发现组件 Eureka 的几个主要调用过程" href="16354990521313.html">服务发现组件 Eureka 的几个主要调用过程</a></li>
+          
+            <li><a title="1.1 微服务和分布式数据管理问题" href="16354990521404.html">1.1 微服务和分布式数据管理问题</a></li>
+          
+            <li><a title="前言" href="16354990521458.html">前言</a></li>
+          
+            <li><a title="开发单体式应用" href="16354990521501.html">开发单体式应用</a></li>
+          
+            <li><a title="微服务架构" href="16354990521550.html">微服务架构</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>high-concurrency</label></li>
+
+          
+            <li><a title="面试题" href="16354990793626.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793679.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793713.html">面试题</a></li>
+          
+            <li><a title="Redis 哨兵集群实现高可用" href="16354990793751.html">Redis 哨兵集群实现高可用</a></li>
+          
+            <li><a title="面试题" href="16354990793793.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793832.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793875.html">面试题</a></li>
+          
+            <li><a title="Redis 主从架构" href="16354990793916.html">Redis 主从架构</a></li>
+          
+            <li><a title="面试题" href="16354990793967.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794013.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794053.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794097.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794153.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794200.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794254.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794301.html">面试题</a></li>
+          
+            <li><a title="消息队列面试场景" href="16354990794344.html">消息队列面试场景</a></li>
+          
+            <li><a title="面试题" href="16354990794383.html">面试题</a></li>
+          
+            <li><a title="如何限流？在工作中是怎么做的？说一下具体的实现？" href="16354990794425.html">如何限流？在工作中是怎么做的？说一下具体的实现？</a></li>
+          
+            <li><a title="面试题" href="16354990794466.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794513.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794565.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794610.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794649.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794700.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794742.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794792.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794830.html">面试题</a></li>
+          
+            <li><a title="Lucene 和 ES 的前世今生" href="16354990794877.html">Lucene 和 ES 的前世今生</a></li>
+          
+            <li><a title="面试题" href="16354990794923.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794969.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990795016.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990795066.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990795109.html">面试题</a></li>
+          
+            <li><a title="高并发架构" href="16354990795148.html">高并发架构</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>high-availability</label></li>
+
+          
+            <li><a title="如何做技术选型？Sentinel 还是 Hystrix？" href="16354991174692.html">如何做技术选型？Sentinel 还是 Hystrix？</a></li>
+          
+            <li><a title="基于 timeout 机制为服务接口调用超时提供安全保护" href="16354991174751.html">基于 timeout 机制为服务接口调用超时提供安全保护</a></li>
+          
+            <li><a title="基于 Hystrix 线程池技术实现资源隔离" href="16354991174802.html">基于 Hystrix 线程池技术实现资源隔离</a></li>
+          
+            <li><a title="深入 Hystrix 线程池隔离与接口限流" href="16354991174852.html">深入 Hystrix 线程池隔离与接口限流</a></li>
+          
+            <li><a title="基于 Hystrix 信号量机制实现资源隔离" href="16354991174902.html">基于 Hystrix 信号量机制实现资源隔离</a></li>
+          
+            <li><a title="基于 request cache 请求缓存技术优化批量商品数据查询接口" href="16354991174952.html">基于 request cache 请求缓存技术优化批量商品数据查询接口</a></li>
+          
+            <li><a title="深入 Hystrix 执行时内部原理" href="16354991174997.html">深入 Hystrix 执行时内部原理</a></li>
+          
+            <li><a title="用 Hystrix 构建高可用服务架构" href="16354991175043.html">用 Hystrix 构建高可用服务架构</a></li>
+          
+            <li><a title="基于本地缓存的 fallback 降级机制" href="16354991175086.html">基于本地缓存的 fallback 降级机制</a></li>
+          
+            <li><a title="Hystrix 隔离策略细粒度控制" href="16354991175126.html">Hystrix 隔离策略细粒度控制</a></li>
+          
+            <li><a title="深入 Hystrix 断路器执行原理" href="16354991175168.html">深入 Hystrix 断路器执行原理</a></li>
+          
+            <li><a title="电商网站的商品详情页系统架构" href="16354991175209.html">电商网站的商品详情页系统架构</a></li>
+          
+            <li><a title="高可用架构" href="16354991175250.html">高可用架构</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>distributed-system</label></li>
+
+          
+            <li><a title="面试题" href="16354991711770.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991711905.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991711991.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712049.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712107.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712172.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712237.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712273.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712309.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712360.html">面试题</a></li>
+          
+            <li><a title="分布式系统面试连环炮" href="16354991712393.html">分布式系统面试连环炮</a></li>
+          
+            <li><a title="面试题" href="16354991712426.html">面试题</a></li>
+          
+            <li><a title="分布式系统 CAP 定理 P 代表什么含义" href="16354991712456.html">分布式系统 CAP 定理 P 代表什么含义</a></li>
+          
+            <li><a title="面试题" href="16354991712501.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712533.html">面试题</a></li>
+          
+            <li><a title="分布式系统" href="16354991712569.html">分布式系统</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>big-data</label></li>
+
+          
+            <li><a title="大数据中 TopK 问题的常用套路" href="16354991934685.html">大数据中 TopK 问题的常用套路</a></li>
+          
+            <li><a title="如何按照 query 的频度排序？" href="16354991934749.html">如何按照 query 的频度排序？</a></li>
+          
+            <li><a title="如何从大量数据中找出高频词？" href="16354991934812.html">如何从大量数据中找出高频词？</a></li>
+          
+            <li><a title="如何找出某一天访问百度网站最多的 IP？" href="16354991934855.html">如何找出某一天访问百度网站最多的 IP？</a></li>
+          
+            <li><a title="如何找出排名前 500 的数？" href="16354991934904.html">如何找出排名前 500 的数？</a></li>
+          
+            <li><a title="如何在大量的数据中找出不重复的整数？" href="16354991934938.html">如何在大量的数据中找出不重复的整数？</a></li>
+          
+            <li><a title="如何从 5 亿个数中找出中位数？" href="16354991934970.html">如何从 5 亿个数中找出中位数？</a></li>
+          
+            <li><a title="如何查询最热门的查询串？" href="16354991935000.html">如何查询最热门的查询串？</a></li>
+          
+            <li><a title="如何从大量的 URL 中找出相同的 URL？" href="16354991935032.html">如何从大量的 URL 中找出相同的 URL？</a></li>
+          
+            <li><a title="如何在大量的数据中判断一个数是否存在？" href="16354991935061.html">如何在大量的数据中判断一个数是否存在？</a></li>
+          
+            <li><a title="如何统计不同电话号码的个数？" href="16354991935090.html">如何统计不同电话号码的个数？</a></li>
+          
+            <li><a title="海量数据处理" href="16354991935121.html">海量数据处理</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>notes</label></li>
+
+          
+            <li><a title="面向对象思想" href="16354992461478.html">面向对象思想</a></li>
+          
+            <li><a title="集群" href="16354992461525.html">集群</a></li>
+          
+            <li><a title="<!-- GFM-TOC -->" href="16354992461566.html"><!-- GFM-TOC --></a></li>
+          
+            <li><a title="1. 适配器（Adapter）" href="16354992461616.html">1. 适配器（Adapter）</a></li>
+          
+            <li><a title="迭代器（Iterator）" href="16354992461648.html">迭代器（Iterator）</a></li>
+          
+            <li><a title="责任链（Chain Of Responsibility）" href="16354992461678.html">责任链（Chain Of Responsibility）</a></li>
+          
+            <li><a title="访问者（Visitor）" href="16354992461708.html">访问者（Visitor）</a></li>
+          
+            <li><a title="解释器（Interpreter）" href="16354992461737.html">解释器（Interpreter）</a></li>
+          
+            <li><a title="7. 观察者（Observer）" href="16354992461767.html">7. 观察者（Observer）</a></li>
+          
+            <li><a title="装饰（Decorator）" href="16354992461796.html">装饰（Decorator）</a></li>
+          
+            <li><a title="组合（Composite）" href="16354992461824.html">组合（Composite）</a></li>
+          
+            <li><a title="简单工厂（Simple Factory）" href="16354992461851.html">简单工厂（Simple Factory）</a></li>
+          
+            <li><a title="9. 策略（Strategy）" href="16354992461877.html">9. 策略（Strategy）</a></li>
+          
+            <li><a title="空对象（Null）" href="16354992461903.html">空对象（Null）</a></li>
+          
+            <li><a title="一、前言" href="16354992461928.html">一、前言</a></li>
+          
+            <li><a title="设计模式目录" href="16354992461958.html">设计模式目录</a></li>
+          
+            <li><a title="5. 生成器（Builder）" href="16354992462049.html">5. 生成器（Builder）</a></li>
+          
+            <li><a title="8. 状态（State）" href="16354992462082.html">8. 状态（State）</a></li>
+          
+            <li><a title="模板方法（Template Method）" href="16354992462113.html">模板方法（Template Method）</a></li>
+          
+            <li><a title="" href="16354992462143.html"></a></li>
+          
+            <li><a title="4. 抽象工厂（Abstract Factory）" href="16354992462175.html">4. 抽象工厂（Abstract Factory）</a></li>
+          
+            <li><a title="工厂方法（Factory Method）" href="16354992462206.html">工厂方法（Factory Method）</a></li>
+          
+            <li><a title="外观（Facade）" href="16354992462238.html">外观（Facade）</a></li>
+          
+            <li><a title="备忘录（Memento）" href="16354992462270.html">备忘录（Memento）</a></li>
+          
+            <li><a title="2. 命令（Command）" href="16354992462300.html">2. 命令（Command）</a></li>
+          
+            <li><a title="6. 原型模式（Prototype）" href="16354992462338.html">6. 原型模式（Prototype）</a></li>
+          
+            <li><a title="代理（Proxy）" href="16354992462373.html">代理（Proxy）</a></li>
+          
+            <li><a title="享元（Flyweight）" href="16354992462410.html">享元（Flyweight）</a></li>
+          
+            <li><a title="5. 中介者（Mediator）" href="16354992462446.html">5. 中介者（Mediator）</a></li>
+          
+            <li><a title="单例（Singleton）" href="16354992462488.html">单例（Singleton）</a></li>
+          
+            <li><a title="计算机网络 - 链路层" href="16354992462560.html">计算机网络 - 链路层</a></li>
+          
+            <li><a title="计算机网络 - 网络层" href="16354992462602.html">计算机网络 - 网络层</a></li>
+          
+            <li><a title="计算机网络" href="16354992462636.html">计算机网络</a></li>
+          
+            <li><a title="计算机网络 - 物理层" href="16354992462686.html">计算机网络 - 物理层</a></li>
+          
+            <li><a title="计算机网络 - 概述" href="16354992462724.html">计算机网络 - 概述</a></li>
+          
+            <li><a title="计算机网络 - 应用层" href="16354992462761.html">计算机网络 - 应用层</a></li>
+          
+            <li><a title="计算机网络 - 传输层" href="16354992462800.html">计算机网络 - 传输层</a></li>
+          
+            <li><a title="计算机操作系统 - 链接" href="16354992462870.html">计算机操作系统 - 链接</a></li>
+          
+            <li><a title="计算机操作系统 - 进程管理" href="16354992462906.html">计算机操作系统 - 进程管理</a></li>
+          
+            <li><a title="计算机操作系统 - 设备管理" href="16354992462944.html">计算机操作系统 - 设备管理</a></li>
+          
+            <li><a title="计算机操作系统" href="16354992462975.html">计算机操作系统</a></li>
+          
+            <li><a title="计算机操作系统 - 死锁" href="16354992463024.html">计算机操作系统 - 死锁</a></li>
+          
+            <li><a title="计算机操作系统 - 概述" href="16354992463058.html">计算机操作系统 - 概述</a></li>
+          
+            <li><a title="计算机操作系统 - 内存管理" href="16354992463092.html">计算机操作系统 - 内存管理</a></li>
+          
+            <li><a title="缓存" href="16354992463126.html">缓存</a></li>
+          
+            <li><a title="系统设计基础" href="16354992463161.html">系统设计基础</a></li>
+          
+            <li><a title="算法 - 算法分析" href="16354992463226.html">算法 - 算法分析</a></li>
+          
+            <li><a title="算法 - 符号表" href="16354992463265.html">算法 - 符号表</a></li>
+          
+            <li><a title="算法目录" href="16354992463300.html">算法目录</a></li>
+          
+            <li><a title="算法 - 栈和队列" href="16354992463349.html">算法 - 栈和队列</a></li>
+          
+            <li><a title="算法 - 排序" href="16354992463383.html">算法 - 排序</a></li>
+          
+            <li><a title="算法 - 并查集" href="16354992463417.html">算法 - 并查集</a></li>
+          
+            <li><a title="算法 - 其它" href="16354992463451.html">算法 - 其它</a></li>
+          
+            <li><a title="消息队列" href="16354992463481.html">消息队列</a></li>
+          
+            <li><a title="正则表达式" href="16354992463516.html">正则表达式</a></li>
+          
+            <li><a title="构建工具" href="16354992463551.html">构建工具</a></li>
+          
+            <li><a title="数据库系统原理" href="16354992463586.html">数据库系统原理</a></li>
+          
+            <li><a title="攻击技术" href="16354992463625.html">攻击技术</a></li>
+          
+            <li><a title="剑指 Offer 题解" href="16354992463690.html">剑指 Offer 题解</a></li>
+          
+            <li><a title="分布式" href="16354992463919.html">分布式</a></li>
+          
+            <li><a title="<!-- GFM-TOC -->" href="16354992463986.html"><!-- GFM-TOC --></a></li>
+          
+            <li><a title="Socket" href="16354992464020.html">Socket</a></li>
+          
+            <li><a title="<!-- GFM-TOC -->" href="16354992464055.html"><!-- GFM-TOC --></a></li>
+          
+            <li><a title="SQL 语法" href="16354992464093.html">SQL 语法</a></li>
+          
+            <li><a title="SQL 练习" href="16354992464132.html">SQL 练习</a></li>
+          
+            <li><a title="Redis" href="16354992464169.html">Redis</a></li>
+          
+            <li><a title="MySQL" href="16354992464205.html">MySQL</a></li>
+          
+            <li><a title="Linux" href="16354992464242.html">Linux</a></li>
+          
+            <li><a title="Leetcode 题解 - 链表" href="16354992464314.html">Leetcode 题解 - 链表</a></li>
+          
+            <li><a title="Leetcode 题解 - 贪心思想" href="16354992464348.html">Leetcode 题解 - 贪心思想</a></li>
+          
+            <li><a title="Leetcode 题解" href="16354992464382.html">Leetcode 题解</a></li>
+          
+            <li><a title="Leetcode 题解 - 树" href="16354992464461.html">Leetcode 题解 - 树</a></li>
+          
+            <li><a title="Leetcode 题解 - 栈和队列" href="16354992464509.html">Leetcode 题解 - 栈和队列</a></li>
+          
+            <li><a title="Leetcode 题解 - 数组与矩阵" href="16354992464543.html">Leetcode 题解 - 数组与矩阵</a></li>
+          
+            <li><a title="Leetcode 题解 - 数学" href="16354992464581.html">Leetcode 题解 - 数学</a></li>
+          
+            <li><a title="Leetcode 题解 - 搜索" href="16354992464619.html">Leetcode 题解 - 搜索</a></li>
+          
+            <li><a title="Leetcode 题解 - 排序" href="16354992464661.html">Leetcode 题解 - 排序</a></li>
+          
+            <li><a title="Leetcode 题解 - 字符串" href="16354992464693.html">Leetcode 题解 - 字符串</a></li>
+          
+            <li><a title="Leetcode 题解 - 图" href="16354992464724.html">Leetcode 题解 - 图</a></li>
+          
+            <li><a title="Leetcode 题解 - 哈希表" href="16354992464756.html">Leetcode 题解 - 哈希表</a></li>
+          
+            <li><a title="Leetcode 题解 - 双指针" href="16354992464785.html">Leetcode 题解 - 双指针</a></li>
+          
+            <li><a title="Leetcode 题解 - 动态规划" href="16354992464826.html">Leetcode 题解 - 动态规划</a></li>
+          
+            <li><a title="Leetcode 题解 - 分治" href="16354992464872.html">Leetcode 题解 - 分治</a></li>
+          
+            <li><a title="Leetcode 题解 - 位运算" href="16354992464906.html">Leetcode 题解 - 位运算</a></li>
+          
+            <li><a title="Leetcode 题解 - 二分查找" href="16354992464939.html">Leetcode 题解 - 二分查找</a></li>
+          
+            <li><a title="Java 虚拟机" href="16354992464975.html">Java 虚拟机</a></li>
+          
+            <li><a title="Java 并发" href="16354992465013.html">Java 并发</a></li>
+          
+            <li><a title="Java 容器" href="16354992465054.html">Java 容器</a></li>
+          
+            <li><a title="Java 基础" href="16354992465090.html">Java 基础</a></li>
+          
+            <li><a title="Java IO" href="16354992465129.html">Java IO</a></li>
+          
+            <li><a title="HTTP" href="16354992465167.html">HTTP</a></li>
+          
+            <li><a title="Git" href="16354992465206.html">Git</a></li>
+          
+            <li><a title="Docker" href="16354992465240.html">Docker</a></li>
+          
+            <li><a title="9. 用两个栈实现队列" href="16354992465270.html">9. 用两个栈实现队列</a></li>
+          
+            <li><a title="8. 二叉树的下一个结点" href="16354992465304.html">8. 二叉树的下一个结点</a></li>
+          
+            <li><a title="7. 重建二叉树" href="16354992465337.html">7. 重建二叉树</a></li>
+          
+            <li><a title="68. 树中两个节点的最低公共祖先" href="16354992465367.html">68. 树中两个节点的最低公共祖先</a></li>
+          
+            <li><a title="67. 把字符串转换成整数" href="16354992465397.html">67. 把字符串转换成整数</a></li>
+          
+            <li><a title="66. 构建乘积数组" href="16354992465429.html">66. 构建乘积数组</a></li>
+          
+            <li><a title="65. 不用加减乘除做加法" href="16354992465460.html">65. 不用加减乘除做加法</a></li>
+          
+            <li><a title="64. 求 1+2+3+...+n" href="16354992465490.html">64. 求 1+2+3+...+n</a></li>
+          
+            <li><a title="63. 股票的最大利润" href="16354992465519.html">63. 股票的最大利润</a></li>
+          
+            <li><a title="62. 圆圈中最后剩下的数" href="16354992465549.html">62. 圆圈中最后剩下的数</a></li>
+          
+            <li><a title="61. 扑克牌顺子" href="16354992465577.html">61. 扑克牌顺子</a></li>
+          
+            <li><a title="60. n 个骰子的点数" href="16354992465607.html">60. n 个骰子的点数</a></li>
+          
+            <li><a title="6. 从尾到头打印链表" href="16354992465635.html">6. 从尾到头打印链表</a></li>
+          
+            <li><a title="59. 滑动窗口的最大值" href="16354992465663.html">59. 滑动窗口的最大值</a></li>
+          
+            <li><a title="58.2 左旋转字符串" href="16354992465691.html">58.2 左旋转字符串</a></li>
+          
+            <li><a title="58.1 翻转单词顺序列" href="16354992465720.html">58.1 翻转单词顺序列</a></li>
+          
+            <li><a title="57.2 和为 S 的连续正数序列" href="16354992465750.html">57.2 和为 S 的连续正数序列</a></li>
+          
+            <li><a title="57.1 和为 S 的两个数字" href="16354992465779.html">57.1 和为 S 的两个数字</a></li>
+          
+            <li><a title="56. 数组中只出现一次的数字" href="16354992465806.html">56. 数组中只出现一次的数字</a></li>
+          
+            <li><a title="55.2 平衡二叉树" href="16354992465834.html">55.2 平衡二叉树</a></li>
+          
+            <li><a title="55.1 二叉树的深度" href="16354992465862.html">55.1 二叉树的深度</a></li>
+          
+            <li><a title="54. 二叉查找树的第 K 个结点" href="16354992465890.html">54. 二叉查找树的第 K 个结点</a></li>
+          
+            <li><a title="53. 数字在排序数组中出现的次数" href="16354992465919.html">53. 数字在排序数组中出现的次数</a></li>
+          
+            <li><a title="52. 两个链表的第一个公共结点" href="16354992465948.html">52. 两个链表的第一个公共结点</a></li>
+          
+            <li><a title="51. 数组中的逆序对" href="16354992465978.html">51. 数组中的逆序对</a></li>
+          
+            <li><a title="50. 第一个只出现一次的字符位置" href="16354992466007.html">50. 第一个只出现一次的字符位置</a></li>
+          
+            <li><a title="5. 替换空格" href="16354992466035.html">5. 替换空格</a></li>
+          
+            <li><a title="49. 丑数" href="16354992466064.html">49. 丑数</a></li>
+          
+            <li><a title="48. 最长不含重复字符的子字符串" href="16354992466092.html">48. 最长不含重复字符的子字符串</a></li>
+          
+            <li><a title="47. 礼物的最大价值" href="16354992466120.html">47. 礼物的最大价值</a></li>
+          
+            <li><a title="46. 把数字翻译成字符串" href="16354992466147.html">46. 把数字翻译成字符串</a></li>
+          
+            <li><a title="45. 把数组排成最小的数" href="16354992466176.html">45. 把数组排成最小的数</a></li>
+          
+            <li><a title="44. 数字序列中的某一位数字" href="16354992466205.html">44. 数字序列中的某一位数字</a></li>
+          
+            <li><a title="43. 从 1 到 n 整数中 1 出现的次数" href="16354992466236.html">43. 从 1 到 n 整数中 1 出现的次数</a></li>
+          
+            <li><a title="42. 连续子数组的最大和" href="16354992466265.html">42. 连续子数组的最大和</a></li>
+          
+            <li><a title="41.2 字符流中第一个不重复的字符" href="16354992466295.html">41.2 字符流中第一个不重复的字符</a></li>
+          
+            <li><a title="41.1 数据流中的中位数" href="16354992466322.html">41.1 数据流中的中位数</a></li>
+          
+            <li><a title="40. 最小的 K 个数" href="16354992466350.html">40. 最小的 K 个数</a></li>
+          
+            <li><a title="4. 二维数组中的查找" href="16354992466380.html">4. 二维数组中的查找</a></li>
+          
+            <li><a title="39. 数组中出现次数超过一半的数字" href="16354992466411.html">39. 数组中出现次数超过一半的数字</a></li>
+          
+            <li><a title="38. 字符串的排列" href="16354992466438.html">38. 字符串的排列</a></li>
+          
+            <li><a title="37. 序列化二叉树" href="16354992466467.html">37. 序列化二叉树</a></li>
+          
+            <li><a title="36. 二叉搜索树与双向链表" href="16354992466497.html">36. 二叉搜索树与双向链表</a></li>
+          
+            <li><a title="35. 复杂链表的复制" href="16354992466525.html">35. 复杂链表的复制</a></li>
+          
+            <li><a title="34. 二叉树中和为某一值的路径" href="16354992466553.html">34. 二叉树中和为某一值的路径</a></li>
+          
+            <li><a title="33. 二叉搜索树的后序遍历序列" href="16354992466580.html">33. 二叉搜索树的后序遍历序列</a></li>
+          
+            <li><a title="32.3 按之字形顺序打印二叉树" href="16354992466607.html">32.3 按之字形顺序打印二叉树</a></li>
+          
+            <li><a title="32.2 把二叉树打印成多行" href="16354992466638.html">32.2 把二叉树打印成多行</a></li>
+          
+            <li><a title="32.1 从上往下打印二叉树" href="16354992466668.html">32.1 从上往下打印二叉树</a></li>
+          
+            <li><a title="31. 栈的压入、弹出序列" href="16354992466698.html">31. 栈的压入、弹出序列</a></li>
+          
+            <li><a title="30. 包含 min 函数的栈" href="16354992466727.html">30. 包含 min 函数的栈</a></li>
+          
+            <li><a title="3. 数组中重复的数字" href="16354992466757.html">3. 数组中重复的数字</a></li>
+          
+            <li><a title="29. 顺时针打印矩阵" href="16354992466786.html">29. 顺时针打印矩阵</a></li>
+          
+            <li><a title="28. 对称的二叉树" href="16354992466815.html">28. 对称的二叉树</a></li>
+          
+            <li><a title="27. 二叉树的镜像" href="16354992466843.html">27. 二叉树的镜像</a></li>
+          
+            <li><a title="26. 树的子结构" href="16354992466871.html">26. 树的子结构</a></li>
+          
+            <li><a title="25. 合并两个排序的链表" href="16354992466899.html">25. 合并两个排序的链表</a></li>
+          
+            <li><a title="24. 反转链表" href="16354992466929.html">24. 反转链表</a></li>
+          
+            <li><a title="23. 链表中环的入口结点" href="16354992466956.html">23. 链表中环的入口结点</a></li>
+          
+            <li><a title="22. 链表中倒数第 K 个结点" href="16354992466984.html">22. 链表中倒数第 K 个结点</a></li>
+          
+            <li><a title="21. 调整数组顺序使奇数位于偶数前面" href="16354992467010.html">21. 调整数组顺序使奇数位于偶数前面</a></li>
+          
+            <li><a title="20. 表示数值的字符串" href="16354992467040.html">20. 表示数值的字符串</a></li>
+          
+            <li><a title="19. 正则表达式匹配" href="16354992467084.html">19. 正则表达式匹配</a></li>
+          
+            <li><a title="18.2 删除链表中重复的结点" href="16354992467117.html">18.2 删除链表中重复的结点</a></li>
+          
+            <li><a title="18.1 在 O(1) 时间内删除链表节点" href="16354992467154.html">18.1 在 O(1) 时间内删除链表节点</a></li>
+          
+            <li><a title="17. 打印从 1 到最大的 n 位数" href="16354992467188.html">17. 打印从 1 到最大的 n 位数</a></li>
+          
+            <li><a title="16. 数值的整数次方" href="16354992467223.html">16. 数值的整数次方</a></li>
+          
+            <li><a title="15. 二进制中 1 的个数" href="16354992467259.html">15. 二进制中 1 的个数</a></li>
+          
+            <li><a title="14. 剪绳子" href="16354992467294.html">14. 剪绳子</a></li>
+          
+            <li><a title="13. 机器人的运动范围" href="16354992467329.html">13. 机器人的运动范围</a></li>
+          
+            <li><a title="12. 矩阵中的路径" href="16354992467363.html">12. 矩阵中的路径</a></li>
+          
+            <li><a title="11. 旋转数组的最小数字" href="16354992467398.html">11. 旋转数组的最小数字</a></li>
+          
+            <li><a title="10.4 变态跳台阶" href="16354992467430.html">10.4 变态跳台阶</a></li>
+          
+            <li><a title="10.3 跳台阶" href="16354992467461.html">10.3 跳台阶</a></li>
+          
+            <li><a title="10.2 矩形覆盖" href="16354992467487.html">10.2 矩形覆盖</a></li>
+          
+            <li><a title="10.1 斐波那契数列" href="16354992467516.html">10.1 斐波那契数列</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>micro-services</span></li>
+                        
+                          <li><a title="迁移到微服务综述" href="16354990520938.html">迁移到微服务综述</a></li>
+                        
+                          <li><a title="微服务" href="16354990521017.html">微服务</a></li>
+                        
+                          <li><a title="什么是微服务？微服务之间是如何独立通讯的？" href="16354990521127.html">什么是微服务？微服务之间是如何独立通讯的？</a></li>
+                        
+                          <li><a title="微服务技术栈" href="16354990521195.html">微服务技术栈</a></li>
+                        
+                          <li><a title="微服务治理策略" href="16354990521247.html">微服务治理策略</a></li>
+                        
+                          <li><a title="服务发现组件 Eureka 的几个主要调用过程" href="16354990521313.html">服务发现组件 Eureka 的几个主要调用过程</a></li>
+                        
+                          <li><a title="1.1 微服务和分布式数据管理问题" href="16354990521404.html">1.1 微服务和分布式数据管理问题</a></li>
+                        
+                          <li><a title="前言" href="16354990521458.html">前言</a></li>
+                        
+                          <li><a title="开发单体式应用" href="16354990521501.html">开发单体式应用</a></li>
+                        
+                          <li><a title="微服务架构" href="16354990521550.html">微服务架构</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>high-concurrency</span></li>
+                        
+                          <li><a title="面试题" href="16354990793626.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793679.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793713.html">面试题</a></li>
+                        
+                          <li><a title="Redis 哨兵集群实现高可用" href="16354990793751.html">Redis 哨兵集群实现高可用</a></li>
+                        
+                          <li><a title="面试题" href="16354990793793.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793832.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793875.html">面试题</a></li>
+                        
+                          <li><a title="Redis 主从架构" href="16354990793916.html">Redis 主从架构</a></li>
+                        
+                          <li><a title="面试题" href="16354990793967.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794013.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794053.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794097.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794153.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794200.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794254.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794301.html">面试题</a></li>
+                        
+                          <li><a title="消息队列面试场景" href="16354990794344.html">消息队列面试场景</a></li>
+                        
+                          <li><a title="面试题" href="16354990794383.html">面试题</a></li>
+                        
+                          <li><a title="如何限流？在工作中是怎么做的？说一下具体的实现？" href="16354990794425.html">如何限流？在工作中是怎么做的？说一下具体的实现？</a></li>
+                        
+                          <li><a title="面试题" href="16354990794466.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794513.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794565.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794610.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794649.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794700.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794742.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794792.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794830.html">面试题</a></li>
+                        
+                          <li><a title="Lucene 和 ES 的前世今生" href="16354990794877.html">Lucene 和 ES 的前世今生</a></li>
+                        
+                          <li><a title="面试题" href="16354990794923.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794969.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990795016.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990795066.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990795109.html">面试题</a></li>
+                        
+                          <li><a title="高并发架构" href="16354990795148.html">高并发架构</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>high-availability</span></li>
+                        
+                          <li><a title="如何做技术选型？Sentinel 还是 Hystrix？" href="16354991174692.html">如何做技术选型？Sentinel 还是 Hystrix？</a></li>
+                        
+                          <li><a title="基于 timeout 机制为服务接口调用超时提供安全保护" href="16354991174751.html">基于 timeout 机制为服务接口调用超时提供安全保护</a></li>
+                        
+                          <li><a title="基于 Hystrix 线程池技术实现资源隔离" href="16354991174802.html">基于 Hystrix 线程池技术实现资源隔离</a></li>
+                        
+                          <li><a title="深入 Hystrix 线程池隔离与接口限流" href="16354991174852.html">深入 Hystrix 线程池隔离与接口限流</a></li>
+                        
+                          <li><a title="基于 Hystrix 信号量机制实现资源隔离" href="16354991174902.html">基于 Hystrix 信号量机制实现资源隔离</a></li>
+                        
+                          <li><a title="基于 request cache 请求缓存技术优化批量商品数据查询接口" href="16354991174952.html">基于 request cache 请求缓存技术优化批量商品数据查询接口</a></li>
+                        
+                          <li><a title="深入 Hystrix 执行时内部原理" href="16354991174997.html">深入 Hystrix 执行时内部原理</a></li>
+                        
+                          <li><a title="用 Hystrix 构建高可用服务架构" href="16354991175043.html">用 Hystrix 构建高可用服务架构</a></li>
+                        
+                          <li><a title="基于本地缓存的 fallback 降级机制" href="16354991175086.html">基于本地缓存的 fallback 降级机制</a></li>
+                        
+                          <li><a title="Hystrix 隔离策略细粒度控制" href="16354991175126.html">Hystrix 隔离策略细粒度控制</a></li>
+                        
+                          <li><a title="深入 Hystrix 断路器执行原理" href="16354991175168.html">深入 Hystrix 断路器执行原理</a></li>
+                        
+                          <li><a title="电商网站的商品详情页系统架构" href="16354991175209.html">电商网站的商品详情页系统架构</a></li>
+                        
+                          <li><a title="高可用架构" href="16354991175250.html">高可用架构</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>distributed-system</span></li>
+                        
+                          <li><a title="面试题" href="16354991711770.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991711905.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991711991.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712049.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712107.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712172.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712237.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712273.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712309.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712360.html">面试题</a></li>
+                        
+                          <li><a title="分布式系统面试连环炮" href="16354991712393.html">分布式系统面试连环炮</a></li>
+                        
+                          <li><a title="面试题" href="16354991712426.html">面试题</a></li>
+                        
+                          <li><a title="分布式系统 CAP 定理 P 代表什么含义" href="16354991712456.html">分布式系统 CAP 定理 P 代表什么含义</a></li>
+                        
+                          <li><a title="面试题" href="16354991712501.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712533.html">面试题</a></li>
+                        
+                          <li><a title="分布式系统" href="16354991712569.html">分布式系统</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>big-data</span></li>
+                        
+                          <li><a title="大数据中 TopK 问题的常用套路" href="16354991934685.html">大数据中 TopK 问题的常用套路</a></li>
+                        
+                          <li><a title="如何按照 query 的频度排序？" href="16354991934749.html">如何按照 query 的频度排序？</a></li>
+                        
+                          <li><a title="如何从大量数据中找出高频词？" href="16354991934812.html">如何从大量数据中找出高频词？</a></li>
+                        
+                          <li><a title="如何找出某一天访问百度网站最多的 IP？" href="16354991934855.html">如何找出某一天访问百度网站最多的 IP？</a></li>
+                        
+                          <li><a title="如何找出排名前 500 的数？" href="16354991934904.html">如何找出排名前 500 的数？</a></li>
+                        
+                          <li><a title="如何在大量的数据中找出不重复的整数？" href="16354991934938.html">如何在大量的数据中找出不重复的整数？</a></li>
+                        
+                          <li><a title="如何从 5 亿个数中找出中位数？" href="16354991934970.html">如何从 5 亿个数中找出中位数？</a></li>
+                        
+                          <li><a title="如何查询最热门的查询串？" href="16354991935000.html">如何查询最热门的查询串？</a></li>
+                        
+                          <li><a title="如何从大量的 URL 中找出相同的 URL？" href="16354991935032.html">如何从大量的 URL 中找出相同的 URL？</a></li>
+                        
+                          <li><a title="如何在大量的数据中判断一个数是否存在？" href="16354991935061.html">如何在大量的数据中判断一个数是否存在？</a></li>
+                        
+                          <li><a title="如何统计不同电话号码的个数？" href="16354991935090.html">如何统计不同电话号码的个数？</a></li>
+                        
+                          <li><a title="海量数据处理" href="16354991935121.html">海量数据处理</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>notes</span></li>
+                        
+                          <li><a title="面向对象思想" href="16354992461478.html">面向对象思想</a></li>
+                        
+                          <li><a title="集群" href="16354992461525.html">集群</a></li>
+                        
+                          <li><a title="<!-- GFM-TOC -->" href="16354992461566.html"><!-- GFM-TOC --></a></li>
+                        
+                          <li><a title="1. 适配器（Adapter）" href="16354992461616.html">1. 适配器（Adapter）</a></li>
+                        
+                          <li><a title="迭代器（Iterator）" href="16354992461648.html">迭代器（Iterator）</a></li>
+                        
+                          <li><a title="责任链（Chain Of Responsibility）" href="16354992461678.html">责任链（Chain Of Responsibility）</a></li>
+                        
+                          <li><a title="访问者（Visitor）" href="16354992461708.html">访问者（Visitor）</a></li>
+                        
+                          <li><a title="解释器（Interpreter）" href="16354992461737.html">解释器（Interpreter）</a></li>
+                        
+                          <li><a title="7. 观察者（Observer）" href="16354992461767.html">7. 观察者（Observer）</a></li>
+                        
+                          <li><a title="装饰（Decorator）" href="16354992461796.html">装饰（Decorator）</a></li>
+                        
+                          <li><a title="组合（Composite）" href="16354992461824.html">组合（Composite）</a></li>
+                        
+                          <li><a title="简单工厂（Simple Factory）" href="16354992461851.html">简单工厂（Simple Factory）</a></li>
+                        
+                          <li><a title="9. 策略（Strategy）" href="16354992461877.html">9. 策略（Strategy）</a></li>
+                        
+                          <li><a title="空对象（Null）" href="16354992461903.html">空对象（Null）</a></li>
+                        
+                          <li><a title="一、前言" href="16354992461928.html">一、前言</a></li>
+                        
+                          <li><a title="设计模式目录" href="16354992461958.html">设计模式目录</a></li>
+                        
+                          <li><a title="5. 生成器（Builder）" href="16354992462049.html">5. 生成器（Builder）</a></li>
+                        
+                          <li><a title="8. 状态（State）" href="16354992462082.html">8. 状态（State）</a></li>
+                        
+                          <li><a title="模板方法（Template Method）" href="16354992462113.html">模板方法（Template Method）</a></li>
+                        
+                          <li><a title="" href="16354992462143.html"></a></li>
+                        
+                          <li><a title="4. 抽象工厂（Abstract Factory）" href="16354992462175.html">4. 抽象工厂（Abstract Factory）</a></li>
+                        
+                          <li><a title="工厂方法（Factory Method）" href="16354992462206.html">工厂方法（Factory Method）</a></li>
+                        
+                          <li><a title="外观（Facade）" href="16354992462238.html">外观（Facade）</a></li>
+                        
+                          <li><a title="备忘录（Memento）" href="16354992462270.html">备忘录（Memento）</a></li>
+                        
+                          <li><a title="2. 命令（Command）" href="16354992462300.html">2. 命令（Command）</a></li>
+                        
+                          <li><a title="6. 原型模式（Prototype）" href="16354992462338.html">6. 原型模式（Prototype）</a></li>
+                        
+                          <li><a title="代理（Proxy）" href="16354992462373.html">代理（Proxy）</a></li>
+                        
+                          <li><a title="享元（Flyweight）" href="16354992462410.html">享元（Flyweight）</a></li>
+                        
+                          <li><a title="5. 中介者（Mediator）" href="16354992462446.html">5. 中介者（Mediator）</a></li>
+                        
+                          <li><a title="单例（Singleton）" href="16354992462488.html">单例（Singleton）</a></li>
+                        
+                          <li><a title="计算机网络 - 链路层" href="16354992462560.html">计算机网络 - 链路层</a></li>
+                        
+                          <li><a title="计算机网络 - 网络层" href="16354992462602.html">计算机网络 - 网络层</a></li>
+                        
+                          <li><a title="计算机网络" href="16354992462636.html">计算机网络</a></li>
+                        
+                          <li><a title="计算机网络 - 物理层" href="16354992462686.html">计算机网络 - 物理层</a></li>
+                        
+                          <li><a title="计算机网络 - 概述" href="16354992462724.html">计算机网络 - 概述</a></li>
+                        
+                          <li><a title="计算机网络 - 应用层" href="16354992462761.html">计算机网络 - 应用层</a></li>
+                        
+                          <li><a title="计算机网络 - 传输层" href="16354992462800.html">计算机网络 - 传输层</a></li>
+                        
+                          <li><a title="计算机操作系统 - 链接" href="16354992462870.html">计算机操作系统 - 链接</a></li>
+                        
+                          <li><a title="计算机操作系统 - 进程管理" href="16354992462906.html">计算机操作系统 - 进程管理</a></li>
+                        
+                          <li><a title="计算机操作系统 - 设备管理" href="16354992462944.html">计算机操作系统 - 设备管理</a></li>
+                        
+                          <li><a title="计算机操作系统" href="16354992462975.html">计算机操作系统</a></li>
+                        
+                          <li><a title="计算机操作系统 - 死锁" href="16354992463024.html">计算机操作系统 - 死锁</a></li>
+                        
+                          <li><a title="计算机操作系统 - 概述" href="16354992463058.html">计算机操作系统 - 概述</a></li>
+                        
+                          <li><a title="计算机操作系统 - 内存管理" href="16354992463092.html">计算机操作系统 - 内存管理</a></li>
+                        
+                          <li><a title="缓存" href="16354992463126.html">缓存</a></li>
+                        
+                          <li><a title="系统设计基础" href="16354992463161.html">系统设计基础</a></li>
+                        
+                          <li><a title="算法 - 算法分析" href="16354992463226.html">算法 - 算法分析</a></li>
+                        
+                          <li><a title="算法 - 符号表" href="16354992463265.html">算法 - 符号表</a></li>
+                        
+                          <li><a title="算法目录" href="16354992463300.html">算法目录</a></li>
+                        
+                          <li><a title="算法 - 栈和队列" href="16354992463349.html">算法 - 栈和队列</a></li>
+                        
+                          <li><a title="算法 - 排序" href="16354992463383.html">算法 - 排序</a></li>
+                        
+                          <li><a title="算法 - 并查集" href="16354992463417.html">算法 - 并查集</a></li>
+                        
+                          <li><a title="算法 - 其它" href="16354992463451.html">算法 - 其它</a></li>
+                        
+                          <li><a title="消息队列" href="16354992463481.html">消息队列</a></li>
+                        
+                          <li><a title="正则表达式" href="16354992463516.html">正则表达式</a></li>
+                        
+                          <li><a title="构建工具" href="16354992463551.html">构建工具</a></li>
+                        
+                          <li><a title="数据库系统原理" href="16354992463586.html">数据库系统原理</a></li>
+                        
+                          <li><a title="攻击技术" href="16354992463625.html">攻击技术</a></li>
+                        
+                          <li><a title="剑指 Offer 题解" href="16354992463690.html">剑指 Offer 题解</a></li>
+                        
+                          <li><a title="分布式" href="16354992463919.html">分布式</a></li>
+                        
+                          <li><a title="<!-- GFM-TOC -->" href="16354992463986.html"><!-- GFM-TOC --></a></li>
+                        
+                          <li><a title="Socket" href="16354992464020.html">Socket</a></li>
+                        
+                          <li><a title="<!-- GFM-TOC -->" href="16354992464055.html"><!-- GFM-TOC --></a></li>
+                        
+                          <li><a title="SQL 语法" href="16354992464093.html">SQL 语法</a></li>
+                        
+                          <li><a title="SQL 练习" href="16354992464132.html">SQL 练习</a></li>
+                        
+                          <li><a title="Redis" href="16354992464169.html">Redis</a></li>
+                        
+                          <li><a title="MySQL" href="16354992464205.html">MySQL</a></li>
+                        
+                          <li><a title="Linux" href="16354992464242.html">Linux</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 链表" href="16354992464314.html">Leetcode 题解 - 链表</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 贪心思想" href="16354992464348.html">Leetcode 题解 - 贪心思想</a></li>
+                        
+                          <li><a title="Leetcode 题解" href="16354992464382.html">Leetcode 题解</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 树" href="16354992464461.html">Leetcode 题解 - 树</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 栈和队列" href="16354992464509.html">Leetcode 题解 - 栈和队列</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 数组与矩阵" href="16354992464543.html">Leetcode 题解 - 数组与矩阵</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 数学" href="16354992464581.html">Leetcode 题解 - 数学</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 搜索" href="16354992464619.html">Leetcode 题解 - 搜索</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 排序" href="16354992464661.html">Leetcode 题解 - 排序</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 字符串" href="16354992464693.html">Leetcode 题解 - 字符串</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 图" href="16354992464724.html">Leetcode 题解 - 图</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 哈希表" href="16354992464756.html">Leetcode 题解 - 哈希表</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 双指针" href="16354992464785.html">Leetcode 题解 - 双指针</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 动态规划" href="16354992464826.html">Leetcode 题解 - 动态规划</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 分治" href="16354992464872.html">Leetcode 题解 - 分治</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 位运算" href="16354992464906.html">Leetcode 题解 - 位运算</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 二分查找" href="16354992464939.html">Leetcode 题解 - 二分查找</a></li>
+                        
+                          <li><a title="Java 虚拟机" href="16354992464975.html">Java 虚拟机</a></li>
+                        
+                          <li><a title="Java 并发" href="16354992465013.html">Java 并发</a></li>
+                        
+                          <li><a title="Java 容器" href="16354992465054.html">Java 容器</a></li>
+                        
+                          <li><a title="Java 基础" href="16354992465090.html">Java 基础</a></li>
+                        
+                          <li><a title="Java IO" href="16354992465129.html">Java IO</a></li>
+                        
+                          <li><a title="HTTP" href="16354992465167.html">HTTP</a></li>
+                        
+                          <li><a title="Git" href="16354992465206.html">Git</a></li>
+                        
+                          <li><a title="Docker" href="16354992465240.html">Docker</a></li>
+                        
+                          <li><a title="9. 用两个栈实现队列" href="16354992465270.html">9. 用两个栈实现队列</a></li>
+                        
+                          <li><a title="8. 二叉树的下一个结点" href="16354992465304.html">8. 二叉树的下一个结点</a></li>
+                        
+                          <li><a title="7. 重建二叉树" href="16354992465337.html">7. 重建二叉树</a></li>
+                        
+                          <li><a title="68. 树中两个节点的最低公共祖先" href="16354992465367.html">68. 树中两个节点的最低公共祖先</a></li>
+                        
+                          <li><a title="67. 把字符串转换成整数" href="16354992465397.html">67. 把字符串转换成整数</a></li>
+                        
+                          <li><a title="66. 构建乘积数组" href="16354992465429.html">66. 构建乘积数组</a></li>
+                        
+                          <li><a title="65. 不用加减乘除做加法" href="16354992465460.html">65. 不用加减乘除做加法</a></li>
+                        
+                          <li><a title="64. 求 1+2+3+...+n" href="16354992465490.html">64. 求 1+2+3+...+n</a></li>
+                        
+                          <li><a title="63. 股票的最大利润" href="16354992465519.html">63. 股票的最大利润</a></li>
+                        
+                          <li><a title="62. 圆圈中最后剩下的数" href="16354992465549.html">62. 圆圈中最后剩下的数</a></li>
+                        
+                          <li><a title="61. 扑克牌顺子" href="16354992465577.html">61. 扑克牌顺子</a></li>
+                        
+                          <li><a title="60. n 个骰子的点数" href="16354992465607.html">60. n 个骰子的点数</a></li>
+                        
+                          <li><a title="6. 从尾到头打印链表" href="16354992465635.html">6. 从尾到头打印链表</a></li>
+                        
+                          <li><a title="59. 滑动窗口的最大值" href="16354992465663.html">59. 滑动窗口的最大值</a></li>
+                        
+                          <li><a title="58.2 左旋转字符串" href="16354992465691.html">58.2 左旋转字符串</a></li>
+                        
+                          <li><a title="58.1 翻转单词顺序列" href="16354992465720.html">58.1 翻转单词顺序列</a></li>
+                        
+                          <li><a title="57.2 和为 S 的连续正数序列" href="16354992465750.html">57.2 和为 S 的连续正数序列</a></li>
+                        
+                          <li><a title="57.1 和为 S 的两个数字" href="16354992465779.html">57.1 和为 S 的两个数字</a></li>
+                        
+                          <li><a title="56. 数组中只出现一次的数字" href="16354992465806.html">56. 数组中只出现一次的数字</a></li>
+                        
+                          <li><a title="55.2 平衡二叉树" href="16354992465834.html">55.2 平衡二叉树</a></li>
+                        
+                          <li><a title="55.1 二叉树的深度" href="16354992465862.html">55.1 二叉树的深度</a></li>
+                        
+                          <li><a title="54. 二叉查找树的第 K 个结点" href="16354992465890.html">54. 二叉查找树的第 K 个结点</a></li>
+                        
+                          <li><a title="53. 数字在排序数组中出现的次数" href="16354992465919.html">53. 数字在排序数组中出现的次数</a></li>
+                        
+                          <li><a title="52. 两个链表的第一个公共结点" href="16354992465948.html">52. 两个链表的第一个公共结点</a></li>
+                        
+                          <li><a title="51. 数组中的逆序对" href="16354992465978.html">51. 数组中的逆序对</a></li>
+                        
+                          <li><a title="50. 第一个只出现一次的字符位置" href="16354992466007.html">50. 第一个只出现一次的字符位置</a></li>
+                        
+                          <li><a title="5. 替换空格" href="16354992466035.html">5. 替换空格</a></li>
+                        
+                          <li><a title="49. 丑数" href="16354992466064.html">49. 丑数</a></li>
+                        
+                          <li><a title="48. 最长不含重复字符的子字符串" href="16354992466092.html">48. 最长不含重复字符的子字符串</a></li>
+                        
+                          <li><a title="47. 礼物的最大价值" href="16354992466120.html">47. 礼物的最大价值</a></li>
+                        
+                          <li><a title="46. 把数字翻译成字符串" href="16354992466147.html">46. 把数字翻译成字符串</a></li>
+                        
+                          <li><a title="45. 把数组排成最小的数" href="16354992466176.html">45. 把数组排成最小的数</a></li>
+                        
+                          <li><a title="44. 数字序列中的某一位数字" href="16354992466205.html">44. 数字序列中的某一位数字</a></li>
+                        
+                          <li><a title="43. 从 1 到 n 整数中 1 出现的次数" href="16354992466236.html">43. 从 1 到 n 整数中 1 出现的次数</a></li>
+                        
+                          <li><a title="42. 连续子数组的最大和" href="16354992466265.html">42. 连续子数组的最大和</a></li>
+                        
+                          <li><a title="41.2 字符流中第一个不重复的字符" href="16354992466295.html">41.2 字符流中第一个不重复的字符</a></li>
+                        
+                          <li><a title="41.1 数据流中的中位数" href="16354992466322.html">41.1 数据流中的中位数</a></li>
+                        
+                          <li><a title="40. 最小的 K 个数" href="16354992466350.html">40. 最小的 K 个数</a></li>
+                        
+                          <li><a title="4. 二维数组中的查找" href="16354992466380.html">4. 二维数组中的查找</a></li>
+                        
+                          <li><a title="39. 数组中出现次数超过一半的数字" href="16354992466411.html">39. 数组中出现次数超过一半的数字</a></li>
+                        
+                          <li><a title="38. 字符串的排列" href="16354992466438.html">38. 字符串的排列</a></li>
+                        
+                          <li><a title="37. 序列化二叉树" href="16354992466467.html">37. 序列化二叉树</a></li>
+                        
+                          <li><a title="36. 二叉搜索树与双向链表" href="16354992466497.html">36. 二叉搜索树与双向链表</a></li>
+                        
+                          <li><a title="35. 复杂链表的复制" href="16354992466525.html">35. 复杂链表的复制</a></li>
+                        
+                          <li><a title="34. 二叉树中和为某一值的路径" href="16354992466553.html">34. 二叉树中和为某一值的路径</a></li>
+                        
+                          <li><a title="33. 二叉搜索树的后序遍历序列" href="16354992466580.html">33. 二叉搜索树的后序遍历序列</a></li>
+                        
+                          <li><a title="32.3 按之字形顺序打印二叉树" href="16354992466607.html">32.3 按之字形顺序打印二叉树</a></li>
+                        
+                          <li><a title="32.2 把二叉树打印成多行" href="16354992466638.html">32.2 把二叉树打印成多行</a></li>
+                        
+                          <li><a title="32.1 从上往下打印二叉树" href="16354992466668.html">32.1 从上往下打印二叉树</a></li>
+                        
+                          <li><a title="31. 栈的压入、弹出序列" href="16354992466698.html">31. 栈的压入、弹出序列</a></li>
+                        
+                          <li><a title="30. 包含 min 函数的栈" href="16354992466727.html">30. 包含 min 函数的栈</a></li>
+                        
+                          <li><a title="3. 数组中重复的数字" href="16354992466757.html">3. 数组中重复的数字</a></li>
+                        
+                          <li><a title="29. 顺时针打印矩阵" href="16354992466786.html">29. 顺时针打印矩阵</a></li>
+                        
+                          <li><a title="28. 对称的二叉树" href="16354992466815.html">28. 对称的二叉树</a></li>
+                        
+                          <li><a title="27. 二叉树的镜像" href="16354992466843.html">27. 二叉树的镜像</a></li>
+                        
+                          <li><a title="26. 树的子结构" href="16354992466871.html">26. 树的子结构</a></li>
+                        
+                          <li><a title="25. 合并两个排序的链表" href="16354992466899.html">25. 合并两个排序的链表</a></li>
+                        
+                          <li><a title="24. 反转链表" href="16354992466929.html">24. 反转链表</a></li>
+                        
+                          <li><a title="23. 链表中环的入口结点" href="16354992466956.html">23. 链表中环的入口结点</a></li>
+                        
+                          <li><a title="22. 链表中倒数第 K 个结点" href="16354992466984.html">22. 链表中倒数第 K 个结点</a></li>
+                        
+                          <li><a title="21. 调整数组顺序使奇数位于偶数前面" href="16354992467010.html">21. 调整数组顺序使奇数位于偶数前面</a></li>
+                        
+                          <li><a title="20. 表示数值的字符串" href="16354992467040.html">20. 表示数值的字符串</a></li>
+                        
+                          <li><a title="19. 正则表达式匹配" href="16354992467084.html">19. 正则表达式匹配</a></li>
+                        
+                          <li><a title="18.2 删除链表中重复的结点" href="16354992467117.html">18.2 删除链表中重复的结点</a></li>
+                        
+                          <li><a title="18.1 在 O(1) 时间内删除链表节点" href="16354992467154.html">18.1 在 O(1) 时间内删除链表节点</a></li>
+                        
+                          <li><a title="17. 打印从 1 到最大的 n 位数" href="16354992467188.html">17. 打印从 1 到最大的 n 位数</a></li>
+                        
+                          <li><a title="16. 数值的整数次方" href="16354992467223.html">16. 数值的整数次方</a></li>
+                        
+                          <li><a title="15. 二进制中 1 的个数" href="16354992467259.html">15. 二进制中 1 的个数</a></li>
+                        
+                          <li><a title="14. 剪绳子" href="16354992467294.html">14. 剪绳子</a></li>
+                        
+                          <li><a title="13. 机器人的运动范围" href="16354992467329.html">13. 机器人的运动范围</a></li>
+                        
+                          <li><a title="12. 矩阵中的路径" href="16354992467363.html">12. 矩阵中的路径</a></li>
+                        
+                          <li><a title="11. 旋转数组的最小数字" href="16354992467398.html">11. 旋转数组的最小数字</a></li>
+                        
+                          <li><a title="10.4 变态跳台阶" href="16354992467430.html">10.4 变态跳台阶</a></li>
+                        
+                          <li><a title="10.3 跳台阶" href="16354992467461.html">10.3 跳台阶</a></li>
+                        
+                          <li><a title="10.2 矩形覆盖" href="16354992467487.html">10.2 矩形覆盖</a></li>
+                        
+                          <li><a title="10.1 斐波那契数列" href="16354992467516.html">10.1 斐波那契数列</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>Leetcode 题解 - 搜索</h1>
+
+<!-- GFM-TOC -->
+
+<ul>
+<li><a href="#leetcode-%E9%A2%98%E8%A7%A3---%E6%90%9C%E7%B4%A2">Leetcode 题解 - 搜索</a>
+<ul>
+<li><a href="#bfs">BFS</a>
+<ul>
+<li><a href="#1-%E8%AE%A1%E7%AE%97%E5%9C%A8%E7%BD%91%E6%A0%BC%E4%B8%AD%E4%BB%8E%E5%8E%9F%E7%82%B9%E5%88%B0%E7%89%B9%E5%AE%9A%E7%82%B9%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%95%BF%E5%BA%A6">1. 计算在网格中从原点到特定点的最短路径长度</a></li>
+<li><a href="#2-%E7%BB%84%E6%88%90%E6%95%B4%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F%E5%B9%B3%E6%96%B9%E6%95%B0%E6%95%B0%E9%87%8F">2. 组成整数的最小平方数数量</a></li>
+<li><a href="#3-%E6%9C%80%E7%9F%AD%E5%8D%95%E8%AF%8D%E8%B7%AF%E5%BE%84">3. 最短单词路径</a></li>
+</ul></li>
+<li><a href="#dfs">DFS</a>
+<ul>
+<li><a href="#1-%E6%9F%A5%E6%89%BE%E6%9C%80%E5%A4%A7%E7%9A%84%E8%BF%9E%E9%80%9A%E9%9D%A2%E7%A7%AF">1. 查找最大的连通面积</a></li>
+<li><a href="#2-%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E6%95%B0%E7%9B%AE">2. 矩阵中的连通分量数目</a></li>
+<li><a href="#3-%E5%A5%BD%E5%8F%8B%E5%85%B3%E7%B3%BB%E7%9A%84%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E6%95%B0%E7%9B%AE">3. 好友关系的连通分量数目</a></li>
+<li><a href="#4-%E5%A1%AB%E5%85%85%E5%B0%81%E9%97%AD%E5%8C%BA%E5%9F%9F">4. 填充封闭区域</a></li>
+<li><a href="#5-%E8%83%BD%E5%88%B0%E8%BE%BE%E7%9A%84%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%92%8C%E5%A4%A7%E8%A5%BF%E6%B4%8B%E7%9A%84%E5%8C%BA%E5%9F%9F">5. 能到达的太平洋和大西洋的区域</a></li>
+</ul></li>
+<li><a href="#backtracking">Backtracking</a>
+<ul>
+<li><a href="#1-%E6%95%B0%E5%AD%97%E9%94%AE%E7%9B%98%E7%BB%84%E5%90%88">1. 数字键盘组合</a></li>
+<li><a href="#2-ip-%E5%9C%B0%E5%9D%80%E5%88%92%E5%88%86">2. IP 地址划分</a></li>
+<li><a href="#3-%E5%9C%A8%E7%9F%A9%E9%98%B5%E4%B8%AD%E5%AF%BB%E6%89%BE%E5%AD%97%E7%AC%A6%E4%B8%B2">3. 在矩阵中寻找字符串</a></li>
+<li><a href="#4-%E8%BE%93%E5%87%BA%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E6%89%80%E6%9C%89%E4%BB%8E%E6%A0%B9%E5%88%B0%E5%8F%B6%E5%AD%90%E7%9A%84%E8%B7%AF%E5%BE%84">4. 输出二叉树中所有从根到叶子的路径</a></li>
+<li><a href="#5-%E6%8E%92%E5%88%97">5. 排列</a></li>
+<li><a href="#6-%E5%90%AB%E6%9C%89%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0%E6%B1%82%E6%8E%92%E5%88%97">6. 含有相同元素求排列</a></li>
+<li><a href="#7-%E7%BB%84%E5%90%88">7. 组合</a></li>
+<li><a href="#8-%E7%BB%84%E5%90%88%E6%B1%82%E5%92%8C">8. 组合求和</a></li>
+<li><a href="#9-%E5%90%AB%E6%9C%89%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0%E7%9A%84%E7%BB%84%E5%90%88%E6%B1%82%E5%92%8C">9. 含有相同元素的组合求和</a></li>
+<li><a href="#10-1-9-%E6%95%B0%E5%AD%97%E7%9A%84%E7%BB%84%E5%90%88%E6%B1%82%E5%92%8C">10. 1-9 数字的组合求和</a></li>
+<li><a href="#11-%E5%AD%90%E9%9B%86">11. 子集</a></li>
+<li><a href="#12-%E5%90%AB%E6%9C%89%E7%9B%B8%E5%90%8C%E5%85%83%E7%B4%A0%E6%B1%82%E5%AD%90%E9%9B%86">12. 含有相同元素求子集</a></li>
+<li><a href="#13-%E5%88%86%E5%89%B2%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BD%BF%E5%BE%97%E6%AF%8F%E4%B8%AA%E9%83%A8%E5%88%86%E9%83%BD%E6%98%AF%E5%9B%9E%E6%96%87%E6%95%B0">13. 分割字符串使得每个部分都是回文数</a></li>
+<li><a href="#14-%E6%95%B0%E7%8B%AC">14. 数独</a></li>
+<li><a href="#15-n-%E7%9A%87%E5%90%8E">15. N 皇后</a>
+<!-- GFM-TOC --></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>深度优先搜索和广度优先搜索广泛运用于树和图中，但是它们的应用远远不止如此。</p>
+
+<h2 id="toc_0">BFS</h2>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/95903878-725b-4ed9-bded-bc4aae0792a9.jpg"/> </div><br></p>
+
+<p>广度优先搜索一层一层地进行遍历，每层遍历都是以上一层遍历的结果作为起点，遍历一个距离能访问到的所有节点。需要注意的是，遍历过的节点不能再次被遍历。</p>
+
+<p>第一层：</p>
+
+<ul>
+<li>0 -&gt; {6,2,1,5}</li>
+</ul>
+
+<p>第二层：</p>
+
+<ul>
+<li>6 -&gt; {4}</li>
+<li>2 -&gt; {}</li>
+<li>1 -&gt; {}</li>
+<li>5 -&gt; {3}</li>
+</ul>
+
+<p>第三层：</p>
+
+<ul>
+<li>4 -&gt; {}</li>
+<li>3 -&gt; {}</li>
+</ul>
+
+<p>每一层遍历的节点都与根节点距离相同。设 d<sub>i</sub> 表示第 i 个节点与根节点的距离，推导出一个结论：对于先遍历的节点 i 与后遍历的节点 j，有 d<sub>i</sub> &lt;= d<sub>j</sub>。利用这个结论，可以求解最短路径等   <strong>最优解</strong>   问题：第一次遍历到目的节点，其所经过的路径为最短路径。应该注意的是，使用 BFS 只能求解无权图的最短路径，无权图是指从一个节点到另一个节点的代价都记为 1。</p>
+
+<p>在程序实现 BFS 时需要考虑以下问题：</p>
+
+<ul>
+<li>队列：用来存储每一轮遍历得到的节点；</li>
+<li>标记：对于遍历过的节点，应该将它标记，防止重复遍历。</li>
+</ul>
+
+<h3 id="toc_1">1. 计算在网格中从原点到特定点的最短路径长度</h3>
+
+<p>1091. Shortest Path in Binary Matrix(Medium)</p>
+
+<p><a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/shortest-path-in-binary-matrix/">力扣</a></p>
+
+<pre><code class="language-markup">[[1,1,0,1],
+ [1,0,1,0],
+ [1,1,1,1],
+ [1,0,1,1]]
+</code></pre>
+
+<p>题目描述：0 表示可以经过某个位置，求解从左上角到右下角的最短路径长度。</p>
+
+<pre><code class="language-java">public int shortestPathBinaryMatrix(int[][] grids) {
+        if (grids == null || grids.length == 0 || grids[0].length == 0) {
+            return -1;
+        }
+        int[][] direction = {{1, -1}, {1, 0}, {1, 1}, {0, -1}, {0, 1}, {-1, -1}, {-1, 0}, {-1, 1}};
+        int m = grids.length, n = grids[0].length;
+        Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new LinkedList&lt;&gt;();
+        queue.add(new Pair&lt;&gt;(0, 0));
+        int pathLength = 0;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            pathLength++;
+            while (size-- &gt; 0) {
+                Pair&lt;Integer, Integer&gt; cur = queue.poll();
+                int cr = cur.getKey(), cc = cur.getValue();
+                if (grids[cr][cc] == 1) {
+                    continue;
+                }
+                if (cr == m - 1 &amp;&amp; cc == n - 1) {
+                    return pathLength;
+                }
+                grids[cr][cc] = 1; // 标记
+                for (int[] d : direction) {
+                    int nr = cr + d[0], nc = cc + d[1];
+                    if (nr &lt; 0 || nr &gt;= m || nc &lt; 0 || nc &gt;= n) {
+                        continue;
+                    }
+                    queue.add(new Pair&lt;&gt;(nr, nc));
+                }
+            }
+        }
+        return -1;
+    }
+</code></pre>
+
+<h3 id="toc_2">2. 组成整数的最小平方数数量</h3>
+
+<p>279. Perfect Squares (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/perfect-squares/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/perfect-squares/description/">力扣</a></p>
+
+<pre><code class="language-markup">For example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return 2 because 13 = 4 + 9.
+</code></pre>
+
+<p>可以将每个整数看成图中的一个节点，如果两个整数之差为一个平方数，那么这两个整数所在的节点就有一条边。</p>
+
+<p>要求解最小的平方数数量，就是求解从节点 n 到节点 0 的最短路径。</p>
+
+<p>本题也可以用动态规划求解，在之后动态规划部分中会再次出现。</p>
+
+<pre><code class="language-java">public int numSquares(int n) {
+    List&lt;Integer&gt; squares = generateSquares(n);
+    Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+    boolean[] marked = new boolean[n + 1];
+    queue.add(n);
+    marked[n] = true;
+    int level = 0;
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        level++;
+        while (size-- &gt; 0) {
+            int cur = queue.poll();
+            for (int s : squares) {
+                int next = cur - s;
+                if (next &lt; 0) {
+                    break;
+                }
+                if (next == 0) {
+                    return level;
+                }
+                if (marked[next]) {
+                    continue;
+                }
+                marked[next] = true;
+                queue.add(next);
+            }
+        }
+    }
+    return n;
+}
+
+/**
+ * 生成小于 n 的平方数序列
+ * @return 1,4,9,...
+ */
+private List&lt;Integer&gt; generateSquares(int n) {
+    List&lt;Integer&gt; squares = new ArrayList&lt;&gt;();
+    int square = 1;
+    int diff = 3;
+    while (square &lt;= n) {
+        squares.add(square);
+        square += diff;
+        diff += 2;
+    }
+    return squares;
+}
+</code></pre>
+
+<h3 id="toc_3">3. 最短单词路径</h3>
+
+<p>127. Word Ladder (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/word-ladder/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/word-ladder/description/">力扣</a></p>
+
+<pre><code class="language-markup">Input:
+beginWord = &quot;hit&quot;,
+endWord = &quot;cog&quot;,
+wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
+
+Output: 5
+
+Explanation: As one shortest transformation is &quot;hit&quot; -&gt; &quot;hot&quot; -&gt; &quot;dot&quot; -&gt; &quot;dog&quot; -&gt; &quot;cog&quot;,
+return its length 5.
+</code></pre>
+
+<pre><code class="language-markup">Input:
+beginWord = &quot;hit&quot;
+endWord = &quot;cog&quot;
+wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]
+
+Output: 0
+
+Explanation: The endWord &quot;cog&quot; is not in wordList, therefore no possible transformation.
+</code></pre>
+
+<p>题目描述：找出一条从 beginWord 到 endWord 的最短路径，每次移动规定为改变一个字符，并且改变之后的字符串必须在 wordList 中。</p>
+
+<pre><code class="language-java">public int ladderLength(String beginWord, String endWord, List&lt;String&gt; wordList) {
+    wordList.add(beginWord);
+    int N = wordList.size();
+    int start = N - 1;
+    int end = 0;
+    while (end &lt; N &amp;&amp; !wordList.get(end).equals(endWord)) {
+        end++;
+    }
+    if (end == N) {
+        return 0;
+    }
+    List&lt;Integer&gt;[] graphic = buildGraphic(wordList);
+    return getShortestPath(graphic, start, end);
+}
+
+private List&lt;Integer&gt;[] buildGraphic(List&lt;String&gt; wordList) {
+    int N = wordList.size();
+    List&lt;Integer&gt;[] graphic = new List[N];
+    for (int i = 0; i &lt; N; i++) {
+        graphic[i] = new ArrayList&lt;&gt;();
+        for (int j = 0; j &lt; N; j++) {
+            if (isConnect(wordList.get(i), wordList.get(j))) {
+                graphic[i].add(j);
+            }
+        }
+    }
+    return graphic;
+}
+
+private boolean isConnect(String s1, String s2) {
+    int diffCnt = 0;
+    for (int i = 0; i &lt; s1.length() &amp;&amp; diffCnt &lt;= 1; i++) {
+        if (s1.charAt(i) != s2.charAt(i)) {
+            diffCnt++;
+        }
+    }
+    return diffCnt == 1;
+}
+
+private int getShortestPath(List&lt;Integer&gt;[] graphic, int start, int end) {
+    Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();
+    boolean[] marked = new boolean[graphic.length];
+    queue.add(start);
+    marked[start] = true;
+    int path = 1;
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        path++;
+        while (size-- &gt; 0) {
+            int cur = queue.poll();
+            for (int next : graphic[cur]) {
+                if (next == end) {
+                    return path;
+                }
+                if (marked[next]) {
+                    continue;
+                }
+                marked[next] = true;
+                queue.add(next);
+            }
+        }
+    }
+    return 0;
+}
+</code></pre>
+
+<h2 id="toc_4">DFS</h2>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/74dc31eb-6baa-47ea-ab1c-d27a0ca35093.png"/> </div><br></p>
+
+<p>广度优先搜索一层一层遍历，每一层得到的所有新节点，要用队列存储起来以备下一层遍历的时候再遍历。</p>
+
+<p>而深度优先搜索在得到一个新节点时立即对新节点进行遍历：从节点 0 出发开始遍历，得到到新节点 6 时，立马对新节点 6 进行遍历，得到新节点 4；如此反复以这种方式遍历新节点，直到没有新节点了，此时返回。返回到根节点 0 的情况是，继续对根节点 0 进行遍历，得到新节点 2，然后继续以上步骤。</p>
+
+<p>从一个节点出发，使用 DFS 对一个图进行遍历时，能够遍历到的节点都是从初始节点可达的，DFS 常用来求解这种   <strong>可达性</strong>   问题。</p>
+
+<p>在程序实现 DFS 时需要考虑以下问题：</p>
+
+<ul>
+<li>栈：用栈来保存当前节点信息，当遍历新节点返回时能够继续遍历当前节点。可以使用递归栈。</li>
+<li>标记：和 BFS 一样同样需要对已经遍历过的节点进行标记。</li>
+</ul>
+
+<h3 id="toc_5">1. 查找最大的连通面积</h3>
+
+<p>695. Max Area of Island (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/max-area-of-island/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/max-area-of-island/description/">力扣</a></p>
+
+<pre><code class="language-markup">[[0,0,1,0,0,0,0,1,0,0,0,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+</code></pre>
+
+<pre><code class="language-java">private int m, n;
+private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+public int maxAreaOfIsland(int[][] grid) {
+    if (grid == null || grid.length == 0) {
+        return 0;
+    }
+    m = grid.length;
+    n = grid[0].length;
+    int maxArea = 0;
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            maxArea = Math.max(maxArea, dfs(grid, i, j));
+        }
+    }
+    return maxArea;
+}
+
+private int dfs(int[][] grid, int r, int c) {
+    if (r &lt; 0 || r &gt;= m || c &lt; 0 || c &gt;= n || grid[r][c] == 0) {
+        return 0;
+    }
+    grid[r][c] = 0;
+    int area = 1;
+    for (int[] d : direction) {
+        area += dfs(grid, r + d[0], c + d[1]);
+    }
+    return area;
+}
+</code></pre>
+
+<h3 id="toc_6">2. 矩阵中的连通分量数目</h3>
+
+<p>200. Number of Islands (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/number-of-islands/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/number-of-islands/description/">力扣</a></p>
+
+<pre><code class="language-markup">Input:
+11000
+11000
+00100
+00011
+
+Output: 3
+</code></pre>
+
+<p>可以将矩阵表示看成一张有向图。</p>
+
+<pre><code class="language-java">private int m, n;
+private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+public int numIslands(char[][] grid) {
+    if (grid == null || grid.length == 0) {
+        return 0;
+    }
+    m = grid.length;
+    n = grid[0].length;
+    int islandsNum = 0;
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            if (grid[i][j] != &#39;0&#39;) {
+                dfs(grid, i, j);
+                islandsNum++;
+            }
+        }
+    }
+    return islandsNum;
+}
+
+private void dfs(char[][] grid, int i, int j) {
+    if (i &lt; 0 || i &gt;= m || j &lt; 0 || j &gt;= n || grid[i][j] == &#39;0&#39;) {
+        return;
+    }
+    grid[i][j] = &#39;0&#39;;
+    for (int[] d : direction) {
+        dfs(grid, i + d[0], j + d[1]);
+    }
+}
+</code></pre>
+
+<h3 id="toc_7">3. 好友关系的连通分量数目</h3>
+
+<p>547. Friend Circles (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/friend-circles/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/friend-circles/description/">力扣</a></p>
+
+<pre><code class="language-markup">Input:
+[[1,1,0],
+ [1,1,0],
+ [0,0,1]]
+
+Output: 2
+
+Explanation:The 0th and 1st students are direct friends, so they are in a friend circle.
+The 2nd student himself is in a friend circle. So return 2.
+</code></pre>
+
+<p>题目描述：好友关系可以看成是一个无向图，例如第 0 个人与第 1 个人是好友，那么 M[0][1] 和 M[1][0] 的值都为 1。</p>
+
+<pre><code class="language-java">private int n;
+
+public int findCircleNum(int[][] M) {
+    n = M.length;
+    int circleNum = 0;
+    boolean[] hasVisited = new boolean[n];
+    for (int i = 0; i &lt; n; i++) {
+        if (!hasVisited[i]) {
+            dfs(M, i, hasVisited);
+            circleNum++;
+        }
+    }
+    return circleNum;
+}
+
+private void dfs(int[][] M, int i, boolean[] hasVisited) {
+    hasVisited[i] = true;
+    for (int k = 0; k &lt; n; k++) {
+        if (M[i][k] == 1 &amp;&amp; !hasVisited[k]) {
+            dfs(M, k, hasVisited);
+        }
+    }
+}
+</code></pre>
+
+<h3 id="toc_8">4. 填充封闭区域</h3>
+
+<p>130. Surrounded Regions (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/surrounded-regions/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/surrounded-regions/description/">力扣</a></p>
+
+<pre><code class="language-markup">For example,
+X X X X
+X O O X
+X X O X
+X O X X
+
+After running your function, the board should be:
+X X X X
+X X X X
+X X X X
+X O X X
+</code></pre>
+
+<p>题目描述：使被 &#39;X&#39; 包围的 &#39;O&#39; 转换为 &#39;X&#39;。</p>
+
+<p>先填充最外侧，剩下的就是里侧了。</p>
+
+<pre><code class="language-java">private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+private int m, n;
+
+public void solve(char[][] board) {
+    if (board == null || board.length == 0) {
+        return;
+    }
+
+    m = board.length;
+    n = board[0].length;
+
+    for (int i = 0; i &lt; m; i++) {
+        dfs(board, i, 0);
+        dfs(board, i, n - 1);
+    }
+    for (int i = 0; i &lt; n; i++) {
+        dfs(board, 0, i);
+        dfs(board, m - 1, i);
+    }
+
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            if (board[i][j] == &#39;T&#39;) {
+                board[i][j] = &#39;O&#39;;
+            } else if (board[i][j] == &#39;O&#39;) {
+                board[i][j] = &#39;X&#39;;
+            }
+        }
+    }
+}
+
+private void dfs(char[][] board, int r, int c) {
+    if (r &lt; 0 || r &gt;= m || c &lt; 0 || c &gt;= n || board[r][c] != &#39;O&#39;) {
+        return;
+    }
+    board[r][c] = &#39;T&#39;;
+    for (int[] d : direction) {
+        dfs(board, r + d[0], c + d[1]);
+    }
+}
+</code></pre>
+
+<h3 id="toc_9">5. 能到达的太平洋和大西洋的区域</h3>
+
+<p>417. Pacific Atlantic Water Flow (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/pacific-atlantic-water-flow/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/pacific-atlantic-water-flow/description/">力扣</a></p>
+
+<pre><code class="language-markup">Given the following 5x5 matrix:
+
+  Pacific ~   ~   ~   ~   ~
+       ~  1   2   2   3  (5) *
+       ~  3   2   3  (4) (4) *
+       ~  2   4  (5)  3   1  *
+       ~ (6) (7)  1   4   5  *
+       ~ (5)  1   1   2   4  *
+          *   *   *   *   * Atlantic
+
+Return:
+[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (positions with parentheses in above matrix).
+</code></pre>
+
+<p>左边和上边是太平洋，右边和下边是大西洋，内部的数字代表海拔，海拔高的地方的水能够流到低的地方，求解水能够流到太平洋和大西洋的所有位置。</p>
+
+<pre><code class="language-java">private int m, n;
+private int[][] matrix;
+private int[][] direction = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+public List&lt;List&lt;Integer&gt;&gt; pacificAtlantic(int[][] matrix) {
+    List&lt;List&lt;Integer&gt;&gt; ret = new ArrayList&lt;&gt;();
+    if (matrix == null || matrix.length == 0) {
+        return ret;
+    }
+
+    m = matrix.length;
+    n = matrix[0].length;
+    this.matrix = matrix;
+    boolean[][] canReachP = new boolean[m][n];
+    boolean[][] canReachA = new boolean[m][n];
+
+    for (int i = 0; i &lt; m; i++) {
+        dfs(i, 0, canReachP);
+        dfs(i, n - 1, canReachA);
+    }
+    for (int i = 0; i &lt; n; i++) {
+        dfs(0, i, canReachP);
+        dfs(m - 1, i, canReachA);
+    }
+
+    for (int i = 0; i &lt; m; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            if (canReachP[i][j] &amp;&amp; canReachA[i][j]) {
+                ret.add(Arrays.asList(i, j));
+            }
+        }
+    }
+
+    return ret;
+}
+
+private void dfs(int r, int c, boolean[][] canReach) {
+    if (canReach[r][c]) {
+        return;
+    }
+    canReach[r][c] = true;
+    for (int[] d : direction) {
+        int nextR = d[0] + r;
+        int nextC = d[1] + c;
+        if (nextR &lt; 0 || nextR &gt;= m || nextC &lt; 0 || nextC &gt;= n
+                || matrix[r][c] &gt; matrix[nextR][nextC]) {
+
+            continue;
+        }
+        dfs(nextR, nextC, canReach);
+    }
+}
+</code></pre>
+
+<h2 id="toc_10">Backtracking</h2>
+
+<p>Backtracking（回溯）属于 DFS。</p>
+
+<ul>
+<li>普通 DFS 主要用在   <strong>可达性问题</strong>  ，这种问题只需要执行到特点的位置然后返回即可。</li>
+<li>而 Backtracking 主要用于求解   <strong>排列组合</strong>   问题，例如有 { &#39;a&#39;,&#39;b&#39;,&#39;c&#39; } 三个字符，求解所有由这三个字符排列得到的字符串，这种问题在执行到特定的位置返回之后还会继续执行求解过程。</li>
+</ul>
+
+<p>因为 Backtracking 不是立即返回，而要继续求解，因此在程序实现时，需要注意对元素的标记问题：</p>
+
+<ul>
+<li>在访问一个新元素进入新的递归调用时，需要将新元素标记为已经访问，这样才能在继续递归调用时不用重复访问该元素；</li>
+<li>但是在递归返回时，需要将元素标记为未访问，因为只需要保证在一个递归链中不同时访问一个元素，可以访问已经访问过但是不在当前递归链中的元素。</li>
+</ul>
+
+<h3 id="toc_11">1. 数字键盘组合</h3>
+
+<p>17. Letter Combinations of a Phone Number (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/letter-combinations-of-a-phone-number/description/">力扣</a></p>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/9823768c-212b-4b1a-b69a-b3f59e07b977.jpg"/> </div><br></p>
+
+<pre><code class="language-markup">Input:Digit string &quot;23&quot;
+Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].
+</code></pre>
+
+<pre><code class="language-java">private static final String[] KEYS = {&quot;&quot;, &quot;&quot;, &quot;abc&quot;, &quot;def&quot;, &quot;ghi&quot;, &quot;jkl&quot;, &quot;mno&quot;, &quot;pqrs&quot;, &quot;tuv&quot;, &quot;wxyz&quot;};
+
+public List&lt;String&gt; letterCombinations(String digits) {
+    List&lt;String&gt; combinations = new ArrayList&lt;&gt;();
+    if (digits == null || digits.length() == 0) {
+        return combinations;
+    }
+    doCombination(new StringBuilder(), combinations, digits);
+    return combinations;
+}
+
+private void doCombination(StringBuilder prefix, List&lt;String&gt; combinations, final String digits) {
+    if (prefix.length() == digits.length()) {
+        combinations.add(prefix.toString());
+        return;
+    }
+    int curDigits = digits.charAt(prefix.length()) - &#39;0&#39;;
+    String letters = KEYS[curDigits];
+    for (char c : letters.toCharArray()) {
+        prefix.append(c);                         // 添加
+        doCombination(prefix, combinations, digits);
+        prefix.deleteCharAt(prefix.length() - 1); // 删除
+    }
+}
+</code></pre>
+
+<h3 id="toc_12">2. IP 地址划分</h3>
+
+<p>93. Restore IP Addresses(Medium)</p>
+
+<p><a href="https://leetcode.com/problems/restore-ip-addresses/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/restore-ip-addresses/description/">力扣</a></p>
+
+<pre><code class="language-markup">Given &quot;25525511135&quot;,
+return [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;].
+</code></pre>
+
+<pre><code class="language-java">public List&lt;String&gt; restoreIpAddresses(String s) {
+    List&lt;String&gt; addresses = new ArrayList&lt;&gt;();
+    StringBuilder tempAddress = new StringBuilder();
+    doRestore(0, tempAddress, addresses, s);
+    return addresses;
+}
+
+private void doRestore(int k, StringBuilder tempAddress, List&lt;String&gt; addresses, String s) {
+    if (k == 4 || s.length() == 0) {
+        if (k == 4 &amp;&amp; s.length() == 0) {
+            addresses.add(tempAddress.toString());
+        }
+        return;
+    }
+    for (int i = 0; i &lt; s.length() &amp;&amp; i &lt;= 2; i++) {
+        if (i != 0 &amp;&amp; s.charAt(0) == &#39;0&#39;) {
+            break;
+        }
+        String part = s.substring(0, i + 1);
+        if (Integer.valueOf(part) &lt;= 255) {
+            if (tempAddress.length() != 0) {
+                part = &quot;.&quot; + part;
+            }
+            tempAddress.append(part);
+            doRestore(k + 1, tempAddress, addresses, s.substring(i + 1));
+            tempAddress.delete(tempAddress.length() - part.length(), tempAddress.length());
+        }
+    }
+}
+</code></pre>
+
+<h3 id="toc_13">3. 在矩阵中寻找字符串</h3>
+
+<p>79. Word Search (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/word-search/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/word-search/description/">力扣</a></p>
+
+<pre><code class="language-markup">For example,
+Given board =
+[
+  [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;],
+  [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;],
+  [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;]
+]
+word = &quot;ABCCED&quot;, -&gt; returns true,
+word = &quot;SEE&quot;, -&gt; returns true,
+word = &quot;ABCB&quot;, -&gt; returns false.
+</code></pre>
+
+<pre><code class="language-java">private final static int[][] direction = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+private int m;
+private int n;
+
+public boolean exist(char[][] board, String word) {
+    if (word == null || word.length() == 0) {
+        return true;
+    }
+    if (board == null || board.length == 0 || board[0].length == 0) {
+        return false;
+    }
+
+    m = board.length;
+    n = board[0].length;
+    boolean[][] hasVisited = new boolean[m][n];
+
+    for (int r = 0; r &lt; m; r++) {
+        for (int c = 0; c &lt; n; c++) {
+            if (backtracking(0, r, c, hasVisited, board, word)) {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+private boolean backtracking(int curLen, int r, int c, boolean[][] visited, final char[][] board, final String word) {
+    if (curLen == word.length()) {
+        return true;
+    }
+    if (r &lt; 0 || r &gt;= m || c &lt; 0 || c &gt;= n
+            || board[r][c] != word.charAt(curLen) || visited[r][c]) {
+
+        return false;
+    }
+
+    visited[r][c] = true;
+
+    for (int[] d : direction) {
+        if (backtracking(curLen + 1, r + d[0], c + d[1], visited, board, word)) {
+            return true;
+        }
+    }
+
+    visited[r][c] = false;
+
+    return false;
+}
+</code></pre>
+
+<h3 id="toc_14">4. 输出二叉树中所有从根到叶子的路径</h3>
+
+<p>257. Binary Tree Paths (Easy)</p>
+
+<p><a href="https://leetcode.com/problems/binary-tree-paths/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/binary-tree-paths/description/">力扣</a></p>
+
+<pre><code class="language-markup">  1
+ /  \
+2    3
+ \
+  5
+</code></pre>
+
+<pre><code class="language-markup">[&quot;1-&gt;2-&gt;5&quot;, &quot;1-&gt;3&quot;]
+</code></pre>
+
+<pre><code class="language-java">
+public List&lt;String&gt; binaryTreePaths(TreeNode root) {
+    List&lt;String&gt; paths = new ArrayList&lt;&gt;();
+    if (root == null) {
+        return paths;
+    }
+    List&lt;Integer&gt; values = new ArrayList&lt;&gt;();
+    backtracking(root, values, paths);
+    return paths;
+}
+
+private void backtracking(TreeNode node, List&lt;Integer&gt; values, List&lt;String&gt; paths) {
+    if (node == null) {
+        return;
+    }
+    values.add(node.val);
+    if (isLeaf(node)) {
+        paths.add(buildPath(values));
+    } else {
+        backtracking(node.left, values, paths);
+        backtracking(node.right, values, paths);
+    }
+    values.remove(values.size() - 1);
+}
+
+private boolean isLeaf(TreeNode node) {
+    return node.left == null &amp;&amp; node.right == null;
+}
+
+private String buildPath(List&lt;Integer&gt; values) {
+    StringBuilder str = new StringBuilder();
+    for (int i = 0; i &lt; values.size(); i++) {
+        str.append(values.get(i));
+        if (i != values.size() - 1) {
+            str.append(&quot;-&gt;&quot;);
+        }
+    }
+    return str.toString();
+}
+</code></pre>
+
+<h3 id="toc_15">5. 排列</h3>
+
+<p>46. Permutations (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/permutations/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/permutations/description/">力扣</a></p>
+
+<pre><code class="language-markup">[1,2,3] have the following permutations:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+</code></pre>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; permute(int[] nums) {
+    List&lt;List&lt;Integer&gt;&gt; permutes = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; permuteList = new ArrayList&lt;&gt;();
+    boolean[] hasVisited = new boolean[nums.length];
+    backtracking(permuteList, permutes, hasVisited, nums);
+    return permutes;
+}
+
+private void backtracking(List&lt;Integer&gt; permuteList, List&lt;List&lt;Integer&gt;&gt; permutes, boolean[] visited, final int[] nums) {
+    if (permuteList.size() == nums.length) {
+        permutes.add(new ArrayList&lt;&gt;(permuteList)); // 重新构造一个 List
+        return;
+    }
+    for (int i = 0; i &lt; visited.length; i++) {
+        if (visited[i]) {
+            continue;
+        }
+        visited[i] = true;
+        permuteList.add(nums[i]);
+        backtracking(permuteList, permutes, visited, nums);
+        permuteList.remove(permuteList.size() - 1);
+        visited[i] = false;
+    }
+}
+</code></pre>
+
+<h3 id="toc_16">6. 含有相同元素求排列</h3>
+
+<p>47. Permutations II (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/permutations-ii/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/permutations-ii/description/">力扣</a></p>
+
+<pre><code class="language-markup">[1,1,2] have the following unique permutations:
+[[1,1,2], [1,2,1], [2,1,1]]
+</code></pre>
+
+<p>数组元素可能含有相同的元素，进行排列时就有可能出现重复的排列，要求重复的排列只返回一个。</p>
+
+<p>在实现上，和 Permutations 不同的是要先排序，然后在添加一个元素时，判断这个元素是否等于前一个元素，如果等于，并且前一个元素还未访问，那么就跳过这个元素。</p>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; permuteUnique(int[] nums) {
+    List&lt;List&lt;Integer&gt;&gt; permutes = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; permuteList = new ArrayList&lt;&gt;();
+    Arrays.sort(nums);  // 排序
+    boolean[] hasVisited = new boolean[nums.length];
+    backtracking(permuteList, permutes, hasVisited, nums);
+    return permutes;
+}
+
+private void backtracking(List&lt;Integer&gt; permuteList, List&lt;List&lt;Integer&gt;&gt; permutes, boolean[] visited, final int[] nums) {
+    if (permuteList.size() == nums.length) {
+        permutes.add(new ArrayList&lt;&gt;(permuteList));
+        return;
+    }
+
+    for (int i = 0; i &lt; visited.length; i++) {
+        if (i != 0 &amp;&amp; nums[i] == nums[i - 1] &amp;&amp; !visited[i - 1]) {
+            continue;  // 防止重复
+        }
+        if (visited[i]){
+            continue;
+        }
+        visited[i] = true;
+        permuteList.add(nums[i]);
+        backtracking(permuteList, permutes, visited, nums);
+        permuteList.remove(permuteList.size() - 1);
+        visited[i] = false;
+    }
+}
+</code></pre>
+
+<h3 id="toc_17">7. 组合</h3>
+
+<p>77. Combinations (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/combinations/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combinations/description/">力扣</a></p>
+
+<pre><code class="language-markup">If n = 4 and k = 2, a solution is:
+[
+  [2,4],
+  [3,4],
+  [2,3],
+  [1,2],
+  [1,3],
+  [1,4],
+]
+</code></pre>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; combine(int n, int k) {
+    List&lt;List&lt;Integer&gt;&gt; combinations = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; combineList = new ArrayList&lt;&gt;();
+    backtracking(combineList, combinations, 1, k, n);
+    return combinations;
+}
+
+private void backtracking(List&lt;Integer&gt; combineList, List&lt;List&lt;Integer&gt;&gt; combinations, int start, int k, final int n) {
+    if (k == 0) {
+        combinations.add(new ArrayList&lt;&gt;(combineList));
+        return;
+    }
+    for (int i = start; i &lt;= n - k + 1; i++) {  // 剪枝
+        combineList.add(i);
+        backtracking(combineList, combinations, i + 1, k - 1, n);
+        combineList.remove(combineList.size() - 1);
+    }
+}
+</code></pre>
+
+<h3 id="toc_18">8. 组合求和</h3>
+
+<p>39. Combination Sum (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/combination-sum/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combination-sum/description/">力扣</a></p>
+
+<pre><code class="language-markup">given candidate set [2, 3, 6, 7] and target 7,
+A solution set is:
+[[7],[2, 2, 3]]
+</code></pre>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; combinationSum(int[] candidates, int target) {
+    List&lt;List&lt;Integer&gt;&gt; combinations = new ArrayList&lt;&gt;();
+    backtracking(new ArrayList&lt;&gt;(), combinations, 0, target, candidates);
+    return combinations;
+}
+
+private void backtracking(List&lt;Integer&gt; tempCombination, List&lt;List&lt;Integer&gt;&gt; combinations,
+                          int start, int target, final int[] candidates) {
+
+    if (target == 0) {
+        combinations.add(new ArrayList&lt;&gt;(tempCombination));
+        return;
+    }
+    for (int i = start; i &lt; candidates.length; i++) {
+        if (candidates[i] &lt;= target) {
+            tempCombination.add(candidates[i]);
+            backtracking(tempCombination, combinations, i, target - candidates[i], candidates);
+            tempCombination.remove(tempCombination.size() - 1);
+        }
+    }
+}
+</code></pre>
+
+<h3 id="toc_19">9. 含有相同元素的组合求和</h3>
+
+<p>40. Combination Sum II (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/combination-sum-ii/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combination-sum-ii/description/">力扣</a></p>
+
+<pre><code class="language-markup">For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8,
+A solution set is:
+[
+  [1, 7],
+  [1, 2, 5],
+  [2, 6],
+  [1, 1, 6]
+]
+</code></pre>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; combinationSum2(int[] candidates, int target) {
+    List&lt;List&lt;Integer&gt;&gt; combinations = new ArrayList&lt;&gt;();
+    Arrays.sort(candidates);
+    backtracking(new ArrayList&lt;&gt;(), combinations, new boolean[candidates.length], 0, target, candidates);
+    return combinations;
+}
+
+private void backtracking(List&lt;Integer&gt; tempCombination, List&lt;List&lt;Integer&gt;&gt; combinations,
+                          boolean[] hasVisited, int start, int target, final int[] candidates) {
+
+    if (target == 0) {
+        combinations.add(new ArrayList&lt;&gt;(tempCombination));
+        return;
+    }
+    for (int i = start; i &lt; candidates.length; i++) {
+        if (i != 0 &amp;&amp; candidates[i] == candidates[i - 1] &amp;&amp; !hasVisited[i - 1]) {
+            continue;
+        }
+        if (candidates[i] &lt;= target) {
+            tempCombination.add(candidates[i]);
+            hasVisited[i] = true;
+            backtracking(tempCombination, combinations, hasVisited, i + 1, target - candidates[i], candidates);
+            hasVisited[i] = false;
+            tempCombination.remove(tempCombination.size() - 1);
+        }
+    }
+}
+</code></pre>
+
+<h3 id="toc_20">10. 1-9 数字的组合求和</h3>
+
+<p>216. Combination Sum III (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/combination-sum-iii/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/combination-sum-iii/description/">力扣</a></p>
+
+<pre><code class="language-markup">Input: k = 3, n = 9
+
+Output:
+
+[[1,2,6], [1,3,5], [2,3,4]]
+</code></pre>
+
+<p>从 1-9 数字中选出 k 个数不重复的数，使得它们的和为 n。</p>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; combinationSum3(int k, int n) {
+    List&lt;List&lt;Integer&gt;&gt; combinations = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; path = new ArrayList&lt;&gt;();
+    backtracking(k, n, 1, path, combinations);
+    return combinations;
+}
+
+private void backtracking(int k, int n, int start,
+                          List&lt;Integer&gt; tempCombination, List&lt;List&lt;Integer&gt;&gt; combinations) {
+
+    if (k == 0 &amp;&amp; n == 0) {
+        combinations.add(new ArrayList&lt;&gt;(tempCombination));
+        return;
+    }
+    if (k == 0 || n == 0) {
+        return;
+    }
+    for (int i = start; i &lt;= 9; i++) {
+        tempCombination.add(i);
+        backtracking(k - 1, n - i, i + 1, tempCombination, combinations);
+        tempCombination.remove(tempCombination.size() - 1);
+    }
+}
+</code></pre>
+
+<h3 id="toc_21">11. 子集</h3>
+
+<p>78. Subsets (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/subsets/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/subsets/description/">力扣</a></p>
+
+<p>找出集合的所有子集，子集不能重复，[1, 2] 和 [2, 1] 这种子集算重复</p>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; subsets(int[] nums) {
+    List&lt;List&lt;Integer&gt;&gt; subsets = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; tempSubset = new ArrayList&lt;&gt;();
+    for (int size = 0; size &lt;= nums.length; size++) {
+        backtracking(0, tempSubset, subsets, size, nums); // 不同的子集大小
+    }
+    return subsets;
+}
+
+private void backtracking(int start, List&lt;Integer&gt; tempSubset, List&lt;List&lt;Integer&gt;&gt; subsets,
+                          final int size, final int[] nums) {
+
+    if (tempSubset.size() == size) {
+        subsets.add(new ArrayList&lt;&gt;(tempSubset));
+        return;
+    }
+    for (int i = start; i &lt; nums.length; i++) {
+        tempSubset.add(nums[i]);
+        backtracking(i + 1, tempSubset, subsets, size, nums);
+        tempSubset.remove(tempSubset.size() - 1);
+    }
+}
+</code></pre>
+
+<h3 id="toc_22">12. 含有相同元素求子集</h3>
+
+<p>90. Subsets II (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/subsets-ii/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/subsets-ii/description/">力扣</a></p>
+
+<pre><code class="language-markup">For example,
+If nums = [1,2,2], a solution is:
+
+[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]
+</code></pre>
+
+<pre><code class="language-java">public List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(int[] nums) {
+    Arrays.sort(nums);
+    List&lt;List&lt;Integer&gt;&gt; subsets = new ArrayList&lt;&gt;();
+    List&lt;Integer&gt; tempSubset = new ArrayList&lt;&gt;();
+    boolean[] hasVisited = new boolean[nums.length];
+    for (int size = 0; size &lt;= nums.length; size++) {
+        backtracking(0, tempSubset, subsets, hasVisited, size, nums); // 不同的子集大小
+    }
+    return subsets;
+}
+
+private void backtracking(int start, List&lt;Integer&gt; tempSubset, List&lt;List&lt;Integer&gt;&gt; subsets, boolean[] hasVisited,
+                          final int size, final int[] nums) {
+
+    if (tempSubset.size() == size) {
+        subsets.add(new ArrayList&lt;&gt;(tempSubset));
+        return;
+    }
+    for (int i = start; i &lt; nums.length; i++) {
+        if (i != 0 &amp;&amp; nums[i] == nums[i - 1] &amp;&amp; !hasVisited[i - 1]) {
+            continue;
+        }
+        tempSubset.add(nums[i]);
+        hasVisited[i] = true;
+        backtracking(i + 1, tempSubset, subsets, hasVisited, size, nums);
+        hasVisited[i] = false;
+        tempSubset.remove(tempSubset.size() - 1);
+    }
+}
+</code></pre>
+
+<h3 id="toc_23">13. 分割字符串使得每个部分都是回文数</h3>
+
+<p>131. Palindrome Partitioning (Medium)</p>
+
+<p><a href="https://leetcode.com/problems/palindrome-partitioning/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/palindrome-partitioning/description/">力扣</a></p>
+
+<pre><code class="language-markup">For example, given s = &quot;aab&quot;,
+Return
+
+[
+  [&quot;aa&quot;,&quot;b&quot;],
+  [&quot;a&quot;,&quot;a&quot;,&quot;b&quot;]
+]
+</code></pre>
+
+<pre><code class="language-java">public List&lt;List&lt;String&gt;&gt; partition(String s) {
+    List&lt;List&lt;String&gt;&gt; partitions = new ArrayList&lt;&gt;();
+    List&lt;String&gt; tempPartition = new ArrayList&lt;&gt;();
+    doPartition(s, partitions, tempPartition);
+    return partitions;
+}
+
+private void doPartition(String s, List&lt;List&lt;String&gt;&gt; partitions, List&lt;String&gt; tempPartition) {
+    if (s.length() == 0) {
+        partitions.add(new ArrayList&lt;&gt;(tempPartition));
+        return;
+    }
+    for (int i = 0; i &lt; s.length(); i++) {
+        if (isPalindrome(s, 0, i)) {
+            tempPartition.add(s.substring(0, i + 1));
+            doPartition(s.substring(i + 1), partitions, tempPartition);
+            tempPartition.remove(tempPartition.size() - 1);
+        }
+    }
+}
+
+private boolean isPalindrome(String s, int begin, int end) {
+    while (begin &lt; end) {
+        if (s.charAt(begin++) != s.charAt(end--)) {
+            return false;
+        }
+    }
+    return true;
+}
+</code></pre>
+
+<h3 id="toc_24">14. 数独</h3>
+
+<p>37. Sudoku Solver (Hard)</p>
+
+<p><a href="https://leetcode.com/problems/sudoku-solver/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/sudoku-solver/description/">力扣</a></p>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/0e8fdc96-83c1-4798-9abe-45fc91d70b9d.png"/> </div><br></p>
+
+<pre><code class="language-java">private boolean[][] rowsUsed = new boolean[9][10];
+private boolean[][] colsUsed = new boolean[9][10];
+private boolean[][] cubesUsed = new boolean[9][10];
+private char[][] board;
+
+public void solveSudoku(char[][] board) {
+    this.board = board;
+    for (int i = 0; i &lt; 9; i++)
+        for (int j = 0; j &lt; 9; j++) {
+            if (board[i][j] == &#39;.&#39;) {
+                continue;
+            }
+            int num = board[i][j] - &#39;0&#39;;
+            rowsUsed[i][num] = true;
+            colsUsed[j][num] = true;
+            cubesUsed[cubeNum(i, j)][num] = true;
+        }
+        backtracking(0, 0);
+}
+
+private boolean backtracking(int row, int col) {
+    while (row &lt; 9 &amp;&amp; board[row][col] != &#39;.&#39;) {
+        row = col == 8 ? row + 1 : row;
+        col = col == 8 ? 0 : col + 1;
+    }
+    if (row == 9) {
+        return true;
+    }
+    for (int num = 1; num &lt;= 9; num++) {
+        if (rowsUsed[row][num] || colsUsed[col][num] || cubesUsed[cubeNum(row, col)][num]) {
+            continue;
+        }
+        rowsUsed[row][num] = colsUsed[col][num] = cubesUsed[cubeNum(row, col)][num] = true;
+        board[row][col] = (char) (num + &#39;0&#39;);
+        if (backtracking(row, col)) {
+            return true;
+        }
+        board[row][col] = &#39;.&#39;;
+        rowsUsed[row][num] = colsUsed[col][num] = cubesUsed[cubeNum(row, col)][num] = false;
+    }
+    return false;
+}
+
+private int cubeNum(int i, int j) {
+    int r = i / 3;
+    int c = j / 3;
+    return r * 3 + c;
+}
+</code></pre>
+
+<h3 id="toc_25">15. N 皇后</h3>
+
+<p>51. N-Queens (Hard)</p>
+
+<p><a href="https://leetcode.com/problems/n-queens/description/">Leetcode</a> / <a href="https://leetcode-cn.com/problems/n-queens/description/">力扣</a></p>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/067b310c-6877-40fe-9dcf-10654e737485.jpg"/> </div><br></p>
+
+<p>在 n*n 的矩阵中摆放 n 个皇后，并且每个皇后不能在同一行，同一列，同一对角线上，求所有的 n 皇后的解。</p>
+
+<p>一行一行地摆放，在确定一行中的那个皇后应该摆在哪一列时，需要用三个标记数组来确定某一列是否合法，这三个标记数组分别为：列标记数组、45 度对角线标记数组和 135 度对角线标记数组。</p>
+
+<p>45 度对角线标记数组的长度为 2 * n - 1，通过下图可以明确 (r, c) 的位置所在的数组下标为 r + c。</p>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/9c422923-1447-4a3b-a4e1-97e663738187.jpg" width="300px"> </div><br></p>
+
+<p>135 度对角线标记数组的长度也是 2 * n - 1，(r, c) 的位置所在的数组下标为 n - 1 - (r - c)。</p>
+<div align="center">
+<p><img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7a85e285-e152-4116-b6dc-3fab27ba9437.jpg" width="300px"> </div><br></p>
+
+<pre><code class="language-java">private List&lt;List&lt;String&gt;&gt; solutions;
+private char[][] nQueens;
+private boolean[] colUsed;
+private boolean[] diagonals45Used;
+private boolean[] diagonals135Used;
+private int n;
+
+public List&lt;List&lt;String&gt;&gt; solveNQueens(int n) {
+    solutions = new ArrayList&lt;&gt;();
+    nQueens = new char[n][n];
+    for (int i = 0; i &lt; n; i++) {
+        Arrays.fill(nQueens[i], &#39;.&#39;);
+    }
+    colUsed = new boolean[n];
+    diagonals45Used = new boolean[2 * n - 1];
+    diagonals135Used = new boolean[2 * n - 1];
+    this.n = n;
+    backtracking(0);
+    return solutions;
+}
+
+private void backtracking(int row) {
+    if (row == n) {
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        for (char[] chars : nQueens) {
+            list.add(new String(chars));
+        }
+        solutions.add(list);
+        return;
+    }
+
+    for (int col = 0; col &lt; n; col++) {
+        int diagonals45Idx = row + col;
+        int diagonals135Idx = n - 1 - (row - col);
+        if (colUsed[col] || diagonals45Used[diagonals45Idx] || diagonals135Used[diagonals135Idx]) {
+            continue;
+        }
+        nQueens[row][col] = &#39;Q&#39;;
+        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = true;
+        backtracking(row + 1);
+        colUsed[col] = diagonals45Used[diagonals45Idx] = diagonals135Used[diagonals135Idx] = false;
+        nQueens[row][col] = &#39;.&#39;;
+    }
+}
+</code></pre>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="16354992464581.html"  title="Previous Post: Leetcode 题解 - 数学">&laquo; Leetcode 题解 - 数学</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="16354992464661.html" 
+	        title="Next Post: Leetcode 题解 - 排序">Leetcode 题解 - 排序 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '16354992464619.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0.4em 0;padding: 0;}
+  figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+
+</style>
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+
+
+  </body>
+</html>

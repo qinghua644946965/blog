@@ -1,0 +1,1627 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  JDK 提供的并发容器总结 - 
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html"></a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; </span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>micro-services</label></li>
+
+          
+            <li><a title="迁移到微服务综述" href="16354990520938.html">迁移到微服务综述</a></li>
+          
+            <li><a title="微服务" href="16354990521017.html">微服务</a></li>
+          
+            <li><a title="什么是微服务？微服务之间是如何独立通讯的？" href="16354990521127.html">什么是微服务？微服务之间是如何独立通讯的？</a></li>
+          
+            <li><a title="微服务技术栈" href="16354990521195.html">微服务技术栈</a></li>
+          
+            <li><a title="微服务治理策略" href="16354990521247.html">微服务治理策略</a></li>
+          
+            <li><a title="服务发现组件 Eureka 的几个主要调用过程" href="16354990521313.html">服务发现组件 Eureka 的几个主要调用过程</a></li>
+          
+            <li><a title="1.1 微服务和分布式数据管理问题" href="16354990521404.html">1.1 微服务和分布式数据管理问题</a></li>
+          
+            <li><a title="前言" href="16354990521458.html">前言</a></li>
+          
+            <li><a title="开发单体式应用" href="16354990521501.html">开发单体式应用</a></li>
+          
+            <li><a title="微服务架构" href="16354990521550.html">微服务架构</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>high-concurrency</label></li>
+
+          
+            <li><a title="面试题" href="16354990793626.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793679.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793713.html">面试题</a></li>
+          
+            <li><a title="Redis 哨兵集群实现高可用" href="16354990793751.html">Redis 哨兵集群实现高可用</a></li>
+          
+            <li><a title="面试题" href="16354990793793.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793832.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990793875.html">面试题</a></li>
+          
+            <li><a title="Redis 主从架构" href="16354990793916.html">Redis 主从架构</a></li>
+          
+            <li><a title="面试题" href="16354990793967.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794013.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794053.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794097.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794153.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794200.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794254.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794301.html">面试题</a></li>
+          
+            <li><a title="消息队列面试场景" href="16354990794344.html">消息队列面试场景</a></li>
+          
+            <li><a title="面试题" href="16354990794383.html">面试题</a></li>
+          
+            <li><a title="如何限流？在工作中是怎么做的？说一下具体的实现？" href="16354990794425.html">如何限流？在工作中是怎么做的？说一下具体的实现？</a></li>
+          
+            <li><a title="面试题" href="16354990794466.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794513.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794565.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794610.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794649.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794700.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794742.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794792.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794830.html">面试题</a></li>
+          
+            <li><a title="Lucene 和 ES 的前世今生" href="16354990794877.html">Lucene 和 ES 的前世今生</a></li>
+          
+            <li><a title="面试题" href="16354990794923.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990794969.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990795016.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990795066.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354990795109.html">面试题</a></li>
+          
+            <li><a title="高并发架构" href="16354990795148.html">高并发架构</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>high-availability</label></li>
+
+          
+            <li><a title="如何做技术选型？Sentinel 还是 Hystrix？" href="16354991174692.html">如何做技术选型？Sentinel 还是 Hystrix？</a></li>
+          
+            <li><a title="基于 timeout 机制为服务接口调用超时提供安全保护" href="16354991174751.html">基于 timeout 机制为服务接口调用超时提供安全保护</a></li>
+          
+            <li><a title="基于 Hystrix 线程池技术实现资源隔离" href="16354991174802.html">基于 Hystrix 线程池技术实现资源隔离</a></li>
+          
+            <li><a title="深入 Hystrix 线程池隔离与接口限流" href="16354991174852.html">深入 Hystrix 线程池隔离与接口限流</a></li>
+          
+            <li><a title="基于 Hystrix 信号量机制实现资源隔离" href="16354991174902.html">基于 Hystrix 信号量机制实现资源隔离</a></li>
+          
+            <li><a title="基于 request cache 请求缓存技术优化批量商品数据查询接口" href="16354991174952.html">基于 request cache 请求缓存技术优化批量商品数据查询接口</a></li>
+          
+            <li><a title="深入 Hystrix 执行时内部原理" href="16354991174997.html">深入 Hystrix 执行时内部原理</a></li>
+          
+            <li><a title="用 Hystrix 构建高可用服务架构" href="16354991175043.html">用 Hystrix 构建高可用服务架构</a></li>
+          
+            <li><a title="基于本地缓存的 fallback 降级机制" href="16354991175086.html">基于本地缓存的 fallback 降级机制</a></li>
+          
+            <li><a title="Hystrix 隔离策略细粒度控制" href="16354991175126.html">Hystrix 隔离策略细粒度控制</a></li>
+          
+            <li><a title="深入 Hystrix 断路器执行原理" href="16354991175168.html">深入 Hystrix 断路器执行原理</a></li>
+          
+            <li><a title="电商网站的商品详情页系统架构" href="16354991175209.html">电商网站的商品详情页系统架构</a></li>
+          
+            <li><a title="高可用架构" href="16354991175250.html">高可用架构</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>distributed-system</label></li>
+
+          
+            <li><a title="面试题" href="16354991711770.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991711905.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991711991.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712049.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712107.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712172.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712237.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712273.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712309.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712360.html">面试题</a></li>
+          
+            <li><a title="分布式系统面试连环炮" href="16354991712393.html">分布式系统面试连环炮</a></li>
+          
+            <li><a title="面试题" href="16354991712426.html">面试题</a></li>
+          
+            <li><a title="分布式系统 CAP 定理 P 代表什么含义" href="16354991712456.html">分布式系统 CAP 定理 P 代表什么含义</a></li>
+          
+            <li><a title="面试题" href="16354991712501.html">面试题</a></li>
+          
+            <li><a title="面试题" href="16354991712533.html">面试题</a></li>
+          
+            <li><a title="分布式系统" href="16354991712569.html">分布式系统</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>big-data</label></li>
+
+          
+            <li><a title="大数据中 TopK 问题的常用套路" href="16354991934685.html">大数据中 TopK 问题的常用套路</a></li>
+          
+            <li><a title="如何按照 query 的频度排序？" href="16354991934749.html">如何按照 query 的频度排序？</a></li>
+          
+            <li><a title="如何从大量数据中找出高频词？" href="16354991934812.html">如何从大量数据中找出高频词？</a></li>
+          
+            <li><a title="如何找出某一天访问百度网站最多的 IP？" href="16354991934855.html">如何找出某一天访问百度网站最多的 IP？</a></li>
+          
+            <li><a title="如何找出排名前 500 的数？" href="16354991934904.html">如何找出排名前 500 的数？</a></li>
+          
+            <li><a title="如何在大量的数据中找出不重复的整数？" href="16354991934938.html">如何在大量的数据中找出不重复的整数？</a></li>
+          
+            <li><a title="如何从 5 亿个数中找出中位数？" href="16354991934970.html">如何从 5 亿个数中找出中位数？</a></li>
+          
+            <li><a title="如何查询最热门的查询串？" href="16354991935000.html">如何查询最热门的查询串？</a></li>
+          
+            <li><a title="如何从大量的 URL 中找出相同的 URL？" href="16354991935032.html">如何从大量的 URL 中找出相同的 URL？</a></li>
+          
+            <li><a title="如何在大量的数据中判断一个数是否存在？" href="16354991935061.html">如何在大量的数据中判断一个数是否存在？</a></li>
+          
+            <li><a title="如何统计不同电话号码的个数？" href="16354991935090.html">如何统计不同电话号码的个数？</a></li>
+          
+            <li><a title="海量数据处理" href="16354991935121.html">海量数据处理</a></li>
+          
+
+      
+        <li class="divider"></li>
+        <li><label>notes</label></li>
+
+          
+            <li><a title="面向对象思想" href="16354992461478.html">面向对象思想</a></li>
+          
+            <li><a title="集群" href="16354992461525.html">集群</a></li>
+          
+            <li><a title="<!-- GFM-TOC -->" href="16354992461566.html"><!-- GFM-TOC --></a></li>
+          
+            <li><a title="1. 适配器（Adapter）" href="16354992461616.html">1. 适配器（Adapter）</a></li>
+          
+            <li><a title="迭代器（Iterator）" href="16354992461648.html">迭代器（Iterator）</a></li>
+          
+            <li><a title="责任链（Chain Of Responsibility）" href="16354992461678.html">责任链（Chain Of Responsibility）</a></li>
+          
+            <li><a title="访问者（Visitor）" href="16354992461708.html">访问者（Visitor）</a></li>
+          
+            <li><a title="解释器（Interpreter）" href="16354992461737.html">解释器（Interpreter）</a></li>
+          
+            <li><a title="7. 观察者（Observer）" href="16354992461767.html">7. 观察者（Observer）</a></li>
+          
+            <li><a title="装饰（Decorator）" href="16354992461796.html">装饰（Decorator）</a></li>
+          
+            <li><a title="组合（Composite）" href="16354992461824.html">组合（Composite）</a></li>
+          
+            <li><a title="简单工厂（Simple Factory）" href="16354992461851.html">简单工厂（Simple Factory）</a></li>
+          
+            <li><a title="9. 策略（Strategy）" href="16354992461877.html">9. 策略（Strategy）</a></li>
+          
+            <li><a title="空对象（Null）" href="16354992461903.html">空对象（Null）</a></li>
+          
+            <li><a title="一、前言" href="16354992461928.html">一、前言</a></li>
+          
+            <li><a title="设计模式目录" href="16354992461958.html">设计模式目录</a></li>
+          
+            <li><a title="5. 生成器（Builder）" href="16354992462049.html">5. 生成器（Builder）</a></li>
+          
+            <li><a title="8. 状态（State）" href="16354992462082.html">8. 状态（State）</a></li>
+          
+            <li><a title="模板方法（Template Method）" href="16354992462113.html">模板方法（Template Method）</a></li>
+          
+            <li><a title="" href="16354992462143.html"></a></li>
+          
+            <li><a title="4. 抽象工厂（Abstract Factory）" href="16354992462175.html">4. 抽象工厂（Abstract Factory）</a></li>
+          
+            <li><a title="工厂方法（Factory Method）" href="16354992462206.html">工厂方法（Factory Method）</a></li>
+          
+            <li><a title="外观（Facade）" href="16354992462238.html">外观（Facade）</a></li>
+          
+            <li><a title="备忘录（Memento）" href="16354992462270.html">备忘录（Memento）</a></li>
+          
+            <li><a title="2. 命令（Command）" href="16354992462300.html">2. 命令（Command）</a></li>
+          
+            <li><a title="6. 原型模式（Prototype）" href="16354992462338.html">6. 原型模式（Prototype）</a></li>
+          
+            <li><a title="代理（Proxy）" href="16354992462373.html">代理（Proxy）</a></li>
+          
+            <li><a title="享元（Flyweight）" href="16354992462410.html">享元（Flyweight）</a></li>
+          
+            <li><a title="5. 中介者（Mediator）" href="16354992462446.html">5. 中介者（Mediator）</a></li>
+          
+            <li><a title="单例（Singleton）" href="16354992462488.html">单例（Singleton）</a></li>
+          
+            <li><a title="计算机网络 - 链路层" href="16354992462560.html">计算机网络 - 链路层</a></li>
+          
+            <li><a title="计算机网络 - 网络层" href="16354992462602.html">计算机网络 - 网络层</a></li>
+          
+            <li><a title="计算机网络" href="16354992462636.html">计算机网络</a></li>
+          
+            <li><a title="计算机网络 - 物理层" href="16354992462686.html">计算机网络 - 物理层</a></li>
+          
+            <li><a title="计算机网络 - 概述" href="16354992462724.html">计算机网络 - 概述</a></li>
+          
+            <li><a title="计算机网络 - 应用层" href="16354992462761.html">计算机网络 - 应用层</a></li>
+          
+            <li><a title="计算机网络 - 传输层" href="16354992462800.html">计算机网络 - 传输层</a></li>
+          
+            <li><a title="计算机操作系统 - 链接" href="16354992462870.html">计算机操作系统 - 链接</a></li>
+          
+            <li><a title="计算机操作系统 - 进程管理" href="16354992462906.html">计算机操作系统 - 进程管理</a></li>
+          
+            <li><a title="计算机操作系统 - 设备管理" href="16354992462944.html">计算机操作系统 - 设备管理</a></li>
+          
+            <li><a title="计算机操作系统" href="16354992462975.html">计算机操作系统</a></li>
+          
+            <li><a title="计算机操作系统 - 死锁" href="16354992463024.html">计算机操作系统 - 死锁</a></li>
+          
+            <li><a title="计算机操作系统 - 概述" href="16354992463058.html">计算机操作系统 - 概述</a></li>
+          
+            <li><a title="计算机操作系统 - 内存管理" href="16354992463092.html">计算机操作系统 - 内存管理</a></li>
+          
+            <li><a title="缓存" href="16354992463126.html">缓存</a></li>
+          
+            <li><a title="系统设计基础" href="16354992463161.html">系统设计基础</a></li>
+          
+            <li><a title="算法 - 算法分析" href="16354992463226.html">算法 - 算法分析</a></li>
+          
+            <li><a title="算法 - 符号表" href="16354992463265.html">算法 - 符号表</a></li>
+          
+            <li><a title="算法目录" href="16354992463300.html">算法目录</a></li>
+          
+            <li><a title="算法 - 栈和队列" href="16354992463349.html">算法 - 栈和队列</a></li>
+          
+            <li><a title="算法 - 排序" href="16354992463383.html">算法 - 排序</a></li>
+          
+            <li><a title="算法 - 并查集" href="16354992463417.html">算法 - 并查集</a></li>
+          
+            <li><a title="算法 - 其它" href="16354992463451.html">算法 - 其它</a></li>
+          
+            <li><a title="消息队列" href="16354992463481.html">消息队列</a></li>
+          
+            <li><a title="正则表达式" href="16354992463516.html">正则表达式</a></li>
+          
+            <li><a title="构建工具" href="16354992463551.html">构建工具</a></li>
+          
+            <li><a title="数据库系统原理" href="16354992463586.html">数据库系统原理</a></li>
+          
+            <li><a title="攻击技术" href="16354992463625.html">攻击技术</a></li>
+          
+            <li><a title="剑指 Offer 题解" href="16354992463690.html">剑指 Offer 题解</a></li>
+          
+            <li><a title="分布式" href="16354992463919.html">分布式</a></li>
+          
+            <li><a title="<!-- GFM-TOC -->" href="16354992463986.html"><!-- GFM-TOC --></a></li>
+          
+            <li><a title="Socket" href="16354992464020.html">Socket</a></li>
+          
+            <li><a title="<!-- GFM-TOC -->" href="16354992464055.html"><!-- GFM-TOC --></a></li>
+          
+            <li><a title="SQL 语法" href="16354992464093.html">SQL 语法</a></li>
+          
+            <li><a title="SQL 练习" href="16354992464132.html">SQL 练习</a></li>
+          
+            <li><a title="Redis" href="16354992464169.html">Redis</a></li>
+          
+            <li><a title="MySQL" href="16354992464205.html">MySQL</a></li>
+          
+            <li><a title="Linux" href="16354992464242.html">Linux</a></li>
+          
+            <li><a title="Leetcode 题解 - 链表" href="16354992464314.html">Leetcode 题解 - 链表</a></li>
+          
+            <li><a title="Leetcode 题解 - 贪心思想" href="16354992464348.html">Leetcode 题解 - 贪心思想</a></li>
+          
+            <li><a title="Leetcode 题解" href="16354992464382.html">Leetcode 题解</a></li>
+          
+            <li><a title="Leetcode 题解 - 树" href="16354992464461.html">Leetcode 题解 - 树</a></li>
+          
+            <li><a title="Leetcode 题解 - 栈和队列" href="16354992464509.html">Leetcode 题解 - 栈和队列</a></li>
+          
+            <li><a title="Leetcode 题解 - 数组与矩阵" href="16354992464543.html">Leetcode 题解 - 数组与矩阵</a></li>
+          
+            <li><a title="Leetcode 题解 - 数学" href="16354992464581.html">Leetcode 题解 - 数学</a></li>
+          
+            <li><a title="Leetcode 题解 - 搜索" href="16354992464619.html">Leetcode 题解 - 搜索</a></li>
+          
+            <li><a title="Leetcode 题解 - 排序" href="16354992464661.html">Leetcode 题解 - 排序</a></li>
+          
+            <li><a title="Leetcode 题解 - 字符串" href="16354992464693.html">Leetcode 题解 - 字符串</a></li>
+          
+            <li><a title="Leetcode 题解 - 图" href="16354992464724.html">Leetcode 题解 - 图</a></li>
+          
+            <li><a title="Leetcode 题解 - 哈希表" href="16354992464756.html">Leetcode 题解 - 哈希表</a></li>
+          
+            <li><a title="Leetcode 题解 - 双指针" href="16354992464785.html">Leetcode 题解 - 双指针</a></li>
+          
+            <li><a title="Leetcode 题解 - 动态规划" href="16354992464826.html">Leetcode 题解 - 动态规划</a></li>
+          
+            <li><a title="Leetcode 题解 - 分治" href="16354992464872.html">Leetcode 题解 - 分治</a></li>
+          
+            <li><a title="Leetcode 题解 - 位运算" href="16354992464906.html">Leetcode 题解 - 位运算</a></li>
+          
+            <li><a title="Leetcode 题解 - 二分查找" href="16354992464939.html">Leetcode 题解 - 二分查找</a></li>
+          
+            <li><a title="Java 虚拟机" href="16354992464975.html">Java 虚拟机</a></li>
+          
+            <li><a title="Java 并发" href="16354992465013.html">Java 并发</a></li>
+          
+            <li><a title="Java 容器" href="16354992465054.html">Java 容器</a></li>
+          
+            <li><a title="Java 基础" href="16354992465090.html">Java 基础</a></li>
+          
+            <li><a title="Java IO" href="16354992465129.html">Java IO</a></li>
+          
+            <li><a title="HTTP" href="16354992465167.html">HTTP</a></li>
+          
+            <li><a title="Git" href="16354992465206.html">Git</a></li>
+          
+            <li><a title="Docker" href="16354992465240.html">Docker</a></li>
+          
+            <li><a title="9. 用两个栈实现队列" href="16354992465270.html">9. 用两个栈实现队列</a></li>
+          
+            <li><a title="8. 二叉树的下一个结点" href="16354992465304.html">8. 二叉树的下一个结点</a></li>
+          
+            <li><a title="7. 重建二叉树" href="16354992465337.html">7. 重建二叉树</a></li>
+          
+            <li><a title="68. 树中两个节点的最低公共祖先" href="16354992465367.html">68. 树中两个节点的最低公共祖先</a></li>
+          
+            <li><a title="67. 把字符串转换成整数" href="16354992465397.html">67. 把字符串转换成整数</a></li>
+          
+            <li><a title="66. 构建乘积数组" href="16354992465429.html">66. 构建乘积数组</a></li>
+          
+            <li><a title="65. 不用加减乘除做加法" href="16354992465460.html">65. 不用加减乘除做加法</a></li>
+          
+            <li><a title="64. 求 1+2+3+...+n" href="16354992465490.html">64. 求 1+2+3+...+n</a></li>
+          
+            <li><a title="63. 股票的最大利润" href="16354992465519.html">63. 股票的最大利润</a></li>
+          
+            <li><a title="62. 圆圈中最后剩下的数" href="16354992465549.html">62. 圆圈中最后剩下的数</a></li>
+          
+            <li><a title="61. 扑克牌顺子" href="16354992465577.html">61. 扑克牌顺子</a></li>
+          
+            <li><a title="60. n 个骰子的点数" href="16354992465607.html">60. n 个骰子的点数</a></li>
+          
+            <li><a title="6. 从尾到头打印链表" href="16354992465635.html">6. 从尾到头打印链表</a></li>
+          
+            <li><a title="59. 滑动窗口的最大值" href="16354992465663.html">59. 滑动窗口的最大值</a></li>
+          
+            <li><a title="58.2 左旋转字符串" href="16354992465691.html">58.2 左旋转字符串</a></li>
+          
+            <li><a title="58.1 翻转单词顺序列" href="16354992465720.html">58.1 翻转单词顺序列</a></li>
+          
+            <li><a title="57.2 和为 S 的连续正数序列" href="16354992465750.html">57.2 和为 S 的连续正数序列</a></li>
+          
+            <li><a title="57.1 和为 S 的两个数字" href="16354992465779.html">57.1 和为 S 的两个数字</a></li>
+          
+            <li><a title="56. 数组中只出现一次的数字" href="16354992465806.html">56. 数组中只出现一次的数字</a></li>
+          
+            <li><a title="55.2 平衡二叉树" href="16354992465834.html">55.2 平衡二叉树</a></li>
+          
+            <li><a title="55.1 二叉树的深度" href="16354992465862.html">55.1 二叉树的深度</a></li>
+          
+            <li><a title="54. 二叉查找树的第 K 个结点" href="16354992465890.html">54. 二叉查找树的第 K 个结点</a></li>
+          
+            <li><a title="53. 数字在排序数组中出现的次数" href="16354992465919.html">53. 数字在排序数组中出现的次数</a></li>
+          
+            <li><a title="52. 两个链表的第一个公共结点" href="16354992465948.html">52. 两个链表的第一个公共结点</a></li>
+          
+            <li><a title="51. 数组中的逆序对" href="16354992465978.html">51. 数组中的逆序对</a></li>
+          
+            <li><a title="50. 第一个只出现一次的字符位置" href="16354992466007.html">50. 第一个只出现一次的字符位置</a></li>
+          
+            <li><a title="5. 替换空格" href="16354992466035.html">5. 替换空格</a></li>
+          
+            <li><a title="49. 丑数" href="16354992466064.html">49. 丑数</a></li>
+          
+            <li><a title="48. 最长不含重复字符的子字符串" href="16354992466092.html">48. 最长不含重复字符的子字符串</a></li>
+          
+            <li><a title="47. 礼物的最大价值" href="16354992466120.html">47. 礼物的最大价值</a></li>
+          
+            <li><a title="46. 把数字翻译成字符串" href="16354992466147.html">46. 把数字翻译成字符串</a></li>
+          
+            <li><a title="45. 把数组排成最小的数" href="16354992466176.html">45. 把数组排成最小的数</a></li>
+          
+            <li><a title="44. 数字序列中的某一位数字" href="16354992466205.html">44. 数字序列中的某一位数字</a></li>
+          
+            <li><a title="43. 从 1 到 n 整数中 1 出现的次数" href="16354992466236.html">43. 从 1 到 n 整数中 1 出现的次数</a></li>
+          
+            <li><a title="42. 连续子数组的最大和" href="16354992466265.html">42. 连续子数组的最大和</a></li>
+          
+            <li><a title="41.2 字符流中第一个不重复的字符" href="16354992466295.html">41.2 字符流中第一个不重复的字符</a></li>
+          
+            <li><a title="41.1 数据流中的中位数" href="16354992466322.html">41.1 数据流中的中位数</a></li>
+          
+            <li><a title="40. 最小的 K 个数" href="16354992466350.html">40. 最小的 K 个数</a></li>
+          
+            <li><a title="4. 二维数组中的查找" href="16354992466380.html">4. 二维数组中的查找</a></li>
+          
+            <li><a title="39. 数组中出现次数超过一半的数字" href="16354992466411.html">39. 数组中出现次数超过一半的数字</a></li>
+          
+            <li><a title="38. 字符串的排列" href="16354992466438.html">38. 字符串的排列</a></li>
+          
+            <li><a title="37. 序列化二叉树" href="16354992466467.html">37. 序列化二叉树</a></li>
+          
+            <li><a title="36. 二叉搜索树与双向链表" href="16354992466497.html">36. 二叉搜索树与双向链表</a></li>
+          
+            <li><a title="35. 复杂链表的复制" href="16354992466525.html">35. 复杂链表的复制</a></li>
+          
+            <li><a title="34. 二叉树中和为某一值的路径" href="16354992466553.html">34. 二叉树中和为某一值的路径</a></li>
+          
+            <li><a title="33. 二叉搜索树的后序遍历序列" href="16354992466580.html">33. 二叉搜索树的后序遍历序列</a></li>
+          
+            <li><a title="32.3 按之字形顺序打印二叉树" href="16354992466607.html">32.3 按之字形顺序打印二叉树</a></li>
+          
+            <li><a title="32.2 把二叉树打印成多行" href="16354992466638.html">32.2 把二叉树打印成多行</a></li>
+          
+            <li><a title="32.1 从上往下打印二叉树" href="16354992466668.html">32.1 从上往下打印二叉树</a></li>
+          
+            <li><a title="31. 栈的压入、弹出序列" href="16354992466698.html">31. 栈的压入、弹出序列</a></li>
+          
+            <li><a title="30. 包含 min 函数的栈" href="16354992466727.html">30. 包含 min 函数的栈</a></li>
+          
+            <li><a title="3. 数组中重复的数字" href="16354992466757.html">3. 数组中重复的数字</a></li>
+          
+            <li><a title="29. 顺时针打印矩阵" href="16354992466786.html">29. 顺时针打印矩阵</a></li>
+          
+            <li><a title="28. 对称的二叉树" href="16354992466815.html">28. 对称的二叉树</a></li>
+          
+            <li><a title="27. 二叉树的镜像" href="16354992466843.html">27. 二叉树的镜像</a></li>
+          
+            <li><a title="26. 树的子结构" href="16354992466871.html">26. 树的子结构</a></li>
+          
+            <li><a title="25. 合并两个排序的链表" href="16354992466899.html">25. 合并两个排序的链表</a></li>
+          
+            <li><a title="24. 反转链表" href="16354992466929.html">24. 反转链表</a></li>
+          
+            <li><a title="23. 链表中环的入口结点" href="16354992466956.html">23. 链表中环的入口结点</a></li>
+          
+            <li><a title="22. 链表中倒数第 K 个结点" href="16354992466984.html">22. 链表中倒数第 K 个结点</a></li>
+          
+            <li><a title="21. 调整数组顺序使奇数位于偶数前面" href="16354992467010.html">21. 调整数组顺序使奇数位于偶数前面</a></li>
+          
+            <li><a title="20. 表示数值的字符串" href="16354992467040.html">20. 表示数值的字符串</a></li>
+          
+            <li><a title="19. 正则表达式匹配" href="16354992467084.html">19. 正则表达式匹配</a></li>
+          
+            <li><a title="18.2 删除链表中重复的结点" href="16354992467117.html">18.2 删除链表中重复的结点</a></li>
+          
+            <li><a title="18.1 在 O(1) 时间内删除链表节点" href="16354992467154.html">18.1 在 O(1) 时间内删除链表节点</a></li>
+          
+            <li><a title="17. 打印从 1 到最大的 n 位数" href="16354992467188.html">17. 打印从 1 到最大的 n 位数</a></li>
+          
+            <li><a title="16. 数值的整数次方" href="16354992467223.html">16. 数值的整数次方</a></li>
+          
+            <li><a title="15. 二进制中 1 的个数" href="16354992467259.html">15. 二进制中 1 的个数</a></li>
+          
+            <li><a title="14. 剪绳子" href="16354992467294.html">14. 剪绳子</a></li>
+          
+            <li><a title="13. 机器人的运动范围" href="16354992467329.html">13. 机器人的运动范围</a></li>
+          
+            <li><a title="12. 矩阵中的路径" href="16354992467363.html">12. 矩阵中的路径</a></li>
+          
+            <li><a title="11. 旋转数组的最小数字" href="16354992467398.html">11. 旋转数组的最小数字</a></li>
+          
+            <li><a title="10.4 变态跳台阶" href="16354992467430.html">10.4 变态跳台阶</a></li>
+          
+            <li><a title="10.3 跳台阶" href="16354992467461.html">10.3 跳台阶</a></li>
+          
+            <li><a title="10.2 矩形覆盖" href="16354992467487.html">10.2 矩形覆盖</a></li>
+          
+            <li><a title="10.1 斐波那契数列" href="16354992467516.html">10.1 斐波那契数列</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>micro-services</span></li>
+                        
+                          <li><a title="迁移到微服务综述" href="16354990520938.html">迁移到微服务综述</a></li>
+                        
+                          <li><a title="微服务" href="16354990521017.html">微服务</a></li>
+                        
+                          <li><a title="什么是微服务？微服务之间是如何独立通讯的？" href="16354990521127.html">什么是微服务？微服务之间是如何独立通讯的？</a></li>
+                        
+                          <li><a title="微服务技术栈" href="16354990521195.html">微服务技术栈</a></li>
+                        
+                          <li><a title="微服务治理策略" href="16354990521247.html">微服务治理策略</a></li>
+                        
+                          <li><a title="服务发现组件 Eureka 的几个主要调用过程" href="16354990521313.html">服务发现组件 Eureka 的几个主要调用过程</a></li>
+                        
+                          <li><a title="1.1 微服务和分布式数据管理问题" href="16354990521404.html">1.1 微服务和分布式数据管理问题</a></li>
+                        
+                          <li><a title="前言" href="16354990521458.html">前言</a></li>
+                        
+                          <li><a title="开发单体式应用" href="16354990521501.html">开发单体式应用</a></li>
+                        
+                          <li><a title="微服务架构" href="16354990521550.html">微服务架构</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>high-concurrency</span></li>
+                        
+                          <li><a title="面试题" href="16354990793626.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793679.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793713.html">面试题</a></li>
+                        
+                          <li><a title="Redis 哨兵集群实现高可用" href="16354990793751.html">Redis 哨兵集群实现高可用</a></li>
+                        
+                          <li><a title="面试题" href="16354990793793.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793832.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990793875.html">面试题</a></li>
+                        
+                          <li><a title="Redis 主从架构" href="16354990793916.html">Redis 主从架构</a></li>
+                        
+                          <li><a title="面试题" href="16354990793967.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794013.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794053.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794097.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794153.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794200.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794254.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794301.html">面试题</a></li>
+                        
+                          <li><a title="消息队列面试场景" href="16354990794344.html">消息队列面试场景</a></li>
+                        
+                          <li><a title="面试题" href="16354990794383.html">面试题</a></li>
+                        
+                          <li><a title="如何限流？在工作中是怎么做的？说一下具体的实现？" href="16354990794425.html">如何限流？在工作中是怎么做的？说一下具体的实现？</a></li>
+                        
+                          <li><a title="面试题" href="16354990794466.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794513.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794565.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794610.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794649.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794700.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794742.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794792.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794830.html">面试题</a></li>
+                        
+                          <li><a title="Lucene 和 ES 的前世今生" href="16354990794877.html">Lucene 和 ES 的前世今生</a></li>
+                        
+                          <li><a title="面试题" href="16354990794923.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990794969.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990795016.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990795066.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354990795109.html">面试题</a></li>
+                        
+                          <li><a title="高并发架构" href="16354990795148.html">高并发架构</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>high-availability</span></li>
+                        
+                          <li><a title="如何做技术选型？Sentinel 还是 Hystrix？" href="16354991174692.html">如何做技术选型？Sentinel 还是 Hystrix？</a></li>
+                        
+                          <li><a title="基于 timeout 机制为服务接口调用超时提供安全保护" href="16354991174751.html">基于 timeout 机制为服务接口调用超时提供安全保护</a></li>
+                        
+                          <li><a title="基于 Hystrix 线程池技术实现资源隔离" href="16354991174802.html">基于 Hystrix 线程池技术实现资源隔离</a></li>
+                        
+                          <li><a title="深入 Hystrix 线程池隔离与接口限流" href="16354991174852.html">深入 Hystrix 线程池隔离与接口限流</a></li>
+                        
+                          <li><a title="基于 Hystrix 信号量机制实现资源隔离" href="16354991174902.html">基于 Hystrix 信号量机制实现资源隔离</a></li>
+                        
+                          <li><a title="基于 request cache 请求缓存技术优化批量商品数据查询接口" href="16354991174952.html">基于 request cache 请求缓存技术优化批量商品数据查询接口</a></li>
+                        
+                          <li><a title="深入 Hystrix 执行时内部原理" href="16354991174997.html">深入 Hystrix 执行时内部原理</a></li>
+                        
+                          <li><a title="用 Hystrix 构建高可用服务架构" href="16354991175043.html">用 Hystrix 构建高可用服务架构</a></li>
+                        
+                          <li><a title="基于本地缓存的 fallback 降级机制" href="16354991175086.html">基于本地缓存的 fallback 降级机制</a></li>
+                        
+                          <li><a title="Hystrix 隔离策略细粒度控制" href="16354991175126.html">Hystrix 隔离策略细粒度控制</a></li>
+                        
+                          <li><a title="深入 Hystrix 断路器执行原理" href="16354991175168.html">深入 Hystrix 断路器执行原理</a></li>
+                        
+                          <li><a title="电商网站的商品详情页系统架构" href="16354991175209.html">电商网站的商品详情页系统架构</a></li>
+                        
+                          <li><a title="高可用架构" href="16354991175250.html">高可用架构</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>distributed-system</span></li>
+                        
+                          <li><a title="面试题" href="16354991711770.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991711905.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991711991.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712049.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712107.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712172.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712237.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712273.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712309.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712360.html">面试题</a></li>
+                        
+                          <li><a title="分布式系统面试连环炮" href="16354991712393.html">分布式系统面试连环炮</a></li>
+                        
+                          <li><a title="面试题" href="16354991712426.html">面试题</a></li>
+                        
+                          <li><a title="分布式系统 CAP 定理 P 代表什么含义" href="16354991712456.html">分布式系统 CAP 定理 P 代表什么含义</a></li>
+                        
+                          <li><a title="面试题" href="16354991712501.html">面试题</a></li>
+                        
+                          <li><a title="面试题" href="16354991712533.html">面试题</a></li>
+                        
+                          <li><a title="分布式系统" href="16354991712569.html">分布式系统</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>big-data</span></li>
+                        
+                          <li><a title="大数据中 TopK 问题的常用套路" href="16354991934685.html">大数据中 TopK 问题的常用套路</a></li>
+                        
+                          <li><a title="如何按照 query 的频度排序？" href="16354991934749.html">如何按照 query 的频度排序？</a></li>
+                        
+                          <li><a title="如何从大量数据中找出高频词？" href="16354991934812.html">如何从大量数据中找出高频词？</a></li>
+                        
+                          <li><a title="如何找出某一天访问百度网站最多的 IP？" href="16354991934855.html">如何找出某一天访问百度网站最多的 IP？</a></li>
+                        
+                          <li><a title="如何找出排名前 500 的数？" href="16354991934904.html">如何找出排名前 500 的数？</a></li>
+                        
+                          <li><a title="如何在大量的数据中找出不重复的整数？" href="16354991934938.html">如何在大量的数据中找出不重复的整数？</a></li>
+                        
+                          <li><a title="如何从 5 亿个数中找出中位数？" href="16354991934970.html">如何从 5 亿个数中找出中位数？</a></li>
+                        
+                          <li><a title="如何查询最热门的查询串？" href="16354991935000.html">如何查询最热门的查询串？</a></li>
+                        
+                          <li><a title="如何从大量的 URL 中找出相同的 URL？" href="16354991935032.html">如何从大量的 URL 中找出相同的 URL？</a></li>
+                        
+                          <li><a title="如何在大量的数据中判断一个数是否存在？" href="16354991935061.html">如何在大量的数据中判断一个数是否存在？</a></li>
+                        
+                          <li><a title="如何统计不同电话号码的个数？" href="16354991935090.html">如何统计不同电话号码的个数？</a></li>
+                        
+                          <li><a title="海量数据处理" href="16354991935121.html">海量数据处理</a></li>
+                        
+
+                    
+                      <li class="side-title"><span>notes</span></li>
+                        
+                          <li><a title="面向对象思想" href="16354992461478.html">面向对象思想</a></li>
+                        
+                          <li><a title="集群" href="16354992461525.html">集群</a></li>
+                        
+                          <li><a title="<!-- GFM-TOC -->" href="16354992461566.html"><!-- GFM-TOC --></a></li>
+                        
+                          <li><a title="1. 适配器（Adapter）" href="16354992461616.html">1. 适配器（Adapter）</a></li>
+                        
+                          <li><a title="迭代器（Iterator）" href="16354992461648.html">迭代器（Iterator）</a></li>
+                        
+                          <li><a title="责任链（Chain Of Responsibility）" href="16354992461678.html">责任链（Chain Of Responsibility）</a></li>
+                        
+                          <li><a title="访问者（Visitor）" href="16354992461708.html">访问者（Visitor）</a></li>
+                        
+                          <li><a title="解释器（Interpreter）" href="16354992461737.html">解释器（Interpreter）</a></li>
+                        
+                          <li><a title="7. 观察者（Observer）" href="16354992461767.html">7. 观察者（Observer）</a></li>
+                        
+                          <li><a title="装饰（Decorator）" href="16354992461796.html">装饰（Decorator）</a></li>
+                        
+                          <li><a title="组合（Composite）" href="16354992461824.html">组合（Composite）</a></li>
+                        
+                          <li><a title="简单工厂（Simple Factory）" href="16354992461851.html">简单工厂（Simple Factory）</a></li>
+                        
+                          <li><a title="9. 策略（Strategy）" href="16354992461877.html">9. 策略（Strategy）</a></li>
+                        
+                          <li><a title="空对象（Null）" href="16354992461903.html">空对象（Null）</a></li>
+                        
+                          <li><a title="一、前言" href="16354992461928.html">一、前言</a></li>
+                        
+                          <li><a title="设计模式目录" href="16354992461958.html">设计模式目录</a></li>
+                        
+                          <li><a title="5. 生成器（Builder）" href="16354992462049.html">5. 生成器（Builder）</a></li>
+                        
+                          <li><a title="8. 状态（State）" href="16354992462082.html">8. 状态（State）</a></li>
+                        
+                          <li><a title="模板方法（Template Method）" href="16354992462113.html">模板方法（Template Method）</a></li>
+                        
+                          <li><a title="" href="16354992462143.html"></a></li>
+                        
+                          <li><a title="4. 抽象工厂（Abstract Factory）" href="16354992462175.html">4. 抽象工厂（Abstract Factory）</a></li>
+                        
+                          <li><a title="工厂方法（Factory Method）" href="16354992462206.html">工厂方法（Factory Method）</a></li>
+                        
+                          <li><a title="外观（Facade）" href="16354992462238.html">外观（Facade）</a></li>
+                        
+                          <li><a title="备忘录（Memento）" href="16354992462270.html">备忘录（Memento）</a></li>
+                        
+                          <li><a title="2. 命令（Command）" href="16354992462300.html">2. 命令（Command）</a></li>
+                        
+                          <li><a title="6. 原型模式（Prototype）" href="16354992462338.html">6. 原型模式（Prototype）</a></li>
+                        
+                          <li><a title="代理（Proxy）" href="16354992462373.html">代理（Proxy）</a></li>
+                        
+                          <li><a title="享元（Flyweight）" href="16354992462410.html">享元（Flyweight）</a></li>
+                        
+                          <li><a title="5. 中介者（Mediator）" href="16354992462446.html">5. 中介者（Mediator）</a></li>
+                        
+                          <li><a title="单例（Singleton）" href="16354992462488.html">单例（Singleton）</a></li>
+                        
+                          <li><a title="计算机网络 - 链路层" href="16354992462560.html">计算机网络 - 链路层</a></li>
+                        
+                          <li><a title="计算机网络 - 网络层" href="16354992462602.html">计算机网络 - 网络层</a></li>
+                        
+                          <li><a title="计算机网络" href="16354992462636.html">计算机网络</a></li>
+                        
+                          <li><a title="计算机网络 - 物理层" href="16354992462686.html">计算机网络 - 物理层</a></li>
+                        
+                          <li><a title="计算机网络 - 概述" href="16354992462724.html">计算机网络 - 概述</a></li>
+                        
+                          <li><a title="计算机网络 - 应用层" href="16354992462761.html">计算机网络 - 应用层</a></li>
+                        
+                          <li><a title="计算机网络 - 传输层" href="16354992462800.html">计算机网络 - 传输层</a></li>
+                        
+                          <li><a title="计算机操作系统 - 链接" href="16354992462870.html">计算机操作系统 - 链接</a></li>
+                        
+                          <li><a title="计算机操作系统 - 进程管理" href="16354992462906.html">计算机操作系统 - 进程管理</a></li>
+                        
+                          <li><a title="计算机操作系统 - 设备管理" href="16354992462944.html">计算机操作系统 - 设备管理</a></li>
+                        
+                          <li><a title="计算机操作系统" href="16354992462975.html">计算机操作系统</a></li>
+                        
+                          <li><a title="计算机操作系统 - 死锁" href="16354992463024.html">计算机操作系统 - 死锁</a></li>
+                        
+                          <li><a title="计算机操作系统 - 概述" href="16354992463058.html">计算机操作系统 - 概述</a></li>
+                        
+                          <li><a title="计算机操作系统 - 内存管理" href="16354992463092.html">计算机操作系统 - 内存管理</a></li>
+                        
+                          <li><a title="缓存" href="16354992463126.html">缓存</a></li>
+                        
+                          <li><a title="系统设计基础" href="16354992463161.html">系统设计基础</a></li>
+                        
+                          <li><a title="算法 - 算法分析" href="16354992463226.html">算法 - 算法分析</a></li>
+                        
+                          <li><a title="算法 - 符号表" href="16354992463265.html">算法 - 符号表</a></li>
+                        
+                          <li><a title="算法目录" href="16354992463300.html">算法目录</a></li>
+                        
+                          <li><a title="算法 - 栈和队列" href="16354992463349.html">算法 - 栈和队列</a></li>
+                        
+                          <li><a title="算法 - 排序" href="16354992463383.html">算法 - 排序</a></li>
+                        
+                          <li><a title="算法 - 并查集" href="16354992463417.html">算法 - 并查集</a></li>
+                        
+                          <li><a title="算法 - 其它" href="16354992463451.html">算法 - 其它</a></li>
+                        
+                          <li><a title="消息队列" href="16354992463481.html">消息队列</a></li>
+                        
+                          <li><a title="正则表达式" href="16354992463516.html">正则表达式</a></li>
+                        
+                          <li><a title="构建工具" href="16354992463551.html">构建工具</a></li>
+                        
+                          <li><a title="数据库系统原理" href="16354992463586.html">数据库系统原理</a></li>
+                        
+                          <li><a title="攻击技术" href="16354992463625.html">攻击技术</a></li>
+                        
+                          <li><a title="剑指 Offer 题解" href="16354992463690.html">剑指 Offer 题解</a></li>
+                        
+                          <li><a title="分布式" href="16354992463919.html">分布式</a></li>
+                        
+                          <li><a title="<!-- GFM-TOC -->" href="16354992463986.html"><!-- GFM-TOC --></a></li>
+                        
+                          <li><a title="Socket" href="16354992464020.html">Socket</a></li>
+                        
+                          <li><a title="<!-- GFM-TOC -->" href="16354992464055.html"><!-- GFM-TOC --></a></li>
+                        
+                          <li><a title="SQL 语法" href="16354992464093.html">SQL 语法</a></li>
+                        
+                          <li><a title="SQL 练习" href="16354992464132.html">SQL 练习</a></li>
+                        
+                          <li><a title="Redis" href="16354992464169.html">Redis</a></li>
+                        
+                          <li><a title="MySQL" href="16354992464205.html">MySQL</a></li>
+                        
+                          <li><a title="Linux" href="16354992464242.html">Linux</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 链表" href="16354992464314.html">Leetcode 题解 - 链表</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 贪心思想" href="16354992464348.html">Leetcode 题解 - 贪心思想</a></li>
+                        
+                          <li><a title="Leetcode 题解" href="16354992464382.html">Leetcode 题解</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 树" href="16354992464461.html">Leetcode 题解 - 树</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 栈和队列" href="16354992464509.html">Leetcode 题解 - 栈和队列</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 数组与矩阵" href="16354992464543.html">Leetcode 题解 - 数组与矩阵</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 数学" href="16354992464581.html">Leetcode 题解 - 数学</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 搜索" href="16354992464619.html">Leetcode 题解 - 搜索</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 排序" href="16354992464661.html">Leetcode 题解 - 排序</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 字符串" href="16354992464693.html">Leetcode 题解 - 字符串</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 图" href="16354992464724.html">Leetcode 题解 - 图</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 哈希表" href="16354992464756.html">Leetcode 题解 - 哈希表</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 双指针" href="16354992464785.html">Leetcode 题解 - 双指针</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 动态规划" href="16354992464826.html">Leetcode 题解 - 动态规划</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 分治" href="16354992464872.html">Leetcode 题解 - 分治</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 位运算" href="16354992464906.html">Leetcode 题解 - 位运算</a></li>
+                        
+                          <li><a title="Leetcode 题解 - 二分查找" href="16354992464939.html">Leetcode 题解 - 二分查找</a></li>
+                        
+                          <li><a title="Java 虚拟机" href="16354992464975.html">Java 虚拟机</a></li>
+                        
+                          <li><a title="Java 并发" href="16354992465013.html">Java 并发</a></li>
+                        
+                          <li><a title="Java 容器" href="16354992465054.html">Java 容器</a></li>
+                        
+                          <li><a title="Java 基础" href="16354992465090.html">Java 基础</a></li>
+                        
+                          <li><a title="Java IO" href="16354992465129.html">Java IO</a></li>
+                        
+                          <li><a title="HTTP" href="16354992465167.html">HTTP</a></li>
+                        
+                          <li><a title="Git" href="16354992465206.html">Git</a></li>
+                        
+                          <li><a title="Docker" href="16354992465240.html">Docker</a></li>
+                        
+                          <li><a title="9. 用两个栈实现队列" href="16354992465270.html">9. 用两个栈实现队列</a></li>
+                        
+                          <li><a title="8. 二叉树的下一个结点" href="16354992465304.html">8. 二叉树的下一个结点</a></li>
+                        
+                          <li><a title="7. 重建二叉树" href="16354992465337.html">7. 重建二叉树</a></li>
+                        
+                          <li><a title="68. 树中两个节点的最低公共祖先" href="16354992465367.html">68. 树中两个节点的最低公共祖先</a></li>
+                        
+                          <li><a title="67. 把字符串转换成整数" href="16354992465397.html">67. 把字符串转换成整数</a></li>
+                        
+                          <li><a title="66. 构建乘积数组" href="16354992465429.html">66. 构建乘积数组</a></li>
+                        
+                          <li><a title="65. 不用加减乘除做加法" href="16354992465460.html">65. 不用加减乘除做加法</a></li>
+                        
+                          <li><a title="64. 求 1+2+3+...+n" href="16354992465490.html">64. 求 1+2+3+...+n</a></li>
+                        
+                          <li><a title="63. 股票的最大利润" href="16354992465519.html">63. 股票的最大利润</a></li>
+                        
+                          <li><a title="62. 圆圈中最后剩下的数" href="16354992465549.html">62. 圆圈中最后剩下的数</a></li>
+                        
+                          <li><a title="61. 扑克牌顺子" href="16354992465577.html">61. 扑克牌顺子</a></li>
+                        
+                          <li><a title="60. n 个骰子的点数" href="16354992465607.html">60. n 个骰子的点数</a></li>
+                        
+                          <li><a title="6. 从尾到头打印链表" href="16354992465635.html">6. 从尾到头打印链表</a></li>
+                        
+                          <li><a title="59. 滑动窗口的最大值" href="16354992465663.html">59. 滑动窗口的最大值</a></li>
+                        
+                          <li><a title="58.2 左旋转字符串" href="16354992465691.html">58.2 左旋转字符串</a></li>
+                        
+                          <li><a title="58.1 翻转单词顺序列" href="16354992465720.html">58.1 翻转单词顺序列</a></li>
+                        
+                          <li><a title="57.2 和为 S 的连续正数序列" href="16354992465750.html">57.2 和为 S 的连续正数序列</a></li>
+                        
+                          <li><a title="57.1 和为 S 的两个数字" href="16354992465779.html">57.1 和为 S 的两个数字</a></li>
+                        
+                          <li><a title="56. 数组中只出现一次的数字" href="16354992465806.html">56. 数组中只出现一次的数字</a></li>
+                        
+                          <li><a title="55.2 平衡二叉树" href="16354992465834.html">55.2 平衡二叉树</a></li>
+                        
+                          <li><a title="55.1 二叉树的深度" href="16354992465862.html">55.1 二叉树的深度</a></li>
+                        
+                          <li><a title="54. 二叉查找树的第 K 个结点" href="16354992465890.html">54. 二叉查找树的第 K 个结点</a></li>
+                        
+                          <li><a title="53. 数字在排序数组中出现的次数" href="16354992465919.html">53. 数字在排序数组中出现的次数</a></li>
+                        
+                          <li><a title="52. 两个链表的第一个公共结点" href="16354992465948.html">52. 两个链表的第一个公共结点</a></li>
+                        
+                          <li><a title="51. 数组中的逆序对" href="16354992465978.html">51. 数组中的逆序对</a></li>
+                        
+                          <li><a title="50. 第一个只出现一次的字符位置" href="16354992466007.html">50. 第一个只出现一次的字符位置</a></li>
+                        
+                          <li><a title="5. 替换空格" href="16354992466035.html">5. 替换空格</a></li>
+                        
+                          <li><a title="49. 丑数" href="16354992466064.html">49. 丑数</a></li>
+                        
+                          <li><a title="48. 最长不含重复字符的子字符串" href="16354992466092.html">48. 最长不含重复字符的子字符串</a></li>
+                        
+                          <li><a title="47. 礼物的最大价值" href="16354992466120.html">47. 礼物的最大价值</a></li>
+                        
+                          <li><a title="46. 把数字翻译成字符串" href="16354992466147.html">46. 把数字翻译成字符串</a></li>
+                        
+                          <li><a title="45. 把数组排成最小的数" href="16354992466176.html">45. 把数组排成最小的数</a></li>
+                        
+                          <li><a title="44. 数字序列中的某一位数字" href="16354992466205.html">44. 数字序列中的某一位数字</a></li>
+                        
+                          <li><a title="43. 从 1 到 n 整数中 1 出现的次数" href="16354992466236.html">43. 从 1 到 n 整数中 1 出现的次数</a></li>
+                        
+                          <li><a title="42. 连续子数组的最大和" href="16354992466265.html">42. 连续子数组的最大和</a></li>
+                        
+                          <li><a title="41.2 字符流中第一个不重复的字符" href="16354992466295.html">41.2 字符流中第一个不重复的字符</a></li>
+                        
+                          <li><a title="41.1 数据流中的中位数" href="16354992466322.html">41.1 数据流中的中位数</a></li>
+                        
+                          <li><a title="40. 最小的 K 个数" href="16354992466350.html">40. 最小的 K 个数</a></li>
+                        
+                          <li><a title="4. 二维数组中的查找" href="16354992466380.html">4. 二维数组中的查找</a></li>
+                        
+                          <li><a title="39. 数组中出现次数超过一半的数字" href="16354992466411.html">39. 数组中出现次数超过一半的数字</a></li>
+                        
+                          <li><a title="38. 字符串的排列" href="16354992466438.html">38. 字符串的排列</a></li>
+                        
+                          <li><a title="37. 序列化二叉树" href="16354992466467.html">37. 序列化二叉树</a></li>
+                        
+                          <li><a title="36. 二叉搜索树与双向链表" href="16354992466497.html">36. 二叉搜索树与双向链表</a></li>
+                        
+                          <li><a title="35. 复杂链表的复制" href="16354992466525.html">35. 复杂链表的复制</a></li>
+                        
+                          <li><a title="34. 二叉树中和为某一值的路径" href="16354992466553.html">34. 二叉树中和为某一值的路径</a></li>
+                        
+                          <li><a title="33. 二叉搜索树的后序遍历序列" href="16354992466580.html">33. 二叉搜索树的后序遍历序列</a></li>
+                        
+                          <li><a title="32.3 按之字形顺序打印二叉树" href="16354992466607.html">32.3 按之字形顺序打印二叉树</a></li>
+                        
+                          <li><a title="32.2 把二叉树打印成多行" href="16354992466638.html">32.2 把二叉树打印成多行</a></li>
+                        
+                          <li><a title="32.1 从上往下打印二叉树" href="16354992466668.html">32.1 从上往下打印二叉树</a></li>
+                        
+                          <li><a title="31. 栈的压入、弹出序列" href="16354992466698.html">31. 栈的压入、弹出序列</a></li>
+                        
+                          <li><a title="30. 包含 min 函数的栈" href="16354992466727.html">30. 包含 min 函数的栈</a></li>
+                        
+                          <li><a title="3. 数组中重复的数字" href="16354992466757.html">3. 数组中重复的数字</a></li>
+                        
+                          <li><a title="29. 顺时针打印矩阵" href="16354992466786.html">29. 顺时针打印矩阵</a></li>
+                        
+                          <li><a title="28. 对称的二叉树" href="16354992466815.html">28. 对称的二叉树</a></li>
+                        
+                          <li><a title="27. 二叉树的镜像" href="16354992466843.html">27. 二叉树的镜像</a></li>
+                        
+                          <li><a title="26. 树的子结构" href="16354992466871.html">26. 树的子结构</a></li>
+                        
+                          <li><a title="25. 合并两个排序的链表" href="16354992466899.html">25. 合并两个排序的链表</a></li>
+                        
+                          <li><a title="24. 反转链表" href="16354992466929.html">24. 反转链表</a></li>
+                        
+                          <li><a title="23. 链表中环的入口结点" href="16354992466956.html">23. 链表中环的入口结点</a></li>
+                        
+                          <li><a title="22. 链表中倒数第 K 个结点" href="16354992466984.html">22. 链表中倒数第 K 个结点</a></li>
+                        
+                          <li><a title="21. 调整数组顺序使奇数位于偶数前面" href="16354992467010.html">21. 调整数组顺序使奇数位于偶数前面</a></li>
+                        
+                          <li><a title="20. 表示数值的字符串" href="16354992467040.html">20. 表示数值的字符串</a></li>
+                        
+                          <li><a title="19. 正则表达式匹配" href="16354992467084.html">19. 正则表达式匹配</a></li>
+                        
+                          <li><a title="18.2 删除链表中重复的结点" href="16354992467117.html">18.2 删除链表中重复的结点</a></li>
+                        
+                          <li><a title="18.1 在 O(1) 时间内删除链表节点" href="16354992467154.html">18.1 在 O(1) 时间内删除链表节点</a></li>
+                        
+                          <li><a title="17. 打印从 1 到最大的 n 位数" href="16354992467188.html">17. 打印从 1 到最大的 n 位数</a></li>
+                        
+                          <li><a title="16. 数值的整数次方" href="16354992467223.html">16. 数值的整数次方</a></li>
+                        
+                          <li><a title="15. 二进制中 1 的个数" href="16354992467259.html">15. 二进制中 1 的个数</a></li>
+                        
+                          <li><a title="14. 剪绳子" href="16354992467294.html">14. 剪绳子</a></li>
+                        
+                          <li><a title="13. 机器人的运动范围" href="16354992467329.html">13. 机器人的运动范围</a></li>
+                        
+                          <li><a title="12. 矩阵中的路径" href="16354992467363.html">12. 矩阵中的路径</a></li>
+                        
+                          <li><a title="11. 旋转数组的最小数字" href="16354992467398.html">11. 旋转数组的最小数字</a></li>
+                        
+                          <li><a title="10.4 变态跳台阶" href="16354992467430.html">10.4 变态跳台阶</a></li>
+                        
+                          <li><a title="10.3 跳台阶" href="16354992467461.html">10.3 跳台阶</a></li>
+                        
+                          <li><a title="10.2 矩形覆盖" href="16354992467487.html">10.2 矩形覆盖</a></li>
+                        
+                          <li><a title="10.1 斐波那契数列" href="16354992467516.html">10.1 斐波那契数列</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>JDK 提供的并发容器总结</h1>
+
+<p>JDK 提供的这些容器大部分在 <code>java.util.concurrent</code> 包中。</p>
+
+<ul>
+<li><strong><code>ConcurrentHashMap</code></strong> : 线程安全的 <code>HashMap</code></li>
+<li><strong><code>CopyOnWriteArrayList</code></strong> : 线程安全的 <code>List</code>，在读多写少的场合性能非常好，远远好于 <code>Vector</code>。</li>
+<li><strong><code>ConcurrentLinkedQueue</code></strong> : 高效的并发队列，使用链表实现。可以看做一个线程安全的 <code>LinkedList</code>，这是一个非阻塞队列。</li>
+<li><strong><code>BlockingQueue</code></strong> : 这是一个接口，JDK 内部通过链表、数组等方式实现了这个接口。表示阻塞队列，非常适合用于作为数据共享的通道。</li>
+<li><strong><code>ConcurrentSkipListMap</code></strong> : 跳表的实现。这是一个 Map，使用跳表的数据结构进行快速查找。</li>
+</ul>
+
+<h2 id="toc_0">ConcurrentHashMap</h2>
+
+<p>我们知道 <code>HashMap</code> 不是线程安全的，在并发场景下如果要保证一种可行的方式是使用 <code>Collections.synchronizedMap()</code> 方法来包装我们的 <code>HashMap</code>。但这是通过使用一个全局的锁来同步不同线程间的并发访问，因此会带来不可忽视的性能问题。</p>
+
+<p>所以就有了 <code>HashMap</code> 的线程安全版本—— <code>ConcurrentHashMap</code> 的诞生。</p>
+
+<p>在 <code>ConcurrentHashMap</code> 中，无论是读操作还是写操作都能保证很高的性能：在进行读操作时(几乎)不需要加锁，而在写操作时通过锁分段技术只对所操作的段加锁而不影响客户端对其它段的访问。</p>
+
+<h2 id="toc_1">CopyOnWriteArrayList</h2>
+
+<h3 id="toc_2">CopyOnWriteArrayList 简介</h3>
+
+<pre><code class="language-java">public class CopyOnWriteArrayList&lt;E&gt;
+extends Object
+implements List&lt;E&gt;, RandomAccess, Cloneable, Serializable
+</code></pre>
+
+<p>在很多应用场景中，读操作可能会远远大于写操作。由于读操作根本不会修改原有的数据，因此对于每次读取都进行加锁其实是一种资源浪费。我们应该允许多个线程同时访问 <code>List</code> 的内部数据，毕竟读取操作是安全的。</p>
+
+<p>这和我们之前在多线程章节讲过 <code>ReentrantReadWriteLock</code> 读写锁的思想非常类似，也就是读读共享、写写互斥、读写互斥、写读互斥。JDK 中提供了 <code>CopyOnWriteArrayList</code> 类比相比于在读写锁的思想又更进一步。为了将读取的性能发挥到极致，<code>CopyOnWriteArrayList</code> 读取是完全不用加锁的，并且更厉害的是：写入也不会阻塞读取操作。只有写入和写入之间需要进行同步等待。这样一来，读操作的性能就会大幅度提升。<strong>那它是怎么做的呢？</strong></p>
+
+<h3 id="toc_3">CopyOnWriteArrayList 是如何做到的？</h3>
+
+<p><code>CopyOnWriteArrayList</code> 类的所有可变操作（add，set 等等）都是通过创建底层数组的新副本来实现的。当 List 需要被修改的时候，我并不修改原有内容，而是对原有数据进行一次复制，将修改的内容写入副本。写完之后，再将修改完的副本替换原来的数据，这样就可以保证写操作不会影响读操作了。</p>
+
+<p>从 <code>CopyOnWriteArrayList</code> 的名字就能看出 <code>CopyOnWriteArrayList</code> 是满足 <code>CopyOnWrite</code> 的。所谓 <code>CopyOnWrite</code> 也就是说：在计算机，如果你想要对一块内存进行修改时，我们不在原有内存块中进行写操作，而是将内存拷贝一份，在新的内存中进行写操作，写完之后呢，就将指向原来内存指针指向新的内存，原来的内存就可以被回收掉了。</p>
+
+<h3 id="toc_4">CopyOnWriteArrayList 读取和写入源码简单分析</h3>
+
+<h4 id="toc_5">CopyOnWriteArrayList 读取操作的实现</h4>
+
+<p>读取操作没有任何同步控制和锁操作，理由就是内部数组 <code>array</code> 不会发生修改，只会被另外一个 <code>array</code> 替换，因此可以保证数据安全。</p>
+
+<pre><code class="language-java">    /** The array, accessed only via getArray/setArray. */
+    private transient volatile Object[] array;
+    public E get(int index) {
+        return get(getArray(), index);
+    }
+    @SuppressWarnings(&quot;unchecked&quot;)
+    private E get(Object[] a, int index) {
+        return (E) a[index];
+    }
+    final Object[] getArray() {
+        return array;
+    }
+
+</code></pre>
+
+<h4 id="toc_6">3.3.2 CopyOnWriteArrayList 写入操作的实现</h4>
+
+<p><code>CopyOnWriteArrayList</code> 写入操作 <code>add()</code>方法在添加集合的时候加了锁，保证了同步，避免了多线程写的时候会 copy 出多个副本出来。</p>
+
+<pre><code class="language-java">    /**
+     * Appends the specified element to the end of this list.
+     *
+     * @param e element to be appended to this list
+     * @return {@code true} (as specified by {@link Collection#add})
+     */
+    public boolean add(E e) {
+        final ReentrantLock lock = this.lock;
+        lock.lock();//加锁
+        try {
+            Object[] elements = getArray();
+            int len = elements.length;
+            Object[] newElements = Arrays.copyOf(elements, len + 1);//拷贝新数组
+            newElements[len] = e;
+            setArray(newElements);
+            return true;
+        } finally {
+            lock.unlock();//释放锁
+        }
+    }
+</code></pre>
+
+<h2 id="toc_7">ConcurrentLinkedQueue</h2>
+
+<p>Java 提供的线程安全的 <code>Queue</code> 可以分为<strong>阻塞队列</strong>和<strong>非阻塞队列</strong>，其中阻塞队列的典型例子是 <code>BlockingQueue</code>，非阻塞队列的典型例子是 <code>ConcurrentLinkedQueue</code>，在实际应用中要根据实际需要选用阻塞队列或者非阻塞队列。 <strong>阻塞队列可以通过加锁来实现，非阻塞队列可以通过 CAS 操作实现。</strong></p>
+
+<p>从名字可以看出，<code>ConcurrentLinkedQueue</code>这个队列使用链表作为其数据结构．<code>ConcurrentLinkedQueue</code> 应该算是在高并发环境中性能最好的队列了。它之所有能有很好的性能，是因为其内部复杂的实现。</p>
+
+<p><code>ConcurrentLinkedQueue</code> 内部代码我们就不分析了，大家知道 <code>ConcurrentLinkedQueue</code> 主要使用 CAS 非阻塞算法来实现线程安全就好了。</p>
+
+<p><code>ConcurrentLinkedQueue</code> 适合在对性能要求相对较高，同时对队列的读写存在多个线程同时进行的场景，即如果对队列加锁的成本较高则适合使用无锁的 <code>ConcurrentLinkedQueue</code> 来替代。</p>
+
+<h2 id="toc_8">BlockingQueue</h2>
+
+<h3 id="toc_9">BlockingQueue 简介</h3>
+
+<p>上面我们己经提到了 <code>ConcurrentLinkedQueue</code> 作为高性能的非阻塞队列。下面我们要讲到的是阻塞队列——<code>BlockingQueue</code>。阻塞队列（<code>BlockingQueue</code>）被广泛使用在“生产者-消费者”问题中，其原因是 <code>BlockingQueue</code> 提供了可阻塞的插入和移除的方法。当队列容器已满，生产者线程会被阻塞，直到队列未满；当队列容器为空时，消费者线程会被阻塞，直至队列非空时为止。</p>
+
+<p><code>BlockingQueue</code> 是一个接口，继承自 <code>Queue</code>，所以其实现类也可以作为 <code>Queue</code> 的实现来使用，而 <code>Queue</code> 又继承自 <code>Collection</code> 接口。下面是 <code>BlockingQueue</code> 的相关实现类：</p>
+
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-12-9/51622268.jpg" alt="BlockingQueue 的实现类"/></p>
+
+<p>下面主要介绍一下 3 个常见的 <code>BlockingQueue</code> 的实现类：<code>ArrayBlockingQueue</code>、<code>LinkedBlockingQueue</code> 、<code>PriorityBlockingQueue</code> 。</p>
+
+<h3 id="toc_10">ArrayBlockingQueue</h3>
+
+<p><code>ArrayBlockingQueue</code> 是 <code>BlockingQueue</code> 接口的有界队列实现类，底层采用数组来实现。</p>
+
+<pre><code class="language-java">public class ArrayBlockingQueue&lt;E&gt;
+extends AbstractQueue&lt;E&gt;
+implements BlockingQueue&lt;E&gt;, Serializable{}
+</code></pre>
+
+<p><code>ArrayBlockingQueue</code> 一旦创建，容量不能改变。其并发控制采用可重入锁 <code>ReentrantLock</code> ，不管是插入操作还是读取操作，都需要获取到锁才能进行操作。当队列容量满时，尝试将元素放入队列将导致操作阻塞;尝试从一个空队列中取一个元素也会同样阻塞。</p>
+
+<p><code>ArrayBlockingQueue</code> 默认情况下不能保证线程访问队列的公平性，所谓公平性是指严格按照线程等待的绝对时间顺序，即最先等待的线程能够最先访问到 <code>ArrayBlockingQueue</code>。而非公平性则是指访问 <code>ArrayBlockingQueue</code> 的顺序不是遵守严格的时间顺序，有可能存在，当 <code>ArrayBlockingQueue</code> 可以被访问时，长时间阻塞的线程依然无法访问到 <code>ArrayBlockingQueue</code>。如果保证公平性，通常会降低吞吐量。如果需要获得公平性的 <code>ArrayBlockingQueue</code>，可采用如下代码：</p>
+
+<pre><code class="language-java">private static ArrayBlockingQueue&lt;Integer&gt; blockingQueue = new ArrayBlockingQueue&lt;Integer&gt;(10,true);
+</code></pre>
+
+<h3 id="toc_11">LinkedBlockingQueue</h3>
+
+<p><code>LinkedBlockingQueue</code> 底层基于<strong>单向链表</strong>实现的阻塞队列，可以当做无界队列也可以当做有界队列来使用，同样满足 FIFO 的特性，与 <code>ArrayBlockingQueue</code> 相比起来具有更高的吞吐量，为了防止 <code>LinkedBlockingQueue</code> 容量迅速增，损耗大量内存。通常在创建 <code>LinkedBlockingQueue</code> 对象时，会指定其大小，如果未指定，容量等于 <code>Integer.MAX_VALUE</code> 。</p>
+
+<p><strong>相关构造方法:</strong></p>
+
+<pre><code class="language-java">    /**
+     *某种意义上的无界队列
+     * Creates a {@code LinkedBlockingQueue} with a capacity of
+     * {@link Integer#MAX_VALUE}.
+     */
+    public LinkedBlockingQueue() {
+        this(Integer.MAX_VALUE);
+    }
+
+    /**
+     *有界队列
+     * Creates a {@code LinkedBlockingQueue} with the given (fixed) capacity.
+     *
+     * @param capacity the capacity of this queue
+     * @throws IllegalArgumentException if {@code capacity} is not greater
+     *         than zero
+     */
+    public LinkedBlockingQueue(int capacity) {
+        if (capacity &lt;= 0) throw new IllegalArgumentException();
+        this.capacity = capacity;
+        last = head = new Node&lt;E&gt;(null);
+    }
+</code></pre>
+
+<h3 id="toc_12">PriorityBlockingQueue</h3>
+
+<p><code>PriorityBlockingQueue</code> 是一个支持优先级的无界阻塞队列。默认情况下元素采用自然顺序进行排序，也可以通过自定义类实现 <code>compareTo()</code> 方法来指定元素排序规则，或者初始化时通过构造器参数 <code>Comparator</code> 来指定排序规则。</p>
+
+<p><code>PriorityBlockingQueue</code> 并发控制采用的是可重入锁 <code>ReentrantLock</code>，队列为无界队列（<code>ArrayBlockingQueue</code> 是有界队列，<code>LinkedBlockingQueue</code> 也可以通过在构造函数中传入 <code>capacity</code> 指定队列最大的容量，但是 <code>PriorityBlockingQueue</code> 只能指定初始的队列大小，后面插入元素的时候，<strong>如果空间不够的话会自动扩容</strong>）。</p>
+
+<p>简单地说，它就是 <code>PriorityQueue</code> 的线程安全版本。不可以插入 null 值，同时，插入队列的对象必须是可比较大小的（comparable），否则报 <code>ClassCastException</code> 异常。它的插入操作 put 方法不会 block，因为它是无界队列（take 方法在队列为空的时候会阻塞）。</p>
+
+<p><strong>推荐文章：</strong> <a href="https://javadoop.com/post/java-concurrent-queue">《解读 Java 并发队列 BlockingQueue》</a></p>
+
+<h2 id="toc_13">ConcurrentSkipListMap</h2>
+
+<p>下面这部分内容参考了极客时间专栏<a href="https://time.geekbang.org/column/intro/126?code=zl3GYeAsRI4rEJIBNu5B/km7LSZsPDlGWQEpAYw5Vu0=&amp;utm_term=SPoster" title="《数据结构与算法之美》">《数据结构与算法之美》</a>以及《实战 Java 高并发程序设计》。</p>
+
+<p>为了引出 <code>ConcurrentSkipListMap</code>，先带着大家简单理解一下跳表。</p>
+
+<p>对于一个单链表，即使链表是有序的，如果我们想要在其中查找某个数据，也只能从头到尾遍历链表，这样效率自然就会很低，跳表就不一样了。跳表是一种可以用来快速查找的数据结构，有点类似于平衡树。它们都可以对元素进行快速的查找。但一个重要的区别是：对平衡树的插入和删除往往很可能导致平衡树进行一次全局的调整。而对跳表的插入和删除只需要对整个数据结构的局部进行操作即可。这样带来的好处是：在高并发的情况下，你会需要一个全局锁来保证整个平衡树的线程安全。而对于跳表，你只需要部分锁即可。这样，在高并发环境下，你就可以拥有更好的性能。而就查询的性能而言，跳表的时间复杂度也是 <strong>O(logn)</strong> 所以在并发数据结构中，JDK 使用跳表来实现一个 Map。</p>
+
+<p>跳表的本质是同时维护了多个链表，并且链表是分层的，</p>
+
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-12-9/93666217.jpg" alt="2级索引跳表"/></p>
+
+<p>最低层的链表维护了跳表内所有的元素，每上面一层链表都是下面一层的子集。</p>
+
+<p>跳表内的所有链表的元素都是排序的。查找时，可以从顶级链表开始找。一旦发现被查找的元素大于当前链表中的取值，就会转入下一层链表继续找。这也就是说在查找过程中，搜索是跳跃式的。如上图所示，在跳表中查找元素 18。</p>
+
+<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-12-9/32005738.jpg" alt="在跳表中查找元素18"/></p>
+
+<p>查找 18 的时候原来需要遍历 18 次，现在只需要 7 次即可。针对链表长度比较大的时候，构建索引查找效率的提升就会非常明显。</p>
+
+<p>从上面很容易看出，<strong>跳表是一种利用空间换时间的算法。</strong></p>
+
+<p>使用跳表实现 <code>Map</code> 和使用哈希算法实现 <code>Map</code> 的另外一个不同之处是：哈希并不会保存元素的顺序，而跳表内所有的元素都是排序的。因此在对跳表进行遍历时，你会得到一个有序的结果。所以，如果你的应用需要有序性，那么跳表就是你不二的选择。JDK 中实现这一数据结构的类是 <code>ConcurrentSkipListMap</code>。</p>
+
+<h2 id="toc_14">参考</h2>
+
+<ul>
+<li>《实战 Java 高并发程序设计》</li>
+<li><a href="https://javadoop.com/post/java-concurrent-queue">https://javadoop.com/post/java-concurrent-queue</a></li>
+<li><a href="https://juejin.im/post/5aeebd02518825672f19c546">https://juejin.im/post/5aeebd02518825672f19c546</a></li>
+</ul>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="16355065852681.html"  title="Previous Post: 线程池最佳实践">&laquo; 线程池最佳实践</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="16355065852785.html" 
+	        title="Next Post: 面试官：“创建线程有哪几种常见的方式？”">面试官：“创建线程有哪几种常见的方式？” &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '16355065852737.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2015
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">GitHub CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="asset/prism.js"></script>
+
+
+<style type="text/css">
+figure{margin: 0.4em 0;padding: 0;}
+  figcaption{text-align:center;}
+
+/* PrismJS 1.14.0
+ http://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background:#b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #F7F7F7;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function,
+.token.class-name {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+    .line-numbers-rows > span {
+        pointer-events: none;
+        display: block;
+        counter-increment: linenumber;
+    }
+
+        .line-numbers-rows > span:before {
+            content: counter(linenumber);
+            color: #999;
+            display: block;
+            padding-right: 0.8em;
+            text-align: right;
+        }
+
+
+</style>
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+
+
+  </body>
+</html>
