@@ -20,5 +20,3 @@ function getJson(src,callback){fetch(src).then(fetchErrors).then(response=>respo
 function flattenHits(results){const items=[];const map=new Map();for(const field of results){for(const page of field.result){if(!map.has(page.doc.href)){map.set(page.doc.href,true);items.push(page.doc);}}}
 return items}
 function loadScript(src,callback){let script=document.createElement('script');script.defer=true;script.async=false;script.src=src;script.onload=callback;document.body.appendChild(script);}})();
-
-if(document.getElementsByTagName("h1").length==2){document.getElementsByTagName("h1")[0].remove()}
