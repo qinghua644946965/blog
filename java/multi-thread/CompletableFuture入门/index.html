@@ -10326,7 +10326,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CompletableFuture</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Future</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;,</span> <span class="n">CompletionStage</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
 <span class="o">}</span>
 </code></pre></div><p><code>CompletableFuture</code> 除了提供了更为好用和强大的 <code>Future</code> 特性之外，还提供了函数式编程的能力。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javaguide/image-20210902092441434.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210902092441434.png" alt=""  /></p>
 <p><code>Future</code> 接口有 5 个方法：</p>
 <ul>
 <li><code>boolean cancel(boolean mayInterruptIfRunning)</code> ：尝试取消执行任务。</li>
@@ -10335,7 +10335,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><code>get()</code> ：等待任务执行完成并获取运算结果。</li>
 <li><code>get(long timeout, TimeUnit unit)</code> ：多了一个超时时间。</li>
 </ul>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javaguide/image-20210902093026059.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210902093026059.png" alt=""  /></p>
 <p><code>CompletionStage&lt;T&gt;</code> 接口中的方法比较多，<code>CompletableFuture</code> 的函数式能力就是这个接口赋予的。从这个接口的方法参数你就可以发现其大量使用了 Java8 引入的函数式编程。</p>
 <p>由于方法众多，所以这里不能一一讲解，下文中我会介绍大部分常见方法的使用。</p>
 <div class="gdoc-page__anchorwrap">

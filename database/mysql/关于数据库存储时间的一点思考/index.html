@@ -10410,7 +10410,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>下图是 MySQL 5.6 版本中日期类型所占的存储空间：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/FhRGUVHFK0ujRPNA75f6CuOXQHTE.jpeg" alt=""  /></p>
+<p><img src="/ext-images/FhRGUVHFK0ujRPNA75f6CuOXQHTE.jpeg" alt=""  /></p>
 <p>可以看出 5.6.4 之后的 MySQL 多出了一个需要 0 ～ 3 字节的小数位。DateTime 和 Timestamp 会有几种不同的存储空间占用。</p>
 <p>为了方便，本文我们还是默认 Timestamp 只需要使用 4 个字节的存储空间，但是 DateTime 需要耗费 8 个字节的存储空间。</p>
 <div class="gdoc-page__anchorwrap">
@@ -10451,9 +10451,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>MySQL 中时间到底怎么存储才好？Datetime?Timestamp? 数值保存的时间戳？</p>
 <p>好像并没有一个银弹，很多程序员会觉得数值型时间戳是真的好，效率又高还各种兼容，但是很多人又觉得它表现的不够直观。这里插一嘴，《高性能 MySQL 》这本神书的作者就是推荐 Timestamp，原因是数值表示时间不够直观。下面是原文：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/高性能mysql-不推荐用数值时间戳.jpg" style="zoom:50%;" /></p>
+<p><img src="/ext-images/高性能mysql-不推荐用数值时间戳.jpg" style="zoom:50%;" /></p>
 <p>每种方式都有各自的优势，根据实际场景才是王道。下面再对这三种方式做一个简单的对比，以供大家实际开发中选择正确的存放时间的数据类型：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-11/总结-常用日期存储方式.jpg" style="zoom:50%;" /></p>
+<p><img src="/ext-images/总结-常用日期存储方式.jpg" style="zoom:50%;" /></p>
 <p>如果还有什么问题欢迎给我留言！如果文章有什么问题的话，也劳烦指出，Guide 哥感激不尽！</p>
 <p>后面的文章我会介绍：</p>
 <ul>

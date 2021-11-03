@@ -10581,7 +10581,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>接着开始以<code>staleSlot</code>位置(<code>index=7</code>)向后迭代，<strong>如果找到了相同 key 值的 Entry 数据：</strong></p>
 <p><img src="./images/thread-local/14.png" alt=""  /></p>
 <p>从当前节点<code>staleSlot</code>向后查找<code>key</code>值相等的<code>Entry</code>元素，找到后更新<code>Entry</code>的值并交换<code>staleSlot</code>元素的位置(<code>staleSlot</code>位置为过期元素)，更新<code>Entry</code>数据，然后开始进行过期<code>Entry</code>的清理工作，如下图所示：</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/view.png" alt=""  />向后遍历过程中，如果没有找到相同 key 值的 Entry 数据：</p>
+<p><img src="/ext-images/view.png" alt=""  />向后遍历过程中，如果没有找到相同 key 值的 Entry 数据：</p>
 <p><img src="./images/thread-local/15.png" alt=""  /></p>
 <p>从当前节点<code>staleSlot</code>向后查找<code>key</code>值相等的<code>Entry</code>元素，直到<code>Entry</code>为<code>null</code>则停止寻找。通过上图可知，此时<code>table</code>中没有<code>key</code>值相同的<code>Entry</code>。</p>
 <p>创建新的<code>Entry</code>，替换<code>table[stableSlot]</code>位置：</p>

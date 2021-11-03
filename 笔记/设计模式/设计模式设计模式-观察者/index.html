@@ -10330,7 +10330,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>定义对象之间的一对多依赖，当一个对象状态改变时，它的所有依赖都会收到通知并且自动更新状态。</p>
 <p>主题（Subject）是被观察的对象，而其所有依赖者（Observer）称为观察者。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7a3c6a30-c735-4edb-8115-337288a4f0f2.jpg" width="600"/> </div><br>
+<div align="center"> <img src="/ext-images/7a3c6a30-c735-4edb-8115-337288a4f0f2.jpg" width="600"/> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h3 id="class-diagram">
         Class Diagram
@@ -10340,7 +10340,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>主题（Subject）具有注册和移除观察者、并通知所有观察者的功能，主题是通过维护一张观察者列表来实现这些操作的。</p>
 <p>观察者（Observer）的注册功能需要调用主题的 registerObserver() 方法。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a8c8f894-a712-447c-9906-5caef6a016e3.png"/> </div><br>
+<div align="center"> <img src="/ext-images/a8c8f894-a712-447c-9906-5caef6a016e3.png"/> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h3 id="implementation">
         Implementation
@@ -10349,7 +10349,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>天气数据布告板会在天气信息发生改变时更新其内容，布告板有多个，并且在将来会继续增加。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/b1df9732-86ce-4d69-9f06-fba1db7b3b5a.jpg"/> </div><br>
+<div align="center"> <img src="/ext-images/b1df9732-86ce-4d69-9f06-fba1db7b3b5a.jpg"/> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Subject</span> <span class="o">{</span>
     <span class="kt">void</span> <span class="nf">registerObserver</span><span class="o">(</span><span class="n">Observer</span> <span class="n">o</span><span class="o">);</span>
 

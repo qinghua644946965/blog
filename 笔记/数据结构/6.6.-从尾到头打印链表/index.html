@@ -10335,7 +10335,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p>从尾到头反过来打印出每个结点的值。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/f5792051-d9b2-4ca4-a234-a4a2de3d5a57.png" width="300px"> </div><br>
+<div align="center"> <img src="/ext-images/f5792051-d9b2-4ca4-a234-a4a2de3d5a57.png" width="300px"> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h2 id="解题思路">
         解题思路
@@ -10371,9 +10371,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">node3</span> <span class="o">=</span> <span class="n">node1</span><span class="o">.</span><span class="na">next</span><span class="o">;</span>
 <span class="n">node2</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node3</span><span class="o">;</span>
 <span class="n">node1</span><span class="o">.</span><span class="na">next</span> <span class="o">=</span> <span class="n">node2</span><span class="o">;</span>
-</code></pre></div><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/58c8e370-3bec-4c2b-bf17-c8d34345dd17.gif" width="220px"> </div><br>
+</code></pre></div><div align="center"> <img src="/ext-images/58c8e370-3bec-4c2b-bf17-c8d34345dd17.gif" width="220px"> </div><br>
 <p>为了能将一个节点插入头部，我们引入了一个叫头结点的辅助节点，该节点不存储值，只是为了方便进行插入操作。不要将头结点与第一个节点混起来，第一个节点是链表中第一个真正存储值的节点。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/0dae7e93-cfd1-4bd3-97e8-325b032b716f-1572687622947.gif" width="420px"> </div><br>
+<div align="center"> <img src="/ext-images/0dae7e93-cfd1-4bd3-97e8-325b032b716f-1572687622947.gif" width="420px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">printListFromTailToHead</span><span class="o">(</span><span class="n">ListNode</span> <span class="n">listNode</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// 头插法构建逆序链表
 </span><span class="c1"></span>    <span class="n">ListNode</span> <span class="n">head</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ListNode</span><span class="o">(-</span><span class="n">1</span><span class="o">);</span>
@@ -10400,7 +10400,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>栈具有后进先出的特点，在遍历链表时将值按顺序放入栈中，最后出栈的顺序即为逆序。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/9d1deeba-4ae1-41dc-98f4-47d85b9831bc.gif" width="340px"> </div><br>
+<div align="center"> <img src="/ext-images/9d1deeba-4ae1-41dc-98f4-47d85b9831bc.gif" width="340px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">printListFromTailToHead</span><span class="o">(</span><span class="n">ListNode</span> <span class="n">listNode</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Stack</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;();</span>
     <span class="k">while</span> <span class="o">(</span><span class="n">listNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>

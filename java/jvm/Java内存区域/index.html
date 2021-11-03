@@ -10569,7 +10569,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p>下图来自《深入理解 Java 虚拟机》第 3 版 2.2.5</p>
-<p><img src="https://img-blog.csdnimg.cn/20210425134508117.png" alt=""  /></p>
+<p><img src="/ext-images/20210425134508117.png" alt=""  /></p>
 <ol>
 <li>
 <p>整个永久代有一个 JVM 本身设置的固定大小上限，无法进行调整，而元空间使用的是直接内存，受本机可用内存的限制，虽然元空间仍旧可能溢出，但是比原来出现的几率会更小。</p>
@@ -10739,7 +10739,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </span></code></pre></div><blockquote>
 <p><strong>注意</strong> ：比较 String 字符串的值是否相等，可以使用 <code>equals()</code> 方法。 <code>String</code> 中的 <code>equals</code> 方法是被重写过的。 <code>Object</code> 的 <code>equals</code> 方法是比较的对象的内存地址，而 <code>String</code> 的 <code>equals</code> 方法比较的是字符串的值是否相等。如果你使用 <code>==</code> 比较两个字符串是否相等的话，IDEA 还是提示你使用 <code>equals()</code> 方法替换。</p>
 </blockquote>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/image-20210817123252441.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210817123252441.png" alt=""  /></p>
 <blockquote>
 <p>对于基本数据类型来说，== 比较的是值。对于引用数据类型来说，==比较的是对象的内存地址。</p>
 </blockquote>
@@ -10754,7 +10754,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>并且，字符串常量拼接得到的字符串常量在编译阶段就已经被存放字符串常量池，这个得益于编译器的优化。</p>
 <blockquote>
 <p>在编译过程中，Javac 编译器（下文中统称为编译器）会进行一个叫做 <strong>常量折叠(Constant Folding)</strong> 的代码优化。《深入理解 Java 虚拟机》中是也有介绍到：</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javaguide/image-20210817142715396.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210817142715396.png" alt=""  /></p>
 <p>常量折叠会把常量表达式的值求出来作为常量嵌在最终生成的代码中，这是 Javac 编译器会对源代码做的极少量优化措施之一(代码优化几乎都在即时编译器中进行)。</p>
 <p>对于 <code>String str3 = &quot;str&quot; + &quot;ing&quot;;</code> 编译器会给你优化成 <code>String str3 = &quot;string&quot;;</code> 。</p>
 <p>并不是所有的常量都会进行折叠，只有编译器在程序编译期就可以确定值的常量才可以：</p>
@@ -10770,7 +10770,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">str4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">().</span><span class="na">append</span><span class="o">(</span><span class="n">str1</span><span class="o">).</span><span class="na">append</span><span class="o">(</span><span class="n">str2</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
 </code></pre></div><p>因此，<code>str4</code> 并不是字符串常量池中存在的对象，属于堆上的新对象。</p>
 <p>我画了一个图帮助理解：</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5-%E5%B8%B8%E9%87%8F%E6%B1%A0.png" alt=""  /></p>
+<p><img src="/ext-images/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5-%E5%B8%B8%E9%87%8F%E6%B1%A0.png" alt=""  /></p>
 <p>我们在平时写代码的时候，尽量避免多个字符串对象拼接，因为这样会重新创建对象。如果需要改变字符串的话，可以使用 <code>StringBuilder</code> 或者 <code>StringBuffer</code>。</p>
 <p>不过，字符串使用 <code>final</code> 关键字声明之后，可以让编译器当做常量来处理。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="n">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="s">&#34;str&#34;</span><span class="o">;</span>
@@ -10923,7 +10923,7 @@ true
 </code></pre></div><p><code>Integer i1=40</code> 这一行代码会发生拆箱，也就是说这行代码等价于 <code>Integer i1=Integer.valueOf(40)</code> 。因此，<code>i1</code> 直接使用的是常量池中的对象。而<code>Integer i1 = new Integer(40)</code> 会直接创建新的对象。</p>
 <p>因此，答案是 <code>false</code> 。你答对了吗？</p>
 <p>记住：<strong>所有整型包装类对象之间值的比较，全部使用 equals 方法比较</strong>。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javaguide/20210313164740893.png" alt=""  /></p>
+<p><img src="/ext-images/20210313164740893.png" alt=""  /></p>
 <p><strong>Integer 比较更丰富的一个例子:</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Integer</span> <span class="n">i1</span> <span class="o">=</span> <span class="n">40</span><span class="o">;</span>
 <span class="n">Integer</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">40</span><span class="o">;</span>

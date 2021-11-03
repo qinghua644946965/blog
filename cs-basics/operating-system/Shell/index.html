@@ -10379,7 +10379,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>目前Linux系统下最流行的运维自动化语言就是Shell和Python了。</p>
 <p>两者之间，Shell几乎是IT企业必须使用的运维自动化编程语言，特别是在运维工作中的服务监控、业务快速部署、服务启动停止、数据备份及处理、日志分析等环节里，shell是不可缺的。Python 更适合处理复杂的业务逻辑，以及开发复杂的运维软件工具，实现通过web访问等。Shell是一个命令解释器，解释执行用户所输入的命令和程序。一输入命令，就立即回应的交互的对话方式。</p>
 <p>另外，了解 shell 编程也是大部分互联网公司招聘后端开发人员的要求。下图是我截取的一些知名互联网公司对于 Shell 编程的要求。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-16/60190220.jpg" alt="大型互联网公司对于shell编程技能的要求"  /></p>
+<p><img src="/ext-images/60190220.jpg" alt="大型互联网公司对于shell编程技能的要求"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="什么是-shell">
         什么是 Shell？
@@ -10389,7 +10389,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>简单来说“Shell编程就是对一堆Linux命令的逻辑化处理”。</p>
 <p>W3Cschool 上的一篇文章是这样介绍 Shell的，如下图所示。
-<img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-26/19456505.jpg" alt="什么是 Shell？"  /></p>
+<img src="/ext-images/19456505.jpg" alt="什么是 Shell？"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="shell-编程的-hello-world">
         Shell 编程的 Hello World
@@ -10407,7 +10407,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="nb">echo</span>  <span class="s2">&#34;helloworld!&#34;</span>
 </code></pre></div><p>shell中 # 符号表示注释。<strong>shell 的第一行比较特殊，一般都会以#!开始来指定使用的 shell 类型。在linux中，除了bash shell以外，还有很多版本的shell， 例如zsh、dash等等&hellip;不过bash shell还是我们使用最多的。</strong></p>
 <p>(4) 运行脚本:<code>./helloworld.sh</code> 。（注意，一定要写成 <code>./helloworld.sh</code> ，而不是 <code>helloworld.sh</code> ，运行其它二进制的程序也一样，直接写 <code>helloworld.sh</code> ，linux 系统会去 PATH 里寻找有没有叫 helloworld.sh 的，而只有 /bin, /sbin, /usr/bin，/usr/sbin 等在 PATH 里，你的当前目录通常不在 PATH 里，所以写成 <code>helloworld.sh</code> 是会找不到命令的，要用<code>./helloworld.sh</code> 告诉系统说，就在当前目录找。）</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-16/55296212.jpg" alt="shell 编程Hello World"  /></p>
+<p><img src="/ext-images/55296212.jpg" alt="shell 编程Hello World"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="shell-变量">
         Shell 变量
@@ -10448,7 +10448,7 @@ PS1　基本提示符，对于root用户是#，对于普通用户是$</p>
 <span class="nv">hello</span><span class="o">=</span><span class="s2">&#34;hello world&#34;</span>
 <span class="nb">echo</span> <span class="nv">$hello</span>
 <span class="nb">echo</span>  <span class="s2">&#34;helloworld!&#34;</span>
-</code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-17/19835037.jpg" alt="使用自己定义的变量"  /></p>
+</code></pre></div><p><img src="/ext-images/19835037.jpg" alt="使用自己定义的变量"  /></p>
 <p><strong>Shell 编程中的变量名的命名的注意事项：</strong></p>
 <ul>
 <li>命名只能使用英文字母，数字和下划线，首个字符不能以数字开头，但是可以使用下划线（_）开头。</li>
@@ -10497,7 +10497,7 @@ PS1　基本提示符，对于root用户是#，对于普通用户是$</p>
 <span class="nv">greeting_3</span><span class="o">=</span><span class="s1">&#39;hello, ${name} !&#39;</span>
 <span class="nb">echo</span> <span class="nv">$greeting_2</span>  <span class="nv">$greeting_3</span>
 </code></pre></div><p>输出结果：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-17/51148933.jpg" alt="输出结果"  /></p>
+<p><img src="/ext-images/51148933.jpg" alt="输出结果"  /></p>
 <p><strong>获取字符串长度：</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span><span class="c1">#获取字符串长度</span>
@@ -10583,7 +10583,7 @@ expr <span class="m">5</span> <span class="se">\*</span> <span class="m">6</span
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/4937342.jpg" alt="算数运算符"  /></p>
+</div><p><img src="/ext-images/4937342.jpg" alt="算数运算符"  /></p>
 <p>我以加法运算符做一个简单的示例（注意：不是单引号，是反引号）：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span><span class="nv">a</span><span class="o">=</span>3<span class="p">;</span><span class="nv">b</span><span class="o">=</span>3<span class="p">;</span>
@@ -10598,7 +10598,7 @@ expr <span class="m">5</span> <span class="se">\*</span> <span class="m">6</span
         </a>
     </h3>
 </div><p>关系运算符只支持数字，不支持字符串，除非字符串的值是数字。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/64391380.jpg" alt="shell关系运算符"  /></p>
+<p><img src="/ext-images/64391380.jpg" alt="shell关系运算符"  /></p>
 <p>通过一个简单的示例演示关系运算符的使用，下面shell程序的作用是当score=100的时候输出A否则输出B。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span><span class="nv">score</span><span class="o">=</span>90<span class="p">;</span>
@@ -10618,7 +10618,7 @@ expr <span class="m">5</span> <span class="se">\*</span> <span class="m">6</span
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/60545848.jpg" alt="逻辑运算符"  /></p>
+</div><p><img src="/ext-images/60545848.jpg" alt="逻辑运算符"  /></p>
 <p>示例：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span><span class="nv">a</span><span class="o">=</span><span class="k">$((</span> <span class="m">1</span> <span class="o">&amp;&amp;</span> <span class="m">0</span><span class="k">))</span>
@@ -10631,7 +10631,7 @@ expr <span class="m">5</span> <span class="se">\*</span> <span class="m">6</span
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/93961425.jpg" alt="布尔运算符"  /></p>
+</div><p><img src="/ext-images/93961425.jpg" alt="布尔运算符"  /></p>
 <p>这里就不做演示了，应该挺简单的。</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="字符串运算符">
@@ -10640,7 +10640,7 @@ expr <span class="m">5</span> <span class="se">\*</span> <span class="m">6</span
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/309094.jpg" alt=" 字符串运算符"  /></p>
+</div><p><img src="/ext-images/309094.jpg" alt=" 字符串运算符"  /></p>
 <p>简单示例：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span><span class="nv">a</span><span class="o">=</span><span class="s2">&#34;abc&#34;</span><span class="p">;</span>
@@ -10660,7 +10660,7 @@ expr <span class="m">5</span> <span class="se">\*</span> <span class="m">6</span
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-11-22/60359774.jpg" alt="文件相关运算符"  /></p>
+</div><p><img src="/ext-images/60359774.jpg" alt="文件相关运算符"  /></p>
 <p>使用方式很简单，比如我们定义好了一个文件路径<code>file=&quot;/usr/learnshell/test.sh&quot;</code> 如果我们想判断这个文件是否可读，可以这样<code>if [ -r $file ]</code> 如果想判断这个文件是否可写，可以这样<code>-w $file</code>，是不是很简单。</p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="shell流程控制">

@@ -10426,7 +10426,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><code>m_creator_trx_id</code>：创建该 <code>Read View</code> 的事务 ID</li>
 </ul>
 <p><strong>事务可见性示意图</strong>（<a class="gdoc-markdown__link" href="https://leviathan.vip/2019/03/20/InnoDB%E7%9A%84%E4%BA%8B%E5%8A%A1%E5%88%86%E6%9E%90-MVCC/#MVCC-1">图源</a>）：</p>
-<p><img src="https://leviathan.vip/2019/03/20/InnoDB%E7%9A%84%E4%BA%8B%E5%8A%A1%E5%88%86%E6%9E%90-MVCC/trans_visible.jpg" alt="trans_visible"  /></p>
+<p><img src="/ext-images/trans_visible.jpg" alt="trans_visible"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="undo-log">
         undo-log
@@ -10444,14 +10444,14 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><strong><code>insert undo log</code></strong> ：指在 <code>insert</code> 操作中产生的 <code>undo log</code>。因为 <code>insert</code> 操作的记录只对事务本身可见，对其他事务不可见，故该 <code>undo log</code> 可以在事务提交后直接删除。不需要进行 <code>purge</code> 操作</li>
 </ol>
 <p><strong><code>insert</code> 时的数据初始状态：</strong></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/317e91e1-1ee1-42ad-9412-9098d5c6a9ad.png" alt=""  /></p>
+<p><img src="/ext-images/317e91e1-1ee1-42ad-9412-9098d5c6a9ad.png" alt=""  /></p>
 <ol start="2">
 <li><strong><code>update undo log</code></strong> ：<code>update</code> 或 <code>delete</code> 操作中产生的 <code>undo log</code>。该 <code>undo log</code>可能需要提供 <code>MVCC</code> 机制，因此不能在事务提交时就进行删除。提交时放入 <code>undo log</code> 链表，等待 <code>purge线程</code> 进行最后的删除</li>
 </ol>
 <p><strong>数据第一次被修改时：</strong></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/c52ff79f-10e6-46cb-b5d4-3c9cbcc1934a.png" alt=""  /></p>
+<p><img src="/ext-images/c52ff79f-10e6-46cb-b5d4-3c9cbcc1934a.png" alt=""  /></p>
 <p><strong>数据第二次被修改时：</strong></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/6a276e7a-b0da-4c7b-bdf7-c0c7b7b3b31c.png" alt=""  /></p>
+<p><img src="/ext-images/6a276e7a-b0da-4c7b-bdf7-c0c7b7b3b31c.png" alt=""  /></p>
 <p>不同事务或者相同事务的对同一记录行的修改，会使该记录行的 <code>undo log</code> 成为一条链表，链首就是最新的记录，链尾就是最早的旧记录。</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="数据可见性算法">
@@ -10462,7 +10462,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>在 <code>InnoDB</code> 存储引擎中，创建一个新事务后，执行每个 <code>select</code> 语句前，都会创建一个快照（Read View），<strong>快照中保存了当前数据库系统中正处于活跃（没有 commit）的事务的 ID 号</strong>。其实简单的说保存的是系统中当前不应该被本事务看到的其他事务 ID 列表（即 m_ids）。当用户在这个事务中要读取某个记录行的时候，<code>InnoDB</code> 会将该记录行的 <code>DB_TRX_ID</code> 与 <code>Read View</code> 中的一些变量及当前事务 ID 进行比较，判断是否满足可见性条件</p>
 <p><a class="gdoc-markdown__link" href="https://github.com/facebook/mysql-8.0/blob/8.0/storage/innobase/include/read0types.h#L161">具体的比较算法</a>如下：<a class="gdoc-markdown__link" href="https://leviathan.vip/2019/03/20/InnoDB%E7%9A%84%E4%BA%8B%E5%8A%A1%E5%88%86%E6%9E%90-MVCC/#MVCC-1">图源</a></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/8778836b-34a8-480b-b8c7-654fe207a8c2.png" alt=""  /></p>
+<p><img src="/ext-images/8778836b-34a8-480b-b8c7-654fe207a8c2.png" alt=""  /></p>
 <ol>
 <li>
 <p>如果记录 DB_TRX_ID &lt; m_up_limit_id，那么表明最新修改该行的事务（DB_TRX_ID）在当前事务创建快照之前就提交了，所以该记录行的值对当前事务是可见的</p>
@@ -10509,7 +10509,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h2>
 </div><p>虽然 RC 和 RR 都通过 <code>MVCC</code> 来读取快照数据，但由于 <strong>生成 Read View 时机不同</strong>，从而在 RR 级别下实现可重复读</p>
 <p>举个例子：</p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/6fb2b9a1-5f14-4dec-a797-e4cf388ed413.png" alt=""  /></p>
+<p><img src="/ext-images/6fb2b9a1-5f14-4dec-a797-e4cf388ed413.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="在-rc-下-readview-生成情况">
         在 RC 下 ReadView 生成情况
@@ -10520,7 +10520,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><ol>
 <li>
 <p><strong><code>假设时间线来到 T4 ，那么此时数据行 id = 1 的版本链为</code>：</strong></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/a3fd1ec6-8f37-42fa-b090-7446d488fd04.png" alt=""  /></p>
+<p><img src="/ext-images/a3fd1ec6-8f37-42fa-b090-7446d488fd04.png" alt=""  /></p>
 </li>
 </ol>
 <p>由于 RC 级别下每次查询都会生成<code>Read View</code> ，并且事务 101、102 并未提交，此时 <code>103</code> 事务生成的 <code>Read View</code> 中活跃的事务 <strong><code>m_ids</code> 为：[101,102]</strong> ，<code>m_low_limit_id</code>为：104，<code>m_up_limit_id</code>为：101，<code>m_creator_trx_id</code> 为：103</p>
@@ -10532,7 +10532,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <ol start="2">
 <li>
 <p><strong><code>时间线来到 T6 ，数据的版本链为</code>：</strong></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/528559e9-dae8-4d14-b78d-a5b657c88391.png" alt="markdown"  /></p>
+<p><img src="/ext-images/528559e9-dae8-4d14-b78d-a5b657c88391.png" alt="markdown"  /></p>
 </li>
 </ol>
 <p>因为在 RC 级别下，重新生成 <code>Read View</code>，这时事务 101 已经提交，102 并未提交，所以此时 <code>Read View</code> 中活跃的事务 <strong><code>m_ids</code>：[102]</strong> ，<code>m_low_limit_id</code>为：104，<code>m_up_limit_id</code>为：102，<code>m_creator_trx_id</code>为：103</p>
@@ -10547,7 +10547,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <ol start="3">
 <li><strong><code>时间线来到 T9 ，数据的版本链为</code>：</strong></li>
 </ol>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/6f82703c-36a1-4458-90fe-d7f4edbac71a.png" alt="markdown"  /></p>
+<p><img src="/ext-images/6f82703c-36a1-4458-90fe-d7f4edbac71a.png" alt="markdown"  /></p>
 <p>重新生成 <code>Read View</code>， 这时事务 101 和 102 都已经提交，所以 <strong>m_ids</strong> 为空，则 m_up_limit_id = m_low_limit_id = 104，最新版本事务 ID 为 102，满足 102 &lt; m_low_limit_id，可见，查询结果为 <code>name = 赵六</code></p>
 <blockquote>
 <p><strong>总结：</strong> <strong>在 RC 隔离级别下，事务在每次查询开始时都会生成并设置新的 Read View，所以导致不可重复读</strong></p>
@@ -10563,7 +10563,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <ol>
 <li><strong><code>在 T4 情况下的版本链为</code>：</strong></li>
 </ol>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/0e906b95-c916-4f30-beda-9cb3e49746bf.png" alt="markdown"  /></p>
+<p><img src="/ext-images/0e906b95-c916-4f30-beda-9cb3e49746bf.png" alt="markdown"  /></p>
 <p>在当前执行 <code>select</code> 语句时生成一个 <code>Read View</code>，此时 <strong><code>m_ids</code>：[101,102]</strong> ，<code>m_low_limit_id</code>为：104，<code>m_up_limit_id</code>为：101，<code>m_creator_trx_id</code> 为：103</p>
 <p>此时和 RC 级别下一样：</p>
 <ul>
@@ -10574,7 +10574,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <ol start="2">
 <li>
 <p><strong><code>时间点 T6 情况下</code>：</strong></p>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/79ed6142-7664-4e0b-9023-cf546586aa39.png" alt="markdown"  /></p>
+<p><img src="/ext-images/79ed6142-7664-4e0b-9023-cf546586aa39.png" alt="markdown"  /></p>
 <p>在 RR 级别下只会生成一次<code>Read View</code>，所以此时依然沿用 <strong><code>m_ids</code> ：[101,102]</strong> ，<code>m_low_limit_id</code>为：104，<code>m_up_limit_id</code>为：101，<code>m_creator_trx_id</code> 为：103</p>
 </li>
 </ol>
@@ -10595,7 +10595,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <ol start="3">
 <li><strong>时间点 T9 情况下：</strong></li>
 </ol>
-<p><img src="https://ddmcc-1255635056.file.myqcloud.com/cbbedbc5-0e3c-4711-aafd-7f3d68a4ed4e.png" alt="markdown"  /></p>
+<p><img src="/ext-images/cbbedbc5-0e3c-4711-aafd-7f3d68a4ed4e.png" alt="markdown"  /></p>
 <p>此时情况跟 T6 完全一样，由于已经生成了 <code>Read View</code>，此时依然沿用 <strong><code>m_ids</code> ：[101,102]</strong> ，所以查询结果依然是 <code>name = 菜花</code></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="mvccnext-key-lock-防止幻读">

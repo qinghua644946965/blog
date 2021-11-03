@@ -10334,7 +10334,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>顾名思义，关系型数据库就是一种建立在关系模型的基础上的数据库。关系模型表明了数据库中所存储的数据之间的联系（一对一、一对多、多对多）。</p>
 <p>关系型数据库中，我们的数据都被存放在了各种表中（比如用户表），表中的每一行就存放着一条数据（比如一个用户的信息）。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/5e3c1a71724a38245aa43b02_99bf70d46cc247be878de9d3a88f0c44.png" alt=""  /></p>
+<p><img src="/ext-images/5e3c1a71724a38245aa43b02_99bf70d46cc247be878de9d3a88f0c44.png" alt=""  /></p>
 <p>大部分关系型数据库都使用 SQL 来操作数据库中的数据。并且，大部分关系型数据库都支持事务的四大特性(ACID)。</p>
 <p><strong>有哪些常见的关系型数据库呢？</strong></p>
 <p>MySQL、PostgreSQL、Oracle、SQL Server、SQLite（微信本地的聊天记录的存储就是用的 SQLite） &hellip;&hellip;。</p>
@@ -10345,7 +10345,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://img-blog.csdnimg.cn/20210327143351823.png" alt=""  /></p>
+</div><p><img src="/ext-images/20210327143351823.png" alt=""  /></p>
 <p><strong>MySQL 是一种关系型数据库，主要用于持久化存储我们的系统中的一些数据比如用户信息。</strong></p>
 <p>由于 MySQL 是开源免费并且比较成熟的数据库，因此，MySQL 被大量使用在各种系统中。任何人都可以在 GPL(General Public License) 的许可下下载并根据个性化的需要对其进行修改。MySQL 的默认端口号是<strong>3306</strong>。</p>
 <div class="gdoc-page__anchorwrap">
@@ -10364,14 +10364,14 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p><strong>查看 MySQL 提供的所有存储引擎</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">engines</span><span class="p">;</span>
-</code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/mysql-engines.png" alt="查看MySQL提供的所有存储引擎"  /></p>
+</code></pre></div><p><img src="/ext-images/mysql-engines.png" alt="查看MySQL提供的所有存储引擎"  /></p>
 <p>从上图我们可以查看出 MySQL 当前默认的存储引擎是 InnoDB，并且在 5.7 版本所有的存储引擎中只有 InnoDB 是事务性存储引擎，也就是说只有 InnoDB 支持事务。</p>
 <p><strong>查看 MySQL 当前默认的存储引擎</strong></p>
 <p>我们也可以通过下面的命令查看默认的存储引擎。</p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">show</span> <span class="n">variables</span> <span class="k">like</span> <span class="s1">&#39;%storage_engine%&#39;</span><span class="p">;</span>
 </code></pre></div><p><strong>查看表的存储引擎</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span> <span class="k">table</span> <span class="n">status</span> <span class="k">like</span> <span class="s2">&#34;table_name&#34;</span> <span class="p">;</span>
-</code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e6%9f%a5%e7%9c%8b%e8%a1%a8%e7%9a%84%e5%ad%98%e5%82%a8%e5%bc%95%e6%93%8e.png" alt="查看表的存储引擎"  /></p>
+</code></pre></div><p><img src="/ext-images/%e6%9f%a5%e7%9c%8b%e8%a1%a8%e7%9a%84%e5%ad%98%e5%82%a8%e5%bc%95%e6%93%8e.png" alt="查看表的存储引擎"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="myisam-和-innodb-的区别">
         MyISAM 和 InnoDB 的区别
@@ -10502,9 +10502,9 @@ set global  query_cache_size=600000;
 <span class="n">SQL1</span><span class="p">,</span><span class="n">SQL2</span><span class="p">...</span>
 <span class="o">##</span> <span class="err">提交事务</span>
 <span class="k">COMMIT</span><span class="p">;</span>
-</code></pre></div><p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-12/640-20201207160554677.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/640-20201207160554677.png" alt=""  /></p>
 <p>另外，关系型数据库（例如：<code>MySQL</code>、<code>SQL Server</code>、<code>Oracle</code> 等）事务都有 <strong>ACID</strong> 特性：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%E4%BA%8B%E5%8A%A1%E7%89%B9%E6%80%A7.png" alt="事务的特性"  /></p>
+<p><img src="/ext-images/%E4%BA%8B%E5%8A%A1%E7%89%B9%E6%80%A7.png" alt="事务的特性"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="何为-acid-特性呢">
         何为 ACID 特性呢？

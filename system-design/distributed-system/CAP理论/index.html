@@ -10343,7 +10343,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p><strong>CAP</strong> 也就是 <strong>Consistency（一致性）</strong>、<strong>Availability（可用性）</strong>、<strong>Partition Tolerance（分区容错性）</strong> 这三个单词首字母组合。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-11/cap.png" alt=""  /></p>
+<p><img src="/ext-images/cap.png" alt=""  /></p>
 <p>CAP 理论的提出者布鲁尔在提出 CAP 猜想的时候，并没有详细定义 <strong>Consistency</strong>、<strong>Availability</strong>、<strong>Partition Tolerance</strong> 三个单词的明确定义。</p>
 <p>因此，对于 CAP 的民间解读有很多，一般比较被大家推荐的是下面 👇 这种版本的解读。</p>
 <p>在理论计算机科学中，CAP 定理（CAP theorem）指出对于一个分布式系统来说，当设计读写操作时，只能同时满足以下三点中的两个：</p>
@@ -10356,7 +10356,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <blockquote>
 <p>分布式系统中，多个节点之前的网络本来是连通的，但是因为某些故障（比如部分节点网络出了问题）某些节点之间不连通了，整个网络就分成了几块区域，这就叫网络分区。</p>
 </blockquote>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-11/partition-tolerance.png" alt="partition-tolerance"  /></p>
+<p><img src="/ext-images/partition-tolerance.png" alt="partition-tolerance"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="不是所谓的3-选-2">
         不是所谓的“3 选 2”
@@ -10383,7 +10383,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><p>我这里以注册中心来探讨一下 CAP 的实际应用。考虑到很多小伙伴不知道注册中心是干嘛的，这里简单以 Dubbo 为例说一说。</p>
 <p>下图是 Dubbo 的架构图。<strong>注册中心 Registry 在其中扮演了什么角色呢？提供了什么服务呢？</strong></p>
 <p>注册中心负责服务地址的注册与查找，相当于目录服务，服务提供者和消费者只在启动时与注册中心交互，注册中心不转发请求，压力较小。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-11/dubbo-architecture.png" alt=""  /></p>
+<p><img src="/ext-images/dubbo-architecture.png" alt=""  /></p>
 <p>常见的可以作为注册中心的组件有：ZooKeeper、Eureka、Nacos&hellip;。</p>
 <ol>
 <li><strong>ZooKeeper 保证的是 CP。</strong> 任何时刻对 ZooKeeper 的读请求都能得到一致性的结果，但是， ZooKeeper 不保证每次请求的可用性比如在 Leader 选举过程中或者半数以上的机器不可用的时候服务就是不可用的。</li>

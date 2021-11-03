@@ -10847,7 +10847,7 @@ appendfsync no        #让操作系统决定何时进行同步
 <p>Redis 4.0 开始支持 RDB 和 AOF 的混合持久化（默认关闭，可以通过配置项 <code>aof-use-rdb-preamble</code> 开启）。</p>
 <p>如果把混合持久化打开，AOF 重写的时候就直接把 RDB 的内容写到 AOF 文件开头。这样做的好处是可以结合 RDB 和 AOF 的优点, 快速加载同时避免丢失过多的数据。当然缺点也是有的， AOF 里面的 RDB 部分是压缩格式不再是 AOF 格式，可读性较差。</p>
 <p>官方文档地址：https://redis.io/topics/persistence</p>
-<p><img src="https://cdn.jsdelivr.net/gh/javaguide-tech/image-host-github-stars-01@main/webfunny_monitor/image-20210807145107290.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210807145107290.png" alt=""  /></p>
 <p><strong>补充内容：AOF 重写</strong></p>
 <p>AOF 重写可以产生一个新的 AOF 文件，这个新的 AOF 文件和原有的 AOF 文件所保存的数据库状态一样，但体积更小。</p>
 <p>AOF 重写是一个有歧义的名字，该功能是通过读取数据库中的键值对来实现的，程序无须对现有 AOF 文件进行任何读入、分析或者写入操作。</p>

@@ -10453,7 +10453,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>在 Java 中，JVM 可以理解的代码就叫做<code>字节码</code>（即扩展名为 <code>.class</code> 的文件），它不面向任何特定的处理器，只面向虚拟机。Java 语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植的特点。所以 Java 程序运行时比较高效，而且，由于字节码并不针对一种特定的机器，因此，Java 程序无须重新编译便可在多种不同操作系统的计算机上运行。</p>
 </blockquote>
 <p><strong>Java 程序从源代码到运行一般有下面 3 步：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/Java%20%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="Java程序运行过程"  /></p>
+<p><img src="/ext-images/Java%20%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png" alt="Java程序运行过程"  /></p>
 <p>我们需要格外注意的是 .class-&gt;机器码 这一步。在这一步 JVM 类加载器首先加载字节码文件，然后通过解释器逐行解释执行，这种方式的执行速度会相对比较慢。而且，有些方法和代码块是经常需要被调用的(也就是所谓的热点代码)，所以后面引进了 JIT 编译器，而 JIT 属于运行时编译。当 JIT 编译器完成第一次编译后，其会将字节码对应的机器码保存下来，下次可以直接使用。而我们知道，机器码的运行效率肯定是高于 Java 解释器的。这也解释了我们为什么经常会说 Java 是编译与解释共存的语言。</p>
 <blockquote>
 <p>HotSpot 采用了惰性评估(Lazy Evaluation)的做法，根据二八定律，消耗大部分系统资源的只有那一小部分的代码（热点代码），而这也就是 JIT 所需要编译的部分。JVM 会根据代码每次被执行的情况收集信息并相应地做出一些优化，因此执行的次数越多，它的速度就越快。JDK 9 引入了一种新的编译模式 AOT(Ahead of Time Compilation)，它是直接将字节码编译成机器码，这样就避免了 JIT 预热等各方面的开销。JDK 支持分层编译和 AOT 协作使用。但是 ，AOT 编译器的编译质量是肯定比不上 JIT 编译器的。</p>
@@ -10507,7 +10507,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li>BCL 协议（Oracle Binary Code License Agreement）： 可以使用JDK（支持商用），但是不能进行修改。</li>
 <li>OTN 协议（Oracle Technology Network License Agreement）： 11 及之后新发布的JDK用的都是这个协议，可以自己私下用，但是商用需要付费。</li>
 </ul>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/20210425151835918.png" alt=""  /></p>
+<p><img src="/ext-images/20210425151835918.png" alt=""  /></p>
 <p>相关阅读👍：<a class="gdoc-markdown__link" href="https://www.baeldung.com/oracle-jdk-vs-openjdk">《Differences Between Oracle JDK and OpenJDK》</a></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="java-和-c的区别">
@@ -10564,7 +10564,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </ol>
 <blockquote>
 <p>java 编程思想第四版：2.2.2 节
-<img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-9-15/86735519.jpg" alt=""  /></p>
+<img src="/ext-images/86735519.jpg" alt=""  /></p>
 </blockquote>
 <div class="gdoc-page__anchorwrap">
     <h3 id="注释">
@@ -11173,7 +11173,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </code></pre></div><p><code>Integer i1=40</code> 这一行代码会发生装箱，也就是说这行代码等价于 <code>Integer i1=Integer.valueOf(40)</code> 。因此，<code>i1</code> 直接使用的是常量池中的对象。而<code>Integer i1 = new Integer(40)</code> 会直接创建新的对象。</p>
 <p>因此，答案是 <code>false</code> 。你答对了吗？</p>
 <p>记住：<strong>所有整型包装类对象之间值的比较，全部使用 equals 方法比较</strong>。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210422164544846.png" alt=""  /></p>
+<p><img src="/ext-images/20210422164544846.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="方法函数">
         方法（函数）
@@ -11304,7 +11304,7 @@ b = 10
 num1 = 10
 num2 = 20
 </code></pre><p><strong>解析：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-9-27/22191348.jpg" alt="example 1 "  /></p>
+<p><img src="/ext-images/22191348.jpg" alt="example 1 "  /></p>
 <p>在 swap 方法中，a、b 的值进行交换，并不会影响到 num1、num2。因为，a、b 中的值，只是从 num1、num2 的复制过来的。也就是说，a、b 相当于 num1、num2 的副本，副本的内容无论怎么修改，都不会影响到原件本身。</p>
 <p><strong>通过上面例子，我们已经知道了一个方法不能修改一个基本数据类型的参数，而对象引用作为参数就不一样，请看 example2.</strong></p>
 <blockquote>
@@ -11325,7 +11325,7 @@ num2 = 20
 <pre><code>1
 0
 </code></pre><p><strong>解析：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-9-27/3825204.jpg" alt="example 2"  /></p>
+<p><img src="/ext-images/3825204.jpg" alt="example 2"  /></p>
 <p>array 被初始化 arr 的拷贝也就是一个对象的引用，也就是说 array 和 arr 指向的是同一个数组对象。 因此，外部对引用对象的改变会反映到所对应的对象上。</p>
 <p><strong>通过 example2 我们已经看到，实现一个改变对象参数状态的方法并不是一件难事。理由很简单，方法得到的是对象引用的拷贝，对象引用及其他的拷贝同时引用同一个对象。</strong></p>
 <p><strong>很多程序设计语言（特别是，C++和 Pascal)提供了两种参数传递的方式：值调用和引用调用。有些程序员（甚至本书的作者）认为 Java 程序设计语言对对象采用的是引用调用，实际上，这种理解是不对的。由于这种误解具有一定的普遍性，所以下面给出一个反例来详细地阐述一下这个问题。</strong></p>
@@ -11358,9 +11358,9 @@ s1:小张
 s2:小李
 </code></pre><p><strong>解析：</strong></p>
 <p>交换之前：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-9-27/88729818.jpg" alt=""  /></p>
+<p><img src="/ext-images/88729818.jpg" alt=""  /></p>
 <p>交换之后：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-9-27/34384414.jpg" alt=""  /></p>
+<p><img src="/ext-images/34384414.jpg" alt=""  /></p>
 <p>通过上面两张图可以很清晰的看出： <strong>方法并没有改变存储在变量 s1 和 s2 中的对象引用。swap 方法的参数 x 和 y 被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝</strong></p>
 <blockquote>
 <p><strong>总结</strong></p>
@@ -11395,7 +11395,7 @@ s2:小李
     </h4>
 </div><p>发生在同一个类中（或者父类和子类之间），方法名必须相同，参数类型不同、个数不同、顺序不同，方法返回值和访问修饰符可以不同。</p>
 <p>下面是《Java 核心技术》对重载这个概念的介绍：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/bg/desktopjava%e6%a0%b8%e5%bf%83%e6%8a%80%e6%9c%af-%e9%87%8d%e8%bd%bd.jpg" alt=""  /></p>
+<p><img src="/ext-images/desktopjava%e6%a0%b8%e5%bf%83%e6%8a%80%e6%9c%af-%e9%87%8d%e8%bd%bd.jpg" alt=""  /></p>
 <p>综上：重载就是同一个类中多个同名方法根据不同的传参来执行不同的逻辑处理。</p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="重写">
@@ -11496,7 +11496,7 @@ s2:小李
 <li><strong>浅拷贝</strong>：对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝，此为浅拷贝。</li>
 <li><strong>深拷贝</strong>：对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容，此为深拷贝。</li>
 </ol>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/java-deep-and-shallow-copy.jpg" alt="deep and shallow copy"  /></p>
+<p><img src="/ext-images/java-deep-and-shallow-copy.jpg" alt="deep and shallow copy"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="java-面向对象">
         Java 面向对象
@@ -11783,9 +11783,9 @@ s2:小李
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-12/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt=""  /></p>
+</div><p><img src="/ext-images/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE.png" alt=""  /></p>
 <p style="font-size:13px;text-align:right">图片来自：https://simplesnippets.tech/exception-handling-in-java-part-1/</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-12/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE2.png" alt=""  /></p>
+<p><img src="/ext-images/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE2.png" alt=""  /></p>
 <p style="font-size:13px;text-align:right">图片来自：https://chercher.tech/java-programming/exceptions-java</p>
 <p>在 Java 中，所有的异常都有一个共同的祖先 <code>java.lang</code> 包中的 <code>Throwable</code> 类。<code>Throwable</code> 类有两个重要的子类 <code>Exception</code>（异常）和 <code>Error</code>（错误）。<code>Exception</code> 能被程序本身处理(<code>try-catch</code>)， <code>Error</code> 是无法处理的(只能尽量避免)。</p>
 <p><code>Exception</code> 和 <code>Error</code> 二者都是 Java 异常处理的重要子类，各自都包含大量子类。</p>
@@ -11795,7 +11795,7 @@ s2:小李
 </ul>
 <p><strong>受检查异常</strong></p>
 <p>Java 代码在编译过程中，如果受检查异常没有被 <code>catch</code>/<code>throw</code> 处理的话，就没办法通过编译 。比如下面这段 IO 操作的代码。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-12/check-exception.png" alt="check-exception"  /></p>
+<p><img src="/ext-images/check-exception.png" alt="check-exception"  /></p>
 <p>除了<code>RuntimeException</code>及其子类以外，其他的<code>Exception</code>类及其子类都属于受检查异常 。常见的受检查异常有： IO 相关的异常、<code>ClassNotFoundException</code> 、<code>SQLException</code>&hellip;。</p>
 <p><strong>不受检查异常</strong></p>
 <p>Java 代码在编译过程中 ，我们即使不处理不受检查异常也可以正常通过编译。</p>
@@ -11921,7 +11921,7 @@ s2:小李
 <p><strong>序列化</strong>（serialization）在计算机科学的数据处理中，是指将数据结构或对象状态转换成可取用格式（例如存成文件，存于缓冲，或经由网络中发送），以留待后续在相同或另一台计算机环境中，能恢复原先状态的过程。依照序列化格式重新获取字节的结果时，可以利用它来产生与原始对象相同语义的副本。对于许多对象，像是使用大量引用的复杂对象，这种序列化重建的过程并不容易。面向对象中的对象序列化，并不概括之前原始对象所关系的函数。这种过程也称为对象编组（marshalling）。从一系列字节提取数据结构的反向操作，是反序列化（也称为解编组、deserialization、unmarshalling）。</p>
 </blockquote>
 <p>综上：<strong>序列化的主要目的是通过网络传输对象或者说是将对象存储到文件系统、数据库、内存中。</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2020-8/a478c74d-2c48-40ae-9374-87aacf05188c.png" alt=""  /></p>
+<p><img src="/ext-images/a478c74d-2c48-40ae-9374-87aacf05188c.png" alt=""  /></p>
 <p style="text-align:right;font-size:13px;color:gray">https://www.corejavaguru.com/java/serialization/interview-questions-1</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="java-序列化中如果有些字段不想进行序列化怎么办">
@@ -11970,9 +11970,9 @@ s2:小李
 <li>OutputStream/Writer: 所有输出流的基类，前者是字节输出流，后者是字符输出流。</li>
 </ul>
 <p>按操作方式分类结构图：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/IO-%e6%93%8d%e4%bd%9c%e6%96%b9%e5%bc%8f%e5%88%86%e7%b1%bb.png" alt="IO-操作方式分类"  /></p>
+<p><img src="/ext-images/IO-%e6%93%8d%e4%bd%9c%e6%96%b9%e5%bc%8f%e5%88%86%e7%b1%bb.png" alt="IO-操作方式分类"  /></p>
 <p>按操作对象分类结构图：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/IO-%e6%93%8d%e4%bd%9c%e5%af%b9%e8%b1%a1%e5%88%86%e7%b1%bb.png" alt="IO-操作对象分类"  /></p>
+<p><img src="/ext-images/IO-%e6%93%8d%e4%bd%9c%e5%af%b9%e8%b1%a1%e5%88%86%e7%b1%bb.png" alt="IO-操作对象分类"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="既然有了字节流为什么还要有字符流">
         既然有了字节流,为什么还要有字符流?

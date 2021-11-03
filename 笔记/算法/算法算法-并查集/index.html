@@ -10337,7 +10337,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p>用于解决动态连通性问题，能动态连接两个点，并且判断两个点是否连通。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/02943a90-7dd4-4e9a-9325-f8217d3cc54d.jpg" width="350"/> </div><br>
+<div align="center"> <img src="/ext-images/02943a90-7dd4-4e9a-9325-f8217d3cc54d.jpg" width="350"/> </div><br>
 <div class=table-wrap> <table>
 <thead>
 <tr>
@@ -10393,7 +10393,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><p>可以快速进行 find 操作，也就是可以快速判断两个节点是否连通。</p>
 <p>需要保证同一连通分量的所有节点的 id 值相等，就可以通过判断两个节点的 id 值是否相等从而判断其连通性。</p>
 <p>但是 union 操作代价却很高，需要将其中一个连通分量中的所有节点 id 值都修改为另一个节点的 id 值。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/0972501d-f854-4d26-8fce-babb27c267f6.jpg" width="320"/> </div><br>
+<div align="center"> <img src="/ext-images/0972501d-f854-4d26-8fce-babb27c267f6.jpg" width="320"/> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuickFindUF</span> <span class="kd">extends</span> <span class="n">UF</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="nf">QuickFindUF</span><span class="o">(</span><span class="kt">int</span> <span class="n">N</span><span class="o">)</span> <span class="o">{</span>
@@ -10432,7 +10432,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h2>
 </div><p>可以快速进行 union 操作，只需要修改一个节点的 id 值即可。</p>
 <p>但是 find 操作开销很大，因为同一个连通分量的节点 id 值不同，id 值只是用来指向另一个节点。因此需要一直向上查找操作，直到找到最上层的节点。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/11b27de5-5a9d-45e4-95cc-417fa3ad1d38.jpg" width="280"/> </div><br>
+<div align="center"> <img src="/ext-images/11b27de5-5a9d-45e4-95cc-417fa3ad1d38.jpg" width="280"/> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">QuickUnionUF</span> <span class="kd">extends</span> <span class="n">UF</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="nf">QuickUnionUF</span><span class="o">(</span><span class="kt">int</span> <span class="n">N</span><span class="o">)</span> <span class="o">{</span>
@@ -10460,7 +10460,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div><p>这种方法可以快速进行 union 操作，但是 find 操作和树高成正比，最坏的情况下树的高度为节点的数目。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/23e4462b-263f-4d15-8805-529e0ca7a4d1.jpg" width="100"/> </div><br>
+<div align="center"> <img src="/ext-images/23e4462b-263f-4d15-8805-529e0ca7a4d1.jpg" width="100"/> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h2 id="加权-quick-union">
         加权 Quick Union
@@ -10470,7 +10470,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h2>
 </div><p>为了解决 quick-union 的树通常会很高的问题，加权 quick-union 在 union 操作时会让较小的树连接较大的树上面。</p>
 <p>理论研究证明，加权 quick-union 算法构造的树深度最多不超过 logN。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a9f18f8a-c1ea-422e-aa56-d91716b0f755.jpg" width="150"/> </div><br>
+<div align="center"> <img src="/ext-images/a9f18f8a-c1ea-422e-aa56-d91716b0f755.jpg" width="150"/> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WeightedQuickUnionUF</span> <span class="kd">extends</span> <span class="n">UF</span> <span class="o">{</span>
 
     <span class="c1">// 保存节点的数量信息

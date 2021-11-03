@@ -10334,7 +10334,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p>根据二叉树的前序遍历和中序遍历的结果，重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/image-20191102210342488.png" width="400"/> </div><br>
+<div align="center"> <img src="/ext-images/image-20191102210342488.png" width="400"/> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h2 id="解题思路">
         解题思路
@@ -10343,7 +10343,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p>前序遍历的第一个值为根节点的值，使用这个值将中序遍历结果分成两部分，左部分为树的左子树中序遍历结果，右部分为树的右子树中序遍历的结果。然后分别对左右子树递归地求解。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/60c4a44c-7829-4242-b3a1-26c3b513aaf0.gif" width="430px"> </div><br>
+<div align="center"> <img src="/ext-images/60c4a44c-7829-4242-b3a1-26c3b513aaf0.gif" width="430px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// 缓存中序遍历数组每个值对应的索引
 </span><span class="c1"></span><span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">indexForInOrders</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
 

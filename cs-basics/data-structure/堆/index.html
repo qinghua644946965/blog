@@ -10345,7 +10345,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li>（<strong>二叉</strong>）堆是一个数组，它可以被看成是一个 <strong>近似的完全二叉树</strong>。——《算法导论》第三版</li>
 </ul>
 <p>大家可以尝试判断下面给出的图是否是堆？</p>
-<p><img src="images/%e5%a0%86/%e5%a0%861.png" alt=""  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%861.png" alt=""  /></p>
 <p>第1个和第2个是堆。第1个是最大堆，每个节点都比子树中所有节点大。第2个是最小堆，每个节点都比子树中所有节点小。</p>
 <p>第3个不是，第三个中，根结点1比2和15小，而15却比3大，19比5大，不满足堆的性质。</p>
 <div class="gdoc-page__anchorwrap">
@@ -10371,7 +10371,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><strong>最小堆</strong> ：堆中的每一个节点的值都小于等于子树中所有节点的值</li>
 </ul>
 <p>如下图所示，图1是最大堆，图2是最小堆</p>
-<p><img src="images/%e5%a0%86/%e5%a0%862.png" alt=""  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%862.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="堆的存储">
         堆的存储
@@ -10381,7 +10381,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h2>
 </div><p>之前介绍树的时候说过，由于完全二叉树的优秀性质，利用数组存储二叉树即节省空间，又方便索引（若根结点的序号为1，那么对于树中任意节点i，其左子节点序号为 <code>2*i</code>，右子节点序号为 <code>2*i+1</code>）。</p>
 <p>为了方便存储和索引，（二叉）堆可以用完全二叉树的形式进行存储。存储的方式如下图所示：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e7%9a%84%e5%ad%98%e5%82%a8.png" alt="堆的存储"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e7%9a%84%e5%ad%98%e5%82%a8.png" alt="堆的存储"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="堆的操作">
         堆的操作
@@ -10404,13 +10404,13 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>插入元素，作为一个新入职的员工，初来乍到，这个员工需要从基层做起</p>
 </blockquote>
 <p><strong>1.将要插入的元素放到最后</strong></p>
-<p><img src="images/%e5%a0%86/%e5%a0%86-%e6%8f%92%e5%85%a5%e5%85%83%e7%b4%a01.png" alt="堆-插入元素-1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86-%e6%8f%92%e5%85%a5%e5%85%83%e7%b4%a01.png" alt="堆-插入元素-1"  /></p>
 <blockquote>
 <p>有能力的人会逐渐升职加薪，是金子总会发光的！！！</p>
 </blockquote>
 <p><strong>2.从底向上，如果父结点比该元素大，则该节点和父结点交换，直到无法交换</strong></p>
-<p><img src="images/%e5%a0%86/%e5%a0%86-%e6%8f%92%e5%85%a5%e5%85%83%e7%b4%a02.png" alt="堆-插入元素2"  /></p>
-<p><img src="images/%e5%a0%86/%e5%a0%86-%e6%8f%92%e5%85%a5%e5%85%83%e7%b4%a03.png" alt="堆-插入元素3"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86-%e6%8f%92%e5%85%a5%e5%85%83%e7%b4%a02.png" alt="堆-插入元素2"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86-%e6%8f%92%e5%85%a5%e5%85%83%e7%b4%a03.png" alt="堆-插入元素3"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="删除堆顶元素">
         删除堆顶元素
@@ -10435,17 +10435,17 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>在堆这个公司中，会出现老大离职的现象，老大离职之后，他的位置就空出来了</p>
 </blockquote>
 <p>首先删除堆顶元素，使得数组中下标为1的位置空出。</p>
-<p><img src="images/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a01.png" alt="删除堆顶元素1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a01.png" alt="删除堆顶元素1"  /></p>
 <blockquote>
 <p>那么他的位置由谁来接替呢，当然是他的直接下属了，谁能力强就让谁上呗</p>
 </blockquote>
 <p>比较根结点的左子节点和右子节点，也就是下标为2,3的数组元素，将较大的元素填充到根结点(下标为1)的位置。</p>
-<p><img src="images/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a02.png" alt="删除堆顶元素2"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a02.png" alt="删除堆顶元素2"  /></p>
 <blockquote>
 <p>这个时候又空出一个位置了，老规矩，谁有能力谁上</p>
 </blockquote>
 <p>一直循环比较空出位置的左右子节点，并将较大者移至空位，直到堆的最底部</p>
-<p><img src="images/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a03.png" alt="删除堆顶元素3"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a03.png" alt="删除堆顶元素3"  /></p>
 <p>这个时候已经完成了自底向上的堆化，没有元素可以填补空缺了，但是，我们可以看到数组中出现了“气泡”，这会导致存储空间的浪费。接下来我们试试自顶向下堆化。</p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="自顶向下堆化">
@@ -10455,10 +10455,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p>自顶向下的堆化用一个词形容就是“石沉大海”，那么第一件事情，就是把石头抬起来，从海面扔下去。这个石头就是堆的最后一个元素，我们将最后一个元素移动到堆顶。</p>
-<p><img src="images/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a04.png" alt="删除堆顶元素4"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a04.png" alt="删除堆顶元素4"  /></p>
 <p>然后开始将这个石头沉入海底，不停与左右子节点的值进行比较，和较大的子节点交换位置，直到无法交换位置。</p>
-<p><img src="images/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a05.png" alt="删除堆顶元素5"  /></p>
-<p><img src="images/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a06.png" alt="删除堆顶元素6"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a05.png" alt="删除堆顶元素5"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%88%a0%e9%99%a4%e5%a0%86%e9%a1%b6%e5%85%83%e7%b4%a06.png" alt="删除堆顶元素6"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="堆的操作总结">
         堆的操作总结
@@ -10492,14 +10492,14 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><p>如果你已经足够了解堆化的过程，那么建堆的过程掌握起来就比较容易了。建堆的过程就是一个对所有非叶节点的自顶向下堆化过程。</p>
 <p>首先要了解哪些是非叶节点，最后一个节点的父结点及它之前的元素，都是非叶节点。也就是说，如果节点个数为n，那么我们需要对n/2到1的节点进行自顶向下（沉底）堆化。</p>
 <p>具体过程如下图：</p>
-<p><img src="images/%e5%a0%86/%e5%bb%ba%e5%a0%861.png" alt="建堆1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%bb%ba%e5%a0%861.png" alt="建堆1"  /></p>
 <p>将初始的无序数组抽象为一棵树，图中的节点个数为6，所以4,5,6节点为叶节点，1,2,3节点为非叶节点，所以要对1-3号节点进行自顶向下（沉底）堆化，注意，顺序是从后往前堆化，从3号节点开始，一直到1号节点。
 3号节点堆化结果：</p>
-<p><img src="images/%e5%a0%86/%e5%bb%ba%e5%a0%862.png" alt="建堆1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%bb%ba%e5%a0%862.png" alt="建堆1"  /></p>
 <p>2号节点堆化结果：</p>
-<p><img src="images/%e5%a0%86/%e5%bb%ba%e5%a0%863.png" alt="建堆1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%bb%ba%e5%a0%863.png" alt="建堆1"  /></p>
 <p>1号节点堆化结果：</p>
-<p><img src="images/%e5%a0%86/%e5%bb%ba%e5%a0%864.png" alt="建堆1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%bb%ba%e5%a0%864.png" alt="建堆1"  /></p>
 <p>至此，数组所对应的树已经成为了一个最大堆，建堆完成！</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="排序">
@@ -10518,17 +10518,17 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>机智的小伙伴已经发现了，这其实是做了一次交换操作，将堆顶和末尾元素调换位置，从而将取出堆顶元素和堆化的第一步(将末尾元素放至根结点位置)进行合并。</p>
 <p>详细过程如下图所示：</p>
 <p>取出第一个元素并堆化：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f1.png" alt="堆排序1"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f1.png" alt="堆排序1"  /></p>
 <p>取出第二个元素并堆化：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f2.png" alt="堆排序2"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f2.png" alt="堆排序2"  /></p>
 <p>取出第三个元素并堆化：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f3.png" alt="堆排序3"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f3.png" alt="堆排序3"  /></p>
 <p>取出第四个元素并堆化：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f4.png" alt="堆排序4"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f4.png" alt="堆排序4"  /></p>
 <p>取出第五个元素并堆化：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f5.png" alt="堆排序5"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f5.png" alt="堆排序5"  /></p>
 <p>取出第六个元素并堆化：</p>
-<p><img src="images/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f6.png" alt="堆排序6"  /></p>
+<p><img src="pictures/%e5%a0%86/%e5%a0%86%e6%8e%92%e5%ba%8f6.png" alt="堆排序6"  /></p>
 <p>堆排序完成！</p>
 
     </article>

@@ -10345,7 +10345,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li>可以通过镜像复制多个一致的容器</li>
 </ol>
 <p>另外，<a class="gdoc-markdown__link" href="https://yeasy.gitbook.io/docker_practice/introduction/why">《Docker 从入门到实践》</a> 这本开源书籍中也已经给出了使用 Docker 的原因。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210412220015698.png" alt=""  /></p>
+<p><img src="/ext-images/20210412220015698.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="docker-的安装">
         Docker 的安装
@@ -10361,21 +10361,21 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>接下来对 Docker 进行安装，以 Windows 系统为例，访问 Docker 的官网：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-4e3146984adaee0067bdc5e9b1d757bb479.png" alt=""  /></p>
+<p><img src="/ext-images/up-4e3146984adaee0067bdc5e9b1d757bb479.png" alt=""  /></p>
 <p>然后点击<code>Get Started</code>：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-96adfbfebe3e59097c8ba25e55f68ba7908.png" alt=""  /></p>
+<p><img src="/ext-images/up-96adfbfebe3e59097c8ba25e55f68ba7908.png" alt=""  /></p>
 <p>在此处点击<code>Download for Windows</code>即可进行下载。</p>
 <p>如果你的电脑是<code>Windows 10 64位专业版</code>的操作系统，则在安装 Docker 之前需要开启一下<code>Hyper-V</code>，开启方式如下。打开控制面板，选择程序：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-73ce678240826de0f49225250a970b4d205.png" alt=""  /></p>
+<p><img src="/ext-images/up-73ce678240826de0f49225250a970b4d205.png" alt=""  /></p>
 <p>点击<code>启用或关闭Windows功能</code>：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-9c7a96c332e56b9506325a1f1fdb608a659.png" alt=""  /></p>
+<p><img src="/ext-images/up-9c7a96c332e56b9506325a1f1fdb608a659.png" alt=""  /></p>
 <p>勾选上<code>Hyper-V</code>，点击确定即可：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-aad4a58c5e917f7185908d6320d7fb06861.png" alt=""  /></p>
+<p><img src="/ext-images/up-aad4a58c5e917f7185908d6320d7fb06861.png" alt=""  /></p>
 <p>完成更改后需要重启一下计算机。</p>
 <p>开启了<code>Hyper-V</code>后，我们就可以对 Docker 进行安装了，打开安装程序后，等待片刻点击<code>Ok</code>即可：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-62ac3c9184bdc21387755294613ff5054c6.png" alt=""  /></p>
+<p><img src="/ext-images/up-62ac3c9184bdc21387755294613ff5054c6.png" alt=""  /></p>
 <p>安装完成后，我们仍然需要重启计算机，重启后，若提示如下内容：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-3585c7d6a4632134ed925493a7d43e14a43.png" alt=""  /></p>
+<p><img src="/ext-images/up-3585c7d6a4632134ed925493a7d43e14a43.png" alt=""  /></p>
 <p>它的意思是询问我们是否使用 WSL2，这是基于 Windows 的一个 Linux 子系统，这里我们取消即可，它就会使用我们之前勾选的<code>Hyper-V</code>虚拟机。</p>
 <p>因为是图形界面的操作，这里就不介绍 Docker Desktop 的具体用法了。</p>
 <div class="gdoc-page__anchorwrap">
@@ -10452,22 +10452,22 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h2>
 </div><p>下面我们来对 Docker 进行一个初步的使用，这里以下载一个 MySQL 的镜像为例<code>(在CentOS7下进行)</code>。</p>
 <p>和 GitHub 一样，Docker 也提供了一个 DockerHub 用于查询各种镜像的地址和安装教程，为此，我们先访问 DockerHub：<a class="gdoc-markdown__link" href="https://hub.docker.com/">https://hub.docker.com/</a></p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-37d083cc92fe36aad829e975646b9d27fa0.png" alt=""  /></p>
+<p><img src="/ext-images/up-37d083cc92fe36aad829e975646b9d27fa0.png" alt=""  /></p>
 <p>在左上角的搜索框中输入<code>MySQL</code>并回车：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-ced37002391a059754def9b3a6c2aa4e342.png" alt=""  /></p>
+<p><img src="/ext-images/up-ced37002391a059754def9b3a6c2aa4e342.png" alt=""  /></p>
 <p>可以看到相关 MySQL 的镜像非常多，若右上角有<code>OFFICIAL IMAGE</code>标识，则说明是官方镜像，所以我们点击第一个 MySQL 镜像：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-48ba3fdc99c93a96e18b929195ca8e93c6c.png" alt=""  /></p>
+<p><img src="/ext-images/up-48ba3fdc99c93a96e18b929195ca8e93c6c.png" alt=""  /></p>
 <p>右边提供了下载 MySQL 镜像的指令为<code>docker pull MySQL</code>，但该指令始终会下载 MySQL 镜像的最新版本。</p>
 <p>若是想下载指定版本的镜像，则点击下面的<code>View Available Tags</code>：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-ed601649275c6cfe65bbe422b463c263a64.png" alt=""  /></p>
+<p><img src="/ext-images/up-ed601649275c6cfe65bbe422b463c263a64.png" alt=""  /></p>
 <p>这里就可以看到各种版本的镜像，右边有下载的指令，所以若是想下载 5.7.32 版本的 MySQL 镜像，则执行：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker pull MySQL:5.7.32
 </code></pre></div><p>然而下载镜像的过程是非常慢的，所以我们需要配置一下镜像源加速下载，访问<code>阿里云</code>官网：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-0a46effd262d3db1b613a0db597efa31f34.png" alt=""  /></p>
+<p><img src="/ext-images/up-0a46effd262d3db1b613a0db597efa31f34.png" alt=""  /></p>
 <p>点击控制台：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-60f198e0106be6b43044969d2900272504f.png" alt=""  /></p>
+<p><img src="/ext-images/up-60f198e0106be6b43044969d2900272504f.png" alt=""  /></p>
 <p>然后点击左上角的菜单，在弹窗的窗口中，将鼠标悬停在产品与服务上，并在右侧搜索容器镜像服务，最后点击容器镜像服务：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-2f6706a979b405dab01bc44a29bb6b26fc4.png" alt=""  /></p>
+<p><img src="/ext-images/up-2f6706a979b405dab01bc44a29bb6b26fc4.png" alt=""  /></p>
 <p>点击左侧的镜像加速器，并依次执行右侧的配置指令即可。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <span class="s">&lt;&lt;-&#39;EOF&#39;
@@ -10512,12 +10512,12 @@ d404d78aa797
 </code></pre></div><p><code>docker pull</code>是固定的，后面写上需要下载的镜像名及版本标志；若是不写版本标志，而是直接执行<code>docker pull MySQL</code>，则会下载镜像的最新版本。</p>
 <p>一般在下载镜像前我们需要搜索一下镜像有哪些版本才能对指定版本进行下载，使用指令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker search MySQL
-</code></pre></div><p><img src="https://oscimg.oschina.net/oscnet/up-559083ae80e7501e86e95fbbad25b6d571a.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/up-559083ae80e7501e86e95fbbad25b6d571a.png" alt=""  /></p>
 <p>不过该指令只能查看 MySQL 相关的镜像信息，而不能知道有哪些版本，若想知道版本，则只能这样查询：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker search MySQL:5.5
-</code></pre></div><p><img src="https://oscimg.oschina.net/oscnet/up-68394e25f652964bb042571151c5e0fd2e9.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/up-68394e25f652964bb042571151c5e0fd2e9.png" alt=""  /></p>
 <p>若是查询的版本不存在，则结果为空：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-abfdd51b9ad2ced3711268369f52b077b12.png" alt=""  /></p>
+<p><img src="/ext-images/up-abfdd51b9ad2ced3711268369f52b077b12.png" alt=""  /></p>
 <p>删除镜像使用指令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker image rm MySQL:5.5
 </code></pre></div><p>若是不指定版本，则默认删除的也是最新版本。</p>
@@ -10546,13 +10546,13 @@ Error response from daemon: conflict: unable to delete bf756fb1ae65 <span class=
 </code></pre></div><p>当然了，运行的前提是你拥有这个镜像，所以先下载镜像：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker pull tomcat:8.0-jre8
 </code></pre></div><p>下载完成后就可以运行了，运行后查看一下当前运行的容器：<code>docker ps</code> 。</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-bd48e20ef07b7c91ad16f92821a3dbca5b5.png" alt=""  /></p>
+<p><img src="/ext-images/up-bd48e20ef07b7c91ad16f92821a3dbca5b5.png" alt=""  /></p>
 <p>其中<code>CONTAINER_ID</code>为容器的 id，<code>IMAGE</code>为镜像名，<code>COMMAND</code>为容器内执行的命令，<code>CREATED</code>为容器的创建时间，<code>STATUS</code>为容器的状态，<code>PORTS</code>为容器内服务监听的端口，<code>NAMES</code>为容器的名称。</p>
 <p>通过该方式运行的 tomcat 是不能直接被外部访问的，因为容器具有隔离性，若是想直接通过 8080 端口访问容器内部的 tomcat，则需要对宿主机端口与容器内的端口进行映射：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -p 8080:8080 tomcat:8.0-jre8
 </code></pre></div><p>解释一下这两个端口的作用(<code>8080:8080</code>)，第一个 8080 为宿主机端口，第二个 8080 为容器内的端口，外部访问 8080 端口就会通过映射访问容器内的 8080 端口。</p>
 <p>此时外部就可以访问 Tomcat 了：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-16d9ff4d29094681f51424ea8d0ee4fd73e.png" alt=""  /></p>
+<p><img src="/ext-images/up-16d9ff4d29094681f51424ea8d0ee4fd73e.png" alt=""  /></p>
 <p>若是这样进行映射：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -p 8088:8080 tomcat:8.0-jre8
 </code></pre></div><p>则外部需访问 8088 端口才能访问 tomcat，需要注意的是，每次运行的容器都是相互独立的，所以同时运行多个 tomcat 容器并不会产生端口的冲突。</p>
@@ -10564,7 +10564,7 @@ Error response from daemon: conflict: unable to delete bf756fb1ae65 <span class=
 <p>再来引申一下<code>docker ps</code>中的几个指令参数，比如<code>-a</code>：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker ps -a
 </code></pre></div><p>该参数会将运行和非运行的容器全部列举出来：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-16d9ff4d29094681f51424ea8d0ee4fd73e.png" alt=""  /></p>
+<p><img src="/ext-images/up-16d9ff4d29094681f51424ea8d0ee4fd73e.png" alt=""  /></p>
 <p><code>-q</code>参数将只查询正在运行的容器 id：<code>docker ps -q</code> 。</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@izrcf5u3j3q8xaz ~<span class="o">]</span><span class="c1"># docker ps -q</span>
 f3aac8ee94a3
@@ -10612,10 +10612,10 @@ d5b6c177c151
 </code></pre></div><hr>
 <p>查看容器内运行了哪些进程，可以使用指令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker top 289cc00dc5ed
-</code></pre></div><p><img src="https://oscimg.oschina.net/oscnet/up-7ec71a682712e56e90490f55c32cf660fd3.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/up-7ec71a682712e56e90490f55c32cf660fd3.png" alt=""  /></p>
 <p>若是想与容器进行交互，则使用指令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker <span class="nb">exec</span> -it 289cc00dc5ed bash
-</code></pre></div><p><img src="https://oscimg.oschina.net/oscnet/up-fd17796322f833685ca8ead592d38581898.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/up-fd17796322f833685ca8ead592d38581898.png" alt=""  /></p>
 <p>此时终端将会进入容器内部，执行的指令都将在容器中生效，在容器内只能执行一些比较简单的指令，如：ls、cd 等，若是想退出容器终端，重新回到 CentOS 中，则执行<code>exit</code>即可。</p>
 <p>现在我们已经能够进入容器终端执行相关操作了，那么该如何向 tomcat 容器中部署一个项目呢？</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker cp ./test.html 289cc00dc5ed:/usr/local/tomcat/webapps
@@ -10631,7 +10631,7 @@ root@289cc00dc5ed:/usr/local/tomcat/webapps#
 <hr>
 <p>虽然使用 Docker 启动软件环境非常简单，但同时也面临着一个问题，我们无法知晓容器内部具体的细节，比如监听的端口、绑定的 ip 地址等等，好在这些 Docker 都帮我们想到了，只需使用指令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker inspect 923c969b0d91
-</code></pre></div><p><img src="https://oscimg.oschina.net/oscnet/up-fca74d4350cdfebfc2b06101e1cab411619.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/up-fca74d4350cdfebfc2b06101e1cab411619.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="docker-数据卷">
         Docker 数据卷
@@ -10643,7 +10643,7 @@ root@289cc00dc5ed:/usr/local/tomcat/webapps#
 <p>现在若是想将宿主机中<code>/opt/apps</code>目录与容器中<code>webapps</code>目录做一个数据卷，则应该这样编写指令：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 8080:8080 --name tomcat01 -v /opt/apps:/usr/local/tomcat/webapps tomcat:8.0-jre8
 </code></pre></div><p>然而此时访问 tomcat 会发现无法访问：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-8fa1b23f6ea2567b5938370e7d7f636533f.png" alt=""  /></p>
+<p><img src="/ext-images/up-8fa1b23f6ea2567b5938370e7d7f636533f.png" alt=""  /></p>
 <p>这就说明我们的数据卷设置成功了，Docker 会将容器内的<code>webapps</code>目录与<code>/opt/apps</code>目录进行同步，而此时<code>/opt/apps</code>目录是空的，导致<code>webapps</code>目录也会变成空目录，所以就访问不到了。</p>
 <p>此时我们只需向<code>/opt/apps</code>目录下添加文件，就会使得<code>webapps</code>目录也会拥有相同的文件，达到文件共享，测试一下：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="o">[</span>root@centos-7 opt<span class="o">]</span><span class="c1"># cd apps/</span>
@@ -10671,7 +10671,7 @@ test.html
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div><p>这是一个非常简单的 Servlet，我们将其打包上传到<code>/opt/apps</code>中，那么容器内肯定就会同步到该文件，此时进行访问：</p>
-<p><img src="https://oscimg.oschina.net/oscnet/up-712716a8c8c444ba3a77ade8ff27e7c6cf5.png" alt=""  /></p>
+<p><img src="/ext-images/up-712716a8c8c444ba3a77ade8ff27e7c6cf5.png" alt=""  /></p>
 <p>这种方式设置的数据卷称为自定义数据卷，因为数据卷的目录是由我们自己设置的，Docker 还为我们提供了另外一种设置数据卷的方式：</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">docker run -d -p 8080:8080 --name tomcat01 -v aa:/usr/local/tomcat/webapps tomcat:8.0-jre8
 </code></pre></div><p>此时的<code>aa</code>并不是数据卷的目录，而是数据卷的别名，Docker 会为我们自动创建一个名为<code>aa</code>的数据卷，并且会将容器内<code>webapps</code>目录下的所有内容复制到数据卷中，该数据卷的位置在<code>/var/lib/docker/volumes</code>目录下：</p>
