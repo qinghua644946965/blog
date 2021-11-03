@@ -22,11 +22,7 @@
   font-size: 0.8em;
 }
 
+
 h1+.gdoc-page__anchorwrap h1 {
   display:none;
 }
-
-
-setTimeout(function(){
-  toggleSearch
-} ,200)
