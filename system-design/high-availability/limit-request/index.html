@@ -10748,7 +10748,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h4>
 </div><p>该算法规定我们单位时间处理的请求数量。比如我们规定我们的一个接口一分钟只能访问10次的话。使用固定窗口计数器算法的话可以这样实现：给定一个变量counter来记录处理的请求数量，当1分钟之内处理一个请求之后counter+1，1分钟之内的如果counter=10的话，后续的请求就会被全部拒绝。等到 1分钟结束后，将counter回归成0，重新开始计数（ps：只要过了一个周期就将counter回归成0）。</p>
 <p>这种限流算法无法保证限流速率，因而无法保证突然激增的流量。比如我们限制一个接口一分钟只能访问10次的话，前半分钟一个请求没有接收，后半分钟接收了10个请求。</p>
-<p><img src="https://static001.infoq.cn/resource/image/8d/15/8ded7a2b90e1482093f92fff555b3615.png" alt="固定窗口计数器算法"  /></p>
+<p><img src="/ext-images/8ded7a2b90e1482093f92fff555b3615.png" alt="固定窗口计数器算法"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="滑动窗口计数器算法">
         滑动窗口计数器算法
@@ -10758,7 +10758,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h4>
 </div><p>该算法算的上是固定窗口计数器算法的升级版。滑动窗口计数器算法相比于固定窗口计数器算法的优化在于：它把时间以一定比例分片。例如我们的接口限流每分钟处理60个请求，我们可以把 1 分钟分为60个窗口。每隔1秒移动一次，每个窗口一秒只能处理 不大于 60(请求数)/60（窗口数） 的请求， 如果当前窗口的请求计数总和超过了限制的数量的话就不再处理其他请求。</p>
 <p>很显然：当滑动窗口的格子划分的越多，滑动窗口的滚动就越平滑，限流的统计就会越精确。</p>
-<p><img src="https://static001.infoq.cn/resource/image/ae/15/ae4d3cd14efb8dc7046d691c90264715.png" alt="滑动窗口计数器算法"  /></p>
+<p><img src="/ext-images/ae4d3cd14efb8dc7046d691c90264715.png" alt="滑动窗口计数器算法"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="漏桶算法">
         漏桶算法
@@ -10768,7 +10768,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h4>
 </div><p>我们可以把发请求的动作比作成注水到桶中，我们处理请求的过程可以比喻为 <strong>漏桶漏水</strong> 。我们往桶中以任意速率流入水，以一定速率流出水。当水超过桶容量则丢弃，因为桶容量是不变的，保证了整体的速率。</p>
 <p>如果想要实现这个算法的话也很简单，准备一个队列用来保存请求，然后我们定期从队列中拿请求来执行就好了。</p>
-<p><img src="https://static001.infoq.cn/resource/image/75/03/75938d1010138ce66e38c6ed0392f103.png" alt="漏桶算法"  /></p>
+<p><img src="/ext-images/75938d1010138ce66e38c6ed0392f103.png" alt="漏桶算法"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="令牌桶算法">
         令牌桶算法
@@ -10778,7 +10778,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h4>
 </div><p>令牌桶算法也比较简单。和漏桶算法一样，我们的主角还是桶（这限流算法和桶过不去啊）。不过现在桶里装的是令牌了，请求在被处理之前需要拿到一个令牌，请求处理完毕之后将这个令牌丢弃（删除）。</p>
 <p>我们根据限流大小，按照一定的速率往桶里添加令牌即可！</p>
-<p><img src="https://static001.infoq.cn/resource/image/ec/93/eca0e5eaa35dac938c673fecf2ec9a93.png" alt="令牌桶算法"  /></p>
+<p><img src="/ext-images/eca0e5eaa35dac938c673fecf2ec9a93.png" alt="令牌桶算法"  /></p>
 <p><strong>漏桶算法 vs 令牌桶算法</strong> ：</p>
 
     </article>

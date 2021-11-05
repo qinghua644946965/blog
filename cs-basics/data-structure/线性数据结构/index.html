@@ -10755,7 +10755,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="n">访问</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">1</span><span class="err">）</span><span class="c1">//访问特定位置的元素
 </span><span class="c1"></span><span class="n">插入</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">n</span> <span class="err">）</span><span class="c1">//最坏的情况发生在插入发生在数组的首部并需要移动所有元素时
 </span><span class="c1"></span><span class="n">删除</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">n</span><span class="err">）</span><span class="c1">//最坏的情况发生在删除数组的开头发生并需要移动第一元素后面所有的元素时
-</span></code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e6%95%b0%e7%bb%84.png" alt="数组"  /></p>
+</span></code></pre></div><p><img src="/ext-images/%e6%95%b0%e7%bb%84.png" alt="数组"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="2-链表">
         2. 链表
@@ -10798,7 +10798,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p><strong>单链表</strong> 单向链表只有一个方向，结点只有一个后继指针 next 指向后面的节点。因此，链表这种数据结构通常在物理内存上是不连续的。我们习惯性地把第一个结点叫作头结点，链表通常有一个不保存任何值的 head 节点(头结点)，通过头结点我们可以遍历整个链表。尾结点通常指向 null。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e5%8d%95%e9%93%be%e8%a1%a82.png" alt="单链表"  /></p>
+<p><img src="/ext-images/%e5%8d%95%e9%93%be%e8%a1%a82.png" alt="单链表"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="222-循环链表">
         2.2.2. 循环链表
@@ -10807,7 +10807,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p><strong>循环链表</strong> 其实是一种特殊的单链表，和单链表不同的是循环链表的尾结点不是指向 null，而是指向链表的头结点。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e5%be%aa%e7%8e%af%e9%93%be%e8%a1%a82.png" alt="循环链表"  /></p>
+<p><img src="/ext-images/%e5%be%aa%e7%8e%af%e9%93%be%e8%a1%a82.png" alt="循环链表"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="223-双向链表">
         2.2.3. 双向链表
@@ -10816,7 +10816,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p><strong>双向链表</strong> 包含两个指针，一个 prev 指向前一个节点，一个 next 指向后一个节点。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e5%8f%8c%e5%90%91%e9%93%be%e8%a1%a8.png" alt="双向链表"  /></p>
+<p><img src="/ext-images/%e5%8f%8c%e5%90%91%e9%93%be%e8%a1%a8.png" alt="双向链表"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="224-双向循环链表">
         2.2.4. 双向循环链表
@@ -10825,7 +10825,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p><strong>双向循环链表</strong> 最后一个节点的 next 指向 head，而 head 的 prev 指向最后一个节点，构成一个环。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e5%8f%8c%e5%90%91%e5%be%aa%e7%8e%af%e9%93%be%e8%a1%a8.png" alt="双向循环链表"  /></p>
+<p><img src="/ext-images/%e5%8f%8c%e5%90%91%e5%be%aa%e7%8e%af%e9%93%be%e8%a1%a8.png" alt="双向循环链表"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="23-应用场景">
         2.3. 应用场景
@@ -10869,7 +10869,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">假设堆栈中有n个元素</span><span class="err">。</span>
 <span class="n">访问</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">n</span><span class="err">）</span><span class="c1">//最坏情况
 </span><span class="c1"></span><span class="n">插入删除</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">1</span><span class="err">）</span><span class="c1">//顶端插入和删除元素
-</span></code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e6%a0%88.png" alt="栈"  /></p>
+</span></code></pre></div><p><img src="/ext-images/%e6%a0%88.png" alt="栈"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="32-栈的常见应用常见应用场景">
         3.2. 栈的常见应用常见应用场景
@@ -10886,7 +10886,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p>我们只需要使用两个栈(Stack1 和 Stack2)和就能实现这个功能。比如你按顺序查看了 1,2,3,4 这四个页面，我们依次把 1,2,3,4 这四个页面压入 Stack1 中。当你想回头看 2 这个页面的时候，你点击回退按钮，我们依次把 4,3 这两个页面从 Stack1 弹出，然后压入 Stack2 中。假如你又想回到页面 3，你点击前进按钮，我们将 3 页面从 Stack2 弹出，然后压入到 Stack1 中。示例图如下:</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e6%a0%88%e5%ae%9e%e7%8e%b0%e6%b5%8f%e8%a7%88%e5%99%a8%e5%80%92%e9%80%80%e5%92%8c%e5%89%8d%e8%bf%9b.png" alt="栈实现浏览器倒退和前进"  /></p>
+<p><img src="/ext-images/%e6%a0%88%e5%ae%9e%e7%8e%b0%e6%b5%8f%e8%a7%88%e5%99%a8%e5%80%92%e9%80%80%e5%92%8c%e5%89%8d%e8%bf%9b.png" alt="栈实现浏览器倒退和前进"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="322-检查符号是否成对出现">
         3.2.2. 检查符号是否成对出现
@@ -11058,7 +11058,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">假设队列中有n个元素</span><span class="err">。</span>
 <span class="n">访问</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">n</span><span class="err">）</span><span class="c1">//最坏情况
 </span><span class="c1"></span><span class="n">插入删除</span><span class="err">：</span><span class="n">O</span><span class="err">（</span><span class="n">1</span><span class="err">）</span><span class="c1">//后端插入前端删除元素
-</span></code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e9%98%9f%e5%88%97.png" alt="队列"  /></p>
+</span></code></pre></div><p><img src="/ext-images/%e9%98%9f%e5%88%97.png" alt="队列"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="42-队列分类">
         4.2. 队列分类
@@ -11079,7 +11079,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <blockquote>
 <p>为了避免当只有一个元素的时候，队头和队尾重合使处理变得麻烦，所以引入两个指针，front 指针指向对头元素，rear 指针指向队列最后一个元素的下一个位置，这样当 front 等于 rear 时，此队列不是还剩一个元素，而是空队列。——From 《大话数据结构》</p>
 </blockquote>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e9%a1%ba%e5%ba%8f%e9%98%9f%e5%88%97%e5%81%87%e6%ba%a2%e5%87%ba1.png" alt="顺序队列假溢出"  /></p>
+<p><img src="/ext-images/%e9%a1%ba%e5%ba%8f%e9%98%9f%e5%88%97%e5%81%87%e6%ba%a2%e5%87%ba1.png" alt="顺序队列假溢出"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="422-循环队列">
         4.2.2. 循环队列
@@ -11089,13 +11089,13 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h4>
 </div><p>循环队列可以解决顺序队列的假溢出和越界问题。解决办法就是：从头开始，这样也就会形成头尾相接的循环，这也就是循环队列名字的由来。</p>
 <p>还是用上面的图，我们将 rear 指针指向数组下标为 0 的位置就不会有越界问题了。当我们再向队列中添加元素的时候， rear 向后移动。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e5%be%aa%e7%8e%af%e9%98%9f%e5%88%97.png" alt="循环队列"  /></p>
+<p><img src="/ext-images/%e5%be%aa%e7%8e%af%e9%98%9f%e5%88%97.png" alt="循环队列"  /></p>
 <p>顺序队列中，我们说 <code>front==rear</code> 的时候队列为空，循环队列中则不一样，也可能为满，如上图所示。解决办法有两种：</p>
 <ol>
 <li>可以设置一个标志变量 <code>flag</code>,当 <code>front==rear</code> 并且 <code>flag=0</code> 的时候队列为空，当<code>front==rear</code> 并且 <code>flag=1</code> 的时候队列为满。</li>
 <li>队列为空的时候就是 <code>front==rear</code> ，队列满的时候，我们保证数组还有一个空闲的位置，rear 就指向这个空闲位置，如下图所示，那么现在判断队列是否为满的条件就是： <code>(rear+1) % QueueSize= front</code> 。</li>
 </ol>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e5%be%aa%e7%8e%af%e9%98%9f%e5%88%97-%e5%a0%86%e6%bb%a1.png" alt="循环队列-队满"  /></p>
+<p><img src="/ext-images/%e5%be%aa%e7%8e%af%e9%98%9f%e5%88%97-%e5%a0%86%e6%bb%a1.png" alt="循环队列-队满"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="43-常见应用场景">
         4.3. 常见应用场景

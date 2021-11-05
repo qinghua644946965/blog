@@ -26,8 +26,3 @@
 h1+.gdoc-page__anchorwrap h1 {
   display:none;
 }
-
-.gdoc-nav--main{
-  max-height: 100vh;
-  overflow-y: scroll;
-}

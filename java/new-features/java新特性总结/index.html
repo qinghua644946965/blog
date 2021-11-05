@@ -10756,7 +10756,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>什么是模块系统？官方的定义是：A uniquely named, reusable group of related packages, as well as resources (such as images and XML files) and a module descriptor.</p>
 <p>简单来说，你可以将一个模块看作是一组唯一命名、可重用的包、资源和模块描述文件（module-info.java）。</p>
 <p>任意一个 jar 文件，只要加上一个 模块描述文件（module-info.java），就可以升级为一个模块。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/module-structure.png" alt=""  /></p>
+<p><img src="/ext-images/module-structure.png" alt=""  /></p>
 <p>在引入了模块系统之后，JDK 被重新组织成 94 个模块。Java 应用可以通过新增的 jlink 工具，创建出只包含所依赖的 JDK 模块的自定义运行时镜像。这样可以极大的减少 Java 运行时环境的大小。</p>
 <p>我们可以通过 exports 关键词精准控制哪些类可以对外开放使用，哪些类只能内部使用。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">module</span> <span class="n">my</span><span class="o">.</span><span class="na">module</span> <span class="o">{</span>
@@ -10783,7 +10783,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>jshell 是 Java 9 新增的一个实用工具。为 Java 提供了类似于 Python 的实时命令行交互工具。</p>
 <p>在 Jshell 中可以直接输入表达式并查看其执行结果。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/image-20210816083417616.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210816083417616.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="集合增强">
         集合增强
@@ -10868,7 +10868,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><p>Java 9 增加了 <code>ProcessHandle</code> 接口，可以对原生进程进行管理，尤其适合于管理长时间运行的进程。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">pid</span><span class="o">());</span>
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ProcessHandle</span><span class="o">.</span><span class="na">current</span><span class="o">().</span><span class="na">info</span><span class="o">());</span>
-</code></pre></div><p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/image-20210816104614414.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/image-20210816104614414.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="平台日志-api-和服务">
         平台日志 API 和服务
@@ -10982,7 +10982,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <span class="k">return</span> <span class="n">ImmutableCollections</span><span class="o">.</span><span class="na">listCopy</span><span class="o">(</span><span class="n">coll</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre></div><p>使用 <code>copyOf()</code> 创建的集合为不可变集合，不能进行添加、删除、替换、 排序等操作，不然会报 <code>java.lang.UnsupportedOperationException</code> 异常。 IDEA 也会有相应的提示。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/image-20210816154125579.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210816154125579.png" alt=""  /></p>
 <p><code>java.util.stream.Collectors</code> 中新增了静态方法，用于将流中的元素收集为不可变的集合。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">var</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
 <span class="n">list</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">toUnmodifiableList</span><span class="o">());</span>
@@ -11036,7 +11036,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p>Java11 于 2018 年 9 月 25 日正式发布，这是很重要的一个版本！Java 11 和 2017 年 9 月份发布的 Java 9 以及 2018 年 3 月份发布的 Java 10 相比，其最大的区别就是：在长期支持(Long-Term-Support)方面，<strong>Oracle 表示会对 Java 11 提供大力支持，这一支持将会持续至 2026 年 9 月。这是据 Java 8 以后支持的首个长期版本。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20210603202746605.png" alt=""  /></p>
+<p><img src="/ext-images/20210603202746605.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="string">
         String
@@ -11654,7 +11654,7 @@ $ java -XX:SharedArchiveFile<span class="o">=</span>my_app_cds.jsa -cp my_app.ja
 
 <span class="kd">public</span> <span class="n">non</span><span class="o">-</span><span class="n">sealed</span> <span class="kd">class</span> <span class="nc">Manager</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="o">{</span>
 <span class="o">}</span>
-</code></pre></div><p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/javaguide/image-20210820153955587.png" alt=""  /></p>
+</code></pre></div><p><img src="/ext-images/image-20210820153955587.png" alt=""  /></p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="instanceof-模式匹配-1">
         instanceof 模式匹配

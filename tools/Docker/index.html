@@ -10759,7 +10759,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h4>
 </div><p><strong>如果需要通俗地描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用比如网站、程序甚至是系统环境。</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/container.png" alt="认识容器"  /></p>
+<p><img src="/ext-images/container.png" alt="认识容器"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="12-图解物理机虚拟机与容器">
         1.2 图解物理机,虚拟机与容器
@@ -10769,11 +10769,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p>关于虚拟机与容器的对比在后面会详细介绍到，这里只是通过网上的图片加深大家对于物理机、虚拟机与容器这三者的理解(下面的图片来源于网络)。</p>
 <p><strong>物理机：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/%e7%89%a9%e7%90%86%e6%9c%ba%e5%9b%be%e8%a7%a3.png" alt="物理机"  /></p>
+<p><img src="/ext-images/%e7%89%a9%e7%90%86%e6%9c%ba%e5%9b%be%e8%a7%a3.png" alt="物理机"  /></p>
 <p><strong>虚拟机：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%9b%be%e8%a7%a3.png" alt="虚拟机"  /></p>
+<p><img src="/ext-images/%e8%99%9a%e6%8b%9f%e6%9c%ba%e5%9b%be%e8%a7%a3.png" alt="虚拟机"  /></p>
 <p><strong>容器：</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/%e5%ae%b9%e5%99%a8%e5%9b%be%e8%a7%a3.png" alt="容器"  /></p>
+<p><img src="/ext-images/%e5%ae%b9%e5%99%a8%e5%9b%be%e8%a7%a3.png" alt="容器"  /></p>
 <p>通过上面这三张抽象图，我们可以大概通过类比概括出： <strong>容器虚拟化的是操作系统而不是硬件，容器之间是共享同一套操作系统资源的。虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统。因此容器的隔离级别会稍低一些。</strong></p>
 <hr>
 <p><strong>相信通过上面的解释大家对于容器这个既陌生又熟悉的概念有了一个初步的认识，下面我们就来谈谈 Docker 的一些概念。</strong></p>
@@ -10883,7 +10883,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>就我而言，对于两者无所谓谁会取代谁，而是两者可以和谐共存。</p>
-<p><img src="https://user-gold-cdn.xitu.io/2018/6/17/1640cca26fc38f9e" alt="两者是可以共存的"  /></p>
+<p><img src="/ext-images/1640cca26fc38f9e" alt="两者是可以共存的"  /></p>
 <hr>
 <div class="gdoc-page__anchorwrap">
     <h2 id="四-docker-基本概念">
@@ -10899,7 +10899,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><strong>仓库（Repository）</strong></li>
 </ul>
 <p>理解了这三个概念，就理解了 Docker 的整个生命周期</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/docker%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5.png" alt="docker基本概念"  /></p>
+<p><img src="/ext-images/docker%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5.png" alt="docker基本概念"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="41-镜像image一个特殊的文件系统">
         4.1 镜像(Image):一个特殊的文件系统
@@ -10940,7 +10940,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>Docker Hub 是 Docker 官方提供的一项服务，用于与您的团队查找和共享容器镜像。</p>
 </blockquote>
 <p>比如我们想要搜索自己想要的镜像：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/Screen%20Shot%202019-11-04%20at%208.21.39%20PM.png" alt="利用Docker Hub 搜索镜像"  /></p>
+<p><img src="/ext-images/Screen%20Shot%202019-11-04%20at%208.21.39%20PM.png" alt="利用Docker Hub 搜索镜像"  /></p>
 <p>在 Docker Hub 的搜索结果中，有几项关键的信息有助于我们选择合适的镜像：</p>
 <ul>
 <li><strong>OFFICIAL Image</strong> ：代表镜像为 Docker 官方提供和维护，相对来说稳定性和安全性较高。</li>

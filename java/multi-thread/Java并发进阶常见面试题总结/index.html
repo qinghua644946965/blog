@@ -10928,7 +10928,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <span class="o">}</span>
 
 </code></pre></div><p>通过 JDK 自带的 <code>javap</code> 命令查看 <code>SynchronizedDemo</code> 类的相关字节码信息：首先切换到类的对应目录执行 <code>javac SynchronizedDemo.java</code> 命令生成编译后的 .class 文件，然后执行<code>javap -c -s -v -l SynchronizedDemo.class</code>。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/synchronized%e5%85%b3%e9%94%ae%e5%ad%97%e5%8e%9f%e7%90%86.png" alt="synchronized关键字原理"  /></p>
+<p><img src="/ext-images/synchronized%e5%85%b3%e9%94%ae%e5%ad%97%e5%8e%9f%e7%90%86.png" alt="synchronized关键字原理"  /></p>
 <p>从上面我们可以看出：</p>
 <p><strong><code>synchronized</code> 同步语句块的实现使用的是 <code>monitorenter</code> 和 <code>monitorexit</code> 指令，其中 <code>monitorenter</code> 指令指向同步代码块的开始位置，<code>monitorexit</code> 指令则指明同步代码块的结束位置。</strong></p>
 <p>当执行 <code>monitorenter</code> 指令时，线程试图获取锁也就是获取 <strong>对象监视器 <code>monitor</code></strong> 的持有权。</p>
@@ -10951,7 +10951,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <span class="o">}</span>
 <span class="o">}</span>
 
-</code></pre></div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/synchronized%e5%85%b3%e9%94%ae%e5%ad%97%e5%8e%9f%e7%90%862.png" alt="synchronized关键字原理"  /></p>
+</code></pre></div><p><img src="/ext-images/synchronized%e5%85%b3%e9%94%ae%e5%ad%97%e5%8e%9f%e7%90%862.png" alt="synchronized关键字原理"  /></p>
 <p><code>synchronized</code> 修饰的方法并没有 <code>monitorenter</code> 指令和 <code>monitorexit</code> 指令，取得代之的确实是 <code>ACC_SYNCHRONIZED</code> 标识，该标识指明了该方法是一个同步方法。JVM 通过该 <code>ACC_SYNCHRONIZED</code> 访问标志来辨别一个方法是否声明为同步方法，从而执行相应的同步调用。</p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="133总结">
@@ -11033,7 +11033,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>我们甚至可以把 <strong>内存可以看作外存的高速缓存</strong>，程序运行的时候我们把外存的数据复制到内存，由于内存的处理速度远远高于外存，这样提高了处理速度。</p>
 <p>总结：<strong>CPU Cache 缓存的是内存数据用于解决 CPU 处理速度和内存不匹配的问题，内存缓存的是硬盘数据用于解决硬盘访问速度过慢的问题。</strong></p>
 <p>为了更好地理解，我画了一个简单的 CPU Cache 示意图如下（实际上，现代的 CPU Cache 通常分为三层，分别叫 L1,L2,L3 Cache）:</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/303a300f-70dd-4ee1-9974-3f33affc6574.png" alt="CPU Cache"  /></p>
+<p><img src="/ext-images/303a300f-70dd-4ee1-9974-3f33affc6574.png" alt="CPU Cache"  /></p>
 <p><strong>CPU Cache 的工作方式：</strong></p>
 <p>先复制一份数据到 CPU Cache 中，当 CPU 需要用到的时候就可以直接从 CPU Cache 中读取数据，当运算完成后，再将运算得到的数据写回 Main Memory 中。但是，这样存在 <strong>内存缓存不一致性的问题</strong> ！比如我执行一个 i++操作的话，如果两个线程同时执行的话，假设两个线程从 CPU Cache 中读取的 i=1，两个线程做了 1++运算完之后再写回 Main Memory 之后 i=2，而正确结果应该是 i=3。</p>
 <p><strong>CPU 为了解决内存缓存不一致性问题可以通过制定缓存一致协议或者其他手段来解决。</strong></p>
@@ -11045,10 +11045,10 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>在 JDK1.2 之前，Java 的内存模型实现总是从<strong>主存</strong>（即共享内存）读取变量，是不需要进行特别的注意的。而在当前的 Java 内存模型下，线程可以把变量保存<strong>本地内存</strong>（比如机器的寄存器）中，而不是直接在主存中进行读写。这就可能造成一个线程在主存中修改了一个变量的值，而另外一个线程还继续使用它在寄存器中的变量值的拷贝，造成<strong>数据的不一致</strong>。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/0ac7e663-7db8-4b95-8d8e-7d2b179f67e8.png" alt="JMM(Java内存模型)"  /></p>
+<p><img src="/ext-images/0ac7e663-7db8-4b95-8d8e-7d2b179f67e8.png" alt="JMM(Java内存模型)"  /></p>
 <p>要解决这个问题，就需要把变量声明为 <strong><code>volatile</code></strong> ，这就指示 JVM，这个变量是共享且不稳定的，每次使用它都到主存中进行读取。</p>
 <p>所以，<strong><code>volatile</code> 关键字 除了防止 JVM 的指令重排 ，还有一个重要的作用就是保证变量的可见性。</strong></p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-8/d49c5557-140b-4abf-adad-8aac3c9036cf.png" alt="volatile关键字的可见性"  /></p>
+<p><img src="/ext-images/d49c5557-140b-4abf-adad-8aac3c9036cf.png" alt="volatile关键字的可见性"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="23-并发编程的三个重要特性">
         2.3. 并发编程的三个重要特性
@@ -11316,7 +11316,7 @@ Thread Name= 9 formatter = yy-M-d ah:mm
 </ul>
 </blockquote>
 <p><strong>方式一：通过构造方法实现</strong></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/ThreadPoolExecutor%e6%9e%84%e9%80%a0%e6%96%b9%e6%b3%95.png" alt="ThreadPoolExecutor构造方法"  /></p>
+<p><img src="/ext-images/ThreadPoolExecutor%e6%9e%84%e9%80%a0%e6%96%b9%e6%b3%95.png" alt="ThreadPoolExecutor构造方法"  /></p>
 <p><strong>方式二：通过 Executor 框架的工具类 Executors 来实现</strong></p>
 <p>我们可以创建三种类型的 ThreadPoolExecutor：</p>
 <ul>
@@ -11325,7 +11325,7 @@ Thread Name= 9 formatter = yy-M-d ah:mm
 <li><strong>CachedThreadPool：</strong> 该方法返回一个可根据实际情况调整线程数量的线程池。线程池的线程数量不确定，但若有空闲线程可以复用，则会优先使用可复用的线程。若所有线程均在工作，又有新的任务提交，则会创建新的线程处理任务。所有线程在当前任务执行完毕后，将返回线程池进行复用。</li>
 </ul>
 <p>对应 Executors 工具类中的方法如图所示：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/Executor%e6%a1%86%e6%9e%b6%e7%9a%84%e5%b7%a5%e5%85%b7%e7%b1%bb.png" alt="Executor框架的工具类"  /></p>
+<p><img src="/ext-images/Executor%e6%a1%86%e6%9e%b6%e7%9a%84%e5%b7%a5%e5%85%b7%e7%b1%bb.png" alt="Executor框架的工具类"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="45-threadpoolexecutor-类分析">
         4.5 ThreadPoolExecutor 类分析
@@ -11582,7 +11582,7 @@ pool-1-thread-2 End. Time = Sun Apr 12 11:14:47 CST 2020
 </div><p><code>Atomic</code> 翻译成中文是原子的意思。在化学上，我们知道原子是构成一般物质的最小单位，在化学反应中是不可分割的。在我们这里 Atomic 是指一个操作是不可中断的。即使是在多个线程一起执行的时候，一个操作一旦开始，就不会被其他线程干扰。</p>
 <p>所以，所谓原子类说简单点就是具有原子/原子操作特征的类。</p>
 <p>并发包 <code>java.util.concurrent</code> 的原子类都存放在<code>java.util.concurrent.atomic</code>下,如下图所示。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/JUC%e5%8e%9f%e5%ad%90%e7%b1%bb%e6%a6%82%e8%a7%88.png" alt="JUC原子类概览"  /></p>
+<p><img src="/ext-images/JUC%e5%8e%9f%e5%ad%90%e7%b1%bb%e6%a6%82%e8%a7%88.png" alt="JUC原子类概览"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="52-juc-包中的原子类是哪-4-类">
         5.2. JUC 包中的原子类是哪 4 类?
@@ -11684,7 +11684,7 @@ pool-1-thread-2 End. Time = Sun Apr 12 11:14:47 CST 2020
         </a>
     </h3>
 </div><p>AQS 的全称为（<code>AbstractQueuedSynchronizer</code>），这个类在<code>java.util.concurrent.locks</code>包下面。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/AQS%e7%b1%bb.png" alt="AQS类"  /></p>
+<p><img src="/ext-images/AQS%e7%b1%bb.png" alt="AQS类"  /></p>
 <p>AQS 是一个用来构建锁和同步器的框架，使用 AQS 能简单且高效地构造出大量应用广泛的同步器，比如我们提到的 <code>ReentrantLock</code>，<code>Semaphore</code>，其他的诸如 <code>ReentrantReadWriteLock</code>，<code>SynchronousQueue</code>，<code>FutureTask</code> 等等皆是基于 AQS 的。当然，我们自己也能利用 AQS 非常轻松容易地构造出符合我们自己需求的同步器。</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="62-aqs-原理分析">
@@ -11710,7 +11710,7 @@ pool-1-thread-2 End. Time = Sun Apr 12 11:14:47 CST 2020
 <p>CLH(Craig,Landin and Hagersten)队列是一个虚拟的双向队列（虚拟的双向队列即不存在队列实例，仅存在结点之间的关联关系）。AQS 是将每条请求共享资源的线程封装成一个 CLH 锁队列的一个结点（Node）来实现锁的分配。</p>
 </blockquote>
 <p>看个 AQS(AbstractQueuedSynchronizer)原理图：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/AQS%e5%8e%9f%e7%90%86%e5%9b%be.png" alt="AQS原理图"  /></p>
+<p><img src="/ext-images/AQS%e5%8e%9f%e7%90%86%e5%9b%be.png" alt="AQS原理图"  /></p>
 <p>AQS 使用一个 int 成员变量来表示同步状态，通过内置的 FIFO 队列来完成获取资源线程的排队工作。AQS 使用 CAS 对该同步状态进行原子操作实现对其值的修改。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">volatile</span> <span class="kt">int</span> <span class="n">state</span><span class="o">;</span><span class="c1">//共享变量，使用volatile修饰保证线程可见性
 </span></code></pre></div><p>状态信息通过 protected 类型的 getState，setState，compareAndSetState 进行操作</p>
@@ -11883,7 +11883,7 @@ pool-1-thread-2 End. Time = Sun Apr 12 11:14:47 CST 2020
 </div><p>如果大家想要实时关注我更新的文章以及分享的干货的话，可以关注我的公众号。</p>
 <p><strong>《Java 面试突击》:</strong> 由本文档衍生的专为面试而生的《Java 面试突击》V2.0 PDF 版本<a class="gdoc-markdown__link" href="#%e5%85%ac%e4%bc%97%e5%8f%b7">公众号</a>后台回复 <strong>&ldquo;面试突击&rdquo;</strong> 即可免费领取！</p>
 <p><strong>Java 工程师必备学习资源:</strong> 一些 Java 工程师常用学习资源公众号后台回复关键字 <strong>“1”</strong> 即可免费无套路获取。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/167598cd2e17b8ec.png" alt="我的公众号"  /></p>
+<p><img src="/ext-images/167598cd2e17b8ec.png" alt="我的公众号"  /></p>
 
     </article>
 

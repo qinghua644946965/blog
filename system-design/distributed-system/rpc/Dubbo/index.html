@@ -10771,7 +10771,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><strong>服务端（服务提供端）</strong> ：提供远程方法的一端。</li>
 </ol>
 <p>具体原理图如下，后面我会串起来将整个RPC的过程给大家说一下。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-12-6/37345851.jpg" alt="RPC原理图"  /></p>
+<p><img src="/ext-images/37345851.jpg" alt="RPC原理图"  /></p>
 <ol>
 <li>服务消费端（client）以本地调用的方式调用远程服务；</li>
 <li>客户端 Stub（client stub） 接收到调用后负责将方法、参数等组装成能够进行网络传输的消息体（序列化）：<code>RpcRequest</code>；</li>
@@ -10798,7 +10798,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h3>
-</div><p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2020-8/427f2168-1930-4c14-8760-415fac8db1d0-20200802184737978.png" alt=""  /></p>
+</div><p><img src="/ext-images/427f2168-1930-4c14-8760-415fac8db1d0-20200802184737978.png" alt=""  /></p>
 <p><a class="gdoc-markdown__link" href="https://github.com/apache/dubbo">Apache Dubbo</a> |ˈdʌbəʊ|  是一款高性能、轻量级的开源 Java RPC 框架。</p>
 <p>根据 <a class="gdoc-markdown__link" href="https://dubbo.apache.org/zh/">Dubbo 官方文档</a>的介绍，Dubbo 提供了六大核心能力</p>
 <ol>
@@ -10809,11 +10809,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li>运行期流量调度。</li>
 <li>可视化的服务治理与运维。</li>
 </ol>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/%E6%BA%90%E7%A0%81/dubbo/dubbo%E6%8F%90%E4%BE%9B%E7%9A%84%E5%85%AD%E5%A4%A7%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B.png" alt="Dubbo提供的六大核心能力"  /></p>
+<p><img src="/ext-images/dubbo%E6%8F%90%E4%BE%9B%E7%9A%84%E5%85%AD%E5%A4%A7%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B.png" alt="Dubbo提供的六大核心能力"  /></p>
 <p>简单来说就是： <strong>Dubbo 不光可以帮助我们调用远程服务，还提供了一些其他开箱即用的功能比如智能负载均衡。</strong></p>
 <p>Dubbo 目前已经有接近 34.4 k 的 Star  。</p>
 <p>在 <strong>2020 年度 OSC 中国开源项目</strong> 评选活动中，Dubbo 位列开发框架和基础组件类项目的第7名。想比几年前来说，热度和排名有所下降。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/%E6%BA%90%E7%A0%81/dubbo/image-20210107153159545.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210107153159545.png" alt=""  /></p>
 <p>Dubbo 是由阿里开源，后来加入了 Apache 。正式由于 Dubbo 的出现，才使得越来越多的公司开始使用以及接受分布式架构。</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="为什么要用-dubbo">
@@ -10832,7 +10832,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><strong>服务访问压力以及时长统计、资源调度和治理</strong> ：基于访问压力实时管理集群容量，提高集群利用率。</li>
 <li>&hellip;&hellip;</li>
 </ol>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-9-26/43050183.jpg" alt=""  /></p>
+<p><img src="/ext-images/43050183.jpg" alt=""  /></p>
 <p>另外，Dubbo 除了能够应用在分布式系统中，也可以应用在现在比较火的微服务系统中。不过，由于 Spring Cloud 在微服务中应用更加广泛，所以，我觉得一般我们提 Dubbo 的话，大部分是分布式系统的情况。</p>
 <p><strong>我们刚刚提到了分布式这个概念，下面再给大家介绍一下什么是分布式？为什么要分布式？</strong></p>
 <div class="gdoc-page__anchorwrap">
@@ -10850,7 +10850,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>分布式或者说 SOA 分布式重要的就是面向服务，说简单的分布式就是我们把整个系统拆分成不同的服务然后将这些服务放在不同的服务器上减轻单体服务的压力提高并发量和性能。比如电商系统可以简单地拆分成订单系统、商品系统、登录系统等等，拆分之后的每个服务可以部署在不同的机器上，如果某一个服务的访问量比较大的话也可以将这个服务同时部署在多台机器上。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="分布式事务示意图"  /></p>
+<p><img src="/ext-images/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="分布式事务示意图"  /></p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="为什么要分布式">
         为什么要分布式?
@@ -10875,7 +10875,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p><a class="gdoc-markdown__link" href="https://dubbo.apache.org/zh/docs/v2.7/dev/design/">官方文档中的框架设计章节</a> 已经介绍的非常详细了，我这里把一些比较重要的点再提一下。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/%E6%BA%90%E7%A0%81/dubbo/dubbo-relation.jpg" alt="dubbo-relation"  /></p>
+<p><img src="/ext-images/dubbo-relation.jpg" alt="dubbo-relation"  /></p>
 <p>上述节点简单介绍以及他们之间的关系：</p>
 <ul>
 <li><strong>Container：</strong> 服务运行容器，负责加载、运行服务提供者。必须。</li>
@@ -10893,7 +10893,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h3>
 </div><p><code>Invoker</code> 是 Dubbo 领域模型中非常重要的一个概念，你如果阅读过 Dubbo 源码的话，你会无数次看到这玩意。就比如下面我要说的负载均衡这块的源码中就有大量 <code>Invoker</code> 的身影。</p>
 <p>简单来说，<code>Invoker</code> 就是 Dubbo 对远程调用的抽象。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/dubbo_rpc_invoke.jpg" alt="dubbo_rpc_invoke.jpg"  /></p>
+<p><img src="/ext-images/dubbo_rpc_invoke.jpg" alt="dubbo_rpc_invoke.jpg"  /></p>
 <p>按照 Dubbo 官方的话来说，<code>Invoker</code>  分为</p>
 <ul>
 <li>服务提供 <code>Invoker</code></li>
@@ -10911,7 +10911,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <blockquote>
 <p>左边淡蓝背景的为服务消费方使用的接口，右边淡绿色背景的为服务提供方使用的接口，位于中轴线上的为双方都用到的接口。</p>
 </blockquote>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/source-code/dubbo/dubbo-framework.jpg" alt="dubbo-framework"  /></p>
+<p><img src="/ext-images/dubbo-framework.jpg" alt="dubbo-framework"  /></p>
 <ul>
 <li><strong>config 配置层</strong>：Dubbo相关的配置。支持代码配置，同时也支持基于 Spring  来做配置，以 <code>ServiceConfig</code>, <code>ReferenceConfig</code> 为中心</li>
 <li><strong>proxy 服务代理层</strong>：调用远程方法像调用本地的方法一样简单的一个关键，真实调用过程依赖代理类，以 <code>ServiceProxy</code> 为中心。</li>
@@ -10975,7 +10975,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>微内核架构模式（有时被称为插件架构模式）是实现基于产品应用程序的一种自然模式。基于产品的应用程序是已经打包好并且拥有不同版本，可作为第三方插件下载的。然后，很多公司也在开发、发布自己内部商业应用像有版本号、说明及可加载插件式的应用软件（这也是这种模式的特征）。微内核系统可让用户添加额外的应用如插件，到核心应用，继而提供了可扩展性和功能分离的用法。</p>
 </blockquote>
 <p>微内核架构包含两类组件：<strong>核心系统（core system）</strong> 和 <strong>插件模块（plug-in modules）</strong>。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/source-code/dubbo/%E5%BE%AE%E5%86%85%E6%A0%B8%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt=""  /></p>
+<p><img src="/ext-images/%E5%BE%AE%E5%86%85%E6%A0%B8%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt=""  /></p>
 <p>核心系统提供系统所需核心能力，插件模块可以扩展系统的功能。因此， 基于微内核架构的系统，非常易于扩展功能。</p>
 <p>我们常见的一些IDE，都可以看作是基于微内核架构设计的。绝大多数 IDE比如IDEA、VSCode都提供了插件来丰富自己的功能。</p>
 <p>正是因为Dubbo基于微内核架构，才使得我们可以随心所欲替换Dubbo的功能点。比如你觉得Dubbo 的序列化模块实现的不满足自己要求，没关系啊！你自己实现一个序列化模块就好了啊！</p>
@@ -11065,7 +11065,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div><p><code>AbstractLoadBalance</code> 的实现类有下面这些：</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/image-20210326105257812.png" alt=""  /></p>
+<p><img src="/ext-images/image-20210326105257812.png" alt=""  /></p>
 <p>官方文档对负载均衡这部分的介绍非常详细，推荐小伙伴们看看，地址：<a class="gdoc-markdown__link" href="https://dubbo.apache.org/zh/docs/v2.7/dev/source/loadbalance/#m-zhdocsv27devsourceloadbalance">https://dubbo.apache.org/zh/docs/v2.7/dev/source/loadbalance/#m-zhdocsv27devsourceloadbalance</a> 。</p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="randomloadbalance">
@@ -11077,7 +11077,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </div><p>根据权重随机选择（对加权随机算法的实现）。这是Dubbo默认采用的一种负载均衡策略。</p>
 <p><code> RandomLoadBalance</code> 具体的实现原理非常简单，假如有两个提供相同服务的服务器 S1,S2，S1的权重为7，S2的权重为3。</p>
 <p>我们把这些权重值分布在坐标区间会得到：S1-&gt;[0, 7) ，S2-&gt;[7, 10)。我们生成[0, 10) 之间的随机数，随机数落到对应的区间，我们就选择对应的服务器来处理请求。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/%20RandomLoadBalance.png" alt="RandomLoadBalance"  /></p>
+<p><img src="/ext-images/%20RandomLoadBalance.png" alt="RandomLoadBalance"  /></p>
 <p><code>RandomLoadBalance</code> 的源码非常简单，简单花几分钟时间看一下。</p>
 <blockquote>
 <p>以下源码来自 Dubbo master 分支上的最新的版本 2.7.9。</p>
@@ -11213,9 +11213,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     </h4>
 </div><p><code>ConsistentHashLoadBalance</code>  小伙伴们应该也不会陌生，在分库分表、各种集群中就经常使用这个负载均衡策略。</p>
 <p><code>ConsistentHashLoadBalance</code> 即<strong>一致性Hash负载均衡策略</strong>。 <code>ConsistentHashLoadBalance</code> 中没有权重的概念，具体是哪个服务提供者处理请求是由你的请求的参数决定的，也就是说相同参数的请求总是发到同一个服务提供者。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/consistent-hash-data-incline.jpg" alt=""  /></p>
+<p><img src="/ext-images/consistent-hash-data-incline.jpg" alt=""  /></p>
 <p>另外，Dubbo 为了避免数据倾斜问题（节点不够分散，大量请求落到同一节点），还引入了虚拟节点的概念。通过虚拟节点可以让节点更加分散，有效均衡各个节点的请求量。</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/java-guide-blog/consistent-hash-invoker.jpg" alt=""  /></p>
+<p><img src="/ext-images/consistent-hash-invoker.jpg" alt=""  /></p>
 <p>官方有详细的源码分析：<a class="gdoc-markdown__link" href="https://dubbo.apache.org/zh/docs/v2.7/dev/source/loadbalance/#23-consistenthashloadbalance">https://dubbo.apache.org/zh/docs/v2.7/dev/source/loadbalance/#23-consistenthashloadbalance</a> 。这里还有一个相关的 <a class="gdoc-markdown__link" href="https://github.com/apache/dubbo/pull/5440">PR#5440</a> 来修复老版本中 ConsistentHashLoadBalance 存在的一些Bug。感兴趣的小伙伴，可以多花点时间研究一下。我这里不多分析了，这个作业留给你们！</p>
 <div class="gdoc-page__anchorwrap">
     <h4 id="roundrobinloadbalance">
@@ -11261,7 +11261,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>JSON 序列化由于性能问题，我们一般也不会考虑使用。</p>
 <p>像 Protostuff，ProtoBuf、hessian2这些都是跨语言的序列化方式，如果有跨语言需求的话可以考虑使用。</p>
 <p>Kryo和FST这两种序列化方式是 Dubbo 后来才引入的，性能非常好。不过，这两者都是专门针对 Java 语言的。Dubbo 官网的一篇文章中提到说推荐使用 Kryo 作为生产环境的序列化方式。(文章地址：<a class="gdoc-markdown__link" href="https://dubbo.apache.org/zh/docs/v2.7/user/references/protocol/rest/">https://dubbo.apache.org/zh/docs/v2.7/user/references/protocol/rest/</a>)</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2020-8/569e541a-22b2-4846-aa07-0ad479f07440.png" alt=""  /></p>
+<p><img src="/ext-images/569e541a-22b2-4846-aa07-0ad479f07440.png" alt=""  /></p>
 <p>Dubbo 官方文档中还有一个关于这些<a class="gdoc-markdown__link" href="https://dubbo.apache.org/zh/docs/v2.7/user/serialization/#m-zhdocsv27userserialization">序列化协议的性能对比图</a>可供参考。</p>
 <p><img src="https://img-blog.csdnimg.cn/20210328093219609.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM0MzM3Mjcy,size_16,color_FFFFFF,t_70" alt=""  /></p>
 

@@ -10753,9 +10753,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <li><strong>Authorization（授权）</strong> 发生在 <strong>Authentication（认证）</strong> 之后。授权嘛，光看意思大家应该就明白，它主要掌管我们访问系统的权限。比如有些特定资源只能具有特定权限的人才能访问比如 admin，有些对系统资源操作比如删除、添加、更新只能特定人才具有。</li>
 </ul>
 <p>认证 ：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210604160908352.png" alt=""  /></p>
+<p><img src="/ext-images/20210604160908352.png" alt=""  /></p>
 <p>授权：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210604161032412.png" alt=""  /></p>
+<p><img src="/ext-images/20210604161032412.png" alt=""  /></p>
 <p>这两个一般在我们的系统中被结合在一起使用，目的就是为了保护我们系统的安全性。</p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="rbac-模型了解吗">
@@ -10768,12 +10768,12 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p><strong>什么是 RBAC 呢？</strong></p>
 <p>RBAC 即基于角色的权限访问控制（Role-Based Access Control）。这是一种通过角色关联权限，角色同时又关联用户的授权的方式。</p>
 <p>简单地说：一个用户可以拥有若干角色，每一个角色又可以被分配若干权限，这样就构造成“用户-角色-权限” 的授权模型。在这种模型中，用户与角色、角色与权限之间构成了多对多的关系，如下图</p>
-<p><img src="https://cdn.jsdelivr.net/gh/javaguide-tech/blog-images-3@main/11-9/RBAC.png" alt="RBAC"  /></p>
+<p><img src="/ext-images/RBAC.png" alt="RBAC"  /></p>
 <p><strong>在 RBAC 中，权限与角色相关联，用户通过成为适当角色的成员而得到这些角色的权限。这就极大地简化了权限的管理。</strong></p>
 <p>本系统的权限设计相关的表如下（一共 5 张表，2 张用户建立表之间的联系）：</p>
-<p><img src="https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-11/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1-%E6%9D%83%E9%99%90.png" alt=""  /></p>
+<p><img src="/ext-images/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1-%E6%9D%83%E9%99%90.png" alt=""  /></p>
 <p>通过这个权限模型，我们可以创建不同的角色并为不同的角色分配不同的权限范围（菜单）。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/javaguide-tech/blog-images-3@main/11-7/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97.png" alt=""  /></p>
+<p><img src="/ext-images/%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97.png" alt=""  /></p>
 <p>通常来说，如果系统对于权限控制要求比较严格的话，一般都会选择使用 RBAC 模型来做权限控制。</p>
 <div class="gdoc-page__anchorwrap">
     <h2 id="什么是-cookie--cookie-的作用是什么">
@@ -10782,7 +10782,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
             <svg class="icon gdoc_link"><use xlink:href="#gdoc_link"></use></svg>
         </a>
     </h2>
-</div><p><img src="https://img-blog.csdnimg.cn/20210615162505880.png" alt=""  /></p>
+</div><p><img src="/ext-images/20210615162505880.png" alt=""  /></p>
 <p><code>Cookie</code> 和 <code>Session</code> 都是用来跟踪浏览器用户身份的会话方式，但是两者的应用场景不太一样。</p>
 <p>维基百科是这样定义 <code>Cookie</code> 的：</p>
 <blockquote>
@@ -10915,7 +10915,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </code></pre></div><p>上面也提到过，进行 <code>Session</code> 认证的时候，我们一般使用 <code>Cookie</code> 来存储 <code>SessionId</code>,当我们登陆后后端生成一个 <code>SessionId</code> 放在 Cookie 中返回给客户端，服务端通过 Redis 或者其他存储工具记录保存着这个 <code>SessionId</code>，客户端登录以后每次请求都会带上这个 <code>SessionId</code>，服务端通过这个 <code>SessionId</code> 来标示你这个人。如果别人通过 <code>Cookie</code> 拿到了 <code>SessionId</code> 后就可以代替你的身份访问系统了。</p>
 <p><code>Session</code> 认证中 <code>Cookie</code> 中的 <code>SessionId</code> 是由浏览器发送到服务端的，借助这个特性，攻击者就可以通过让用户误点攻击链接，达到攻击效果。</p>
 <p>但是，我们使用 <code>Token</code> 的话就不会存在这个问题，在我们登录成功获得 <code>Token</code> 之后，一般会选择存放在 <code>localStorage</code> （浏览器本地存储）中。然后我们在前端通过某些方式会给每个发到后端的请求加上这个 <code>Token</code>,这样就不会出现 CSRF 漏洞的问题。因为，即使有个你点击了非法链接发送了请求到服务端，这个非法请求是不会携带 <code>Token</code> 的，所以这个请求将是非法的。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210615161108272.png" alt=""  /></p>
+<p><img src="/ext-images/20210615161108272.png" alt=""  /></p>
 <p>需要注意的是不论是 <code>Cookie</code> 还是 <code>Token</code> 都无法避免 <strong>跨站脚本攻击（Cross Site Scripting）XSS</strong> 。</p>
 <blockquote>
 <p>跨站脚本攻击（Cross Site Scripting）缩写为 CSS 但这会与层叠样式表（Cascading Style Sheets，CSS）的缩写混淆。因此，有人将跨站脚本攻击缩写为 XSS。</p>
@@ -10980,7 +10980,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>微信支付账户相关参数：</p>
 <p><img src="./images/basis-of-authority-certification/%e5%be%ae%e4%bf%a1%e6%94%af%e4%bb%98-fnglfdlgdfj.png" alt=""  /></p>
 <p>下图是 <a class="gdoc-markdown__link" href="https://api.slack.com/legacy/oauth">Slack OAuth 2.0 第三方登录</a>的示意图：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210615151716340.png" alt=""  /></p>
+<p><img src="/ext-images/20210615151716340.png" alt=""  /></p>
 <p><strong>推荐阅读：</strong></p>
 <ul>
 <li><a class="gdoc-markdown__link" href="http://www.ruanyifeng.com/blog/2019/04/oauth_design.html">OAuth 2.0 的一个简单解释</a></li>

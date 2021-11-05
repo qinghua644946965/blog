@@ -10774,11 +10774,11 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
     <span class="n">visit</span><span class="o">(</span><span class="n">root</span><span class="o">);</span>
     <span class="n">traverse</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div><div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ad5cc8fc-d59b-45ce-8899-63a18320d97e.gif" width="300px"/> </div><br>
+</code></pre></div><div align="center"> <img src="/ext-images/ad5cc8fc-d59b-45ce-8899-63a18320d97e.gif" width="300px"/> </div><br>
 <p>① 如果一个节点的右子树不为空，那么该节点的下一个节点是右子树的最左节点；</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/7008dc2b-6f13-4174-a516-28b2d75b0152.gif" width="300px"/> </div><br>
+<div align="center"> <img src="/ext-images/7008dc2b-6f13-4174-a516-28b2d75b0152.gif" width="300px"/> </div><br>
 <p>② 否则，向上找第一个左链接指向的树包含该节点的祖先节点。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/094e3ac8-e080-4e94-9f0a-64c25abc695e.gif" width="300px"/> </div><br>
+<div align="center"> <img src="/ext-images/094e3ac8-e080-4e94-9f0a-64c25abc695e.gif" width="300px"/> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="n">TreeLinkNode</span> <span class="nf">GetNext</span><span class="o">(</span><span class="n">TreeLinkNode</span> <span class="n">pNode</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">pNode</span><span class="o">.</span><span class="na">right</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">TreeLinkNode</span> <span class="n">node</span> <span class="o">=</span> <span class="n">pNode</span><span class="o">.</span><span class="na">right</span><span class="o">;</span>

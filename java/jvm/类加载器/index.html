@@ -10733,7 +10733,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h2>
 </div><p>类加载过程：<strong>加载-&gt;连接-&gt;初始化</strong>。连接过程又可分为三步：<strong>验证-&gt;准备-&gt;解析</strong>。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/%e7%b1%bb%e5%8a%a0%e8%bd%bd%e8%bf%87%e7%a8%8b.png" alt="类加载过程"  /></p>
+<p><img src="/ext-images/%e7%b1%bb%e5%8a%a0%e8%bd%bd%e8%bf%87%e7%a8%8b.png" alt="类加载过程"  /></p>
 <p>一个非数组类的加载阶段（加载阶段获取类的二进制字节流的动作）是可控性最强的阶段，这一步我们可以去自定义类加载器去控制字节流的获取方式（重写一个类加载器的 <code>loadClass()</code> 方法）。数组类型不通过类加载器创建，它由 Java 虚拟机直接创建。</p>
 <p>所有的类都由类加载器加载，加载的作用就是将 <code>.class</code>文件加载到内存。</p>
 <div class="gdoc-page__anchorwrap">
@@ -10764,7 +10764,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>每一个类都有一个对应它的类加载器。系统中的 ClassLoader 在协同工作的时候会默认使用 <strong>双亲委派模型</strong> 。即在类加载的时候，系统会首先判断当前类是否被加载过。已经被加载的类会直接返回，否则才会尝试加载。加载的时候，首先会把该请求委派给父类加载器的 <code>loadClass()</code> 处理，因此所有的请求最终都应该传送到顶层的启动类加载器 <code>BootstrapClassLoader</code> 中。当父类加载器无法处理时，才由自己来处理。当父类加载器为 null 时，会使用启动类加载器 <code>BootstrapClassLoader</code> 作为父类加载器。</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/classloader_WPS%e5%9b%be%e7%89%87.png" alt="ClassLoader"  /></p>
+<p><img src="/ext-images/classloader_WPS%e5%9b%be%e7%89%87.png" alt="ClassLoader"  /></p>
 <p>每个类加载都有一个父类加载器，我们通过下面的程序来验证。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassLoaderDemo</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>

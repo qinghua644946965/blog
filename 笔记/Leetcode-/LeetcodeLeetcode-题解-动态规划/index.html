@@ -10814,7 +10814,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>定义一个数组 dp 存储上楼梯的方法数（为了方便讨论，数组下标从 1 开始），dp[i] 表示走到第 i 个楼梯的方法数目。</p>
 <p>第 i 个楼梯可以从第 i-1 和 i-2 个楼梯再走一步到达，走到第 i 个楼梯的方法数为走到第 i-1 和第 i-2 个楼梯的方法数之和。</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=dp[i-1]+dp[i-2]" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/14fe1e71-8518-458f-a220-116003061a83.png" width="200px"> </div><br>
+<div align="center"> <img src="/ext-images/14fe1e71-8518-458f-a220-116003061a83.png" width="200px"> </div><br>
 <p>考虑到 dp[i] 只与 dp[i - 1] 和 dp[i - 2] 有关，因此可以只用两个变量来存储 dp[i - 1] 和 dp[i - 2]，使得原来的 O(N) 空间复杂度优化为 O(1) 复杂度。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">climbStairs</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="n">2</span><span class="o">)</span> <span class="o">{</span>
@@ -10841,7 +10841,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>定义 dp 数组用来存储最大的抢劫量，其中 dp[i] 表示抢到第 i 个住户时的最大抢劫量。</p>
 <p>由于不能抢劫邻近住户，如果抢劫了第 i -1 个住户，那么就不能再抢劫第 i 个住户，所以</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=max(dp[i-2]+nums[i],dp[i-1])" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/2de794ca-aa7b-48f3-a556-a0e2708cb976.jpg" width="350px"> </div><br>
+<div align="center"> <img src="/ext-images/2de794ca-aa7b-48f3-a556-a0e2708cb976.jpg" width="350px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">rob</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">nums</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">pre2</span> <span class="o">=</span> <span class="n">0</span><span class="o">,</span> <span class="n">pre1</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
     <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nums</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
@@ -10895,7 +10895,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 </ul>
 <p>综上所述，错误装信数量方式数量为：</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=(i-1)*dp[i-2]+(i-1)*dp[i-1]" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/da1f96b9-fd4d-44ca-8925-fb14c5733388.png" width="350px"> </div><br>
+<div align="center"> <img src="/ext-images/da1f96b9-fd4d-44ca-8925-fb14c5733388.png" width="350px"> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h3 id="5-母牛生产">
         5. 母牛生产
@@ -10907,7 +10907,7 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
 <p>题目描述：假设农场中成熟的母牛每年都会生 1 头小母牛，并且永远不会死。第一年有 1 只小母牛，从第二年开始，母牛开始生小母牛。每只小母牛 3 年之后成熟又可以生小母牛。给定整数 N，求 N 年后牛的数量。</p>
 <p>第 i 年成熟的牛的数量为：</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i]=dp[i-1]+dp[i-3]" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/879814ee-48b5-4bcb-86f5-dcc400cb81ad.png" width="250px"> </div><br>
+<div align="center"> <img src="/ext-images/879814ee-48b5-4bcb-86f5-dcc400cb81ad.png" width="250px"> </div><br>
 <div class="gdoc-page__anchorwrap">
     <h2 id="矩阵路径">
         矩阵路径
@@ -10959,7 +10959,7 @@ Given the above grid map, return 7. Because the path 1→3→1→1→1 minimizes
 </div><p>62. Unique Paths (Medium)</p>
 <p><a class="gdoc-markdown__link" href="https://leetcode.com/problems/unique-paths/description/">Leetcode</a> / <a class="gdoc-markdown__link" href="https://leetcode-cn.com/problems/unique-paths/description/">力扣</a></p>
 <p>题目描述：统计从矩阵左上角到右下角的路径总数，每次只能向右或者向下移动。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/dc82f0f3-c1d4-4ac8-90ac-d5b32a9bd75a.jpg" width=""> </div><br>
+<div align="center"> <img src="/ext-images/dc82f0f3-c1d4-4ac8-90ac-d5b32a9bd75a.jpg" width=""> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">uniquePaths</span><span class="o">(</span><span class="kt">int</span> <span class="n">m</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">n</span><span class="o">];</span>
     <span class="n">Arrays</span><span class="o">.</span><span class="na">fill</span><span class="o">(</span><span class="n">dp</span><span class="o">,</span> <span class="n">1</span><span class="o">);</span>
@@ -11175,7 +11175,7 @@ dp[4] = dp[3] + 1 = 3
 <p>定义一个数组 dp 存储最长递增子序列的长度，dp[n] 表示以 S<sub>n</sub> 结尾的序列的最长递增子序列长度。对于一个递增子序列 {S<sub>i1</sub>, S<sub>i2</sub>,&hellip;,S<sub>im</sub>}，如果 im &lt; n 并且 S<sub>im</sub> &lt; S<sub>n</sub>，此时 {S<sub>i1</sub>, S<sub>i2</sub>,&hellip;, S<sub>im</sub>, S<sub>n</sub>} 为一个递增子序列，递增子序列的长度增加 1。满足上述条件的递增子序列中，长度最长的那个递增子序列就是要找的，在长度最长的递增子序列上加上 S<sub>n</sub> 就构成了以 S<sub>n</sub> 为结尾的最长递增子序列。因此 dp[n] = max{ dp[i]+1 | S<sub>i</sub> &lt; S<sub>n</sub> &amp;&amp; i &lt; n} 。</p>
 <p>因为在求 dp[n] 时可能无法找到一个满足条件的递增子序列，此时 {S<sub>n</sub>} 就构成了递增子序列，需要对前面的求解方程做修改，令 dp[n] 最小为 1，即：</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[n]=max\{1,dp[i]+1|S_i<S_n\&\&i<n\}" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ee994da4-0fc7-443d-ac56-c08caf00a204.jpg" width="350px"> </div><br>
+<div align="center"> <img src="/ext-images/ee994da4-0fc7-443d-ac56-c08caf00a204.jpg" width="350px"> </div><br>
 <p>对于一个长度为 N 的序列，最长递增子序列并不一定会以 S<sub>N</sub> 为结尾，因此 dp[N] 不是序列的最长递增子序列的长度，需要遍历 dp 数组找出最大值才是所要的结果，max{ dp[i] | 1 &lt;= i &lt;= N} 即为所求。</p>
 <div class="gdoc-page__anchorwrap">
     <h3 id="1-最长递增子序列">
@@ -11327,7 +11327,7 @@ Output: 2
 </ul>
 <p>综上，最长公共子序列的状态转移方程为：</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i][j]=\left\{\begin{array}{rcl}dp[i-1][j-1]&&{S1_i==S2_j}\\max(dp[i-1][j],dp[i][j-1])&&{S1_i<>S2_j}\end{array}\right." class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ecd89a22-c075-4716-8423-e0ba89230e9a.jpg" width="450px"> </div><br>
+<div align="center"> <img src="/ext-images/ecd89a22-c075-4716-8423-e0ba89230e9a.jpg" width="450px"> </div><br>
 <p>对于长度为 N 的序列 S<sub>1</sub> 和长度为 M 的序列 S<sub>2</sub>，dp[N][M] 就是序列 S<sub>1</sub> 和序列 S<sub>2</sub> 的最长公共子序列长度。</p>
 <p>与最长递增子序列相比，最长公共子序列有以下不同点：</p>
 <ul>
@@ -11373,7 +11373,7 @@ Output: 2
 </ul>
 <p>第 i 件物品可添加也可以不添加，取决于哪种情况下最大价值更大。因此，0-1 背包的状态转移方程为：</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[i][j]=max(dp[i-1][j],dp[i-1][j-w]+v)" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/8cb2be66-3d47-41ba-b55b-319fc68940d4.png" width="400px"> </div><br>
+<div align="center"> <img src="/ext-images/8cb2be66-3d47-41ba-b55b-319fc68940d4.png" width="400px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// W 为背包总体积
 </span><span class="c1">// N 为物品数量
 </span><span class="c1">// weights 数组存储 N 个物品的重量
@@ -11395,7 +11395,7 @@ Output: 2
 </code></pre></div><p><strong>空间优化</strong></p>
 <p>在程序实现时可以对 0-1 背包做优化。观察状态转移方程可以知道，前 i 件物品的状态仅与前 i-1 件物品的状态有关，因此可以将 dp 定义为一维数组，其中 dp[j] 既可以表示 dp[i-1][j] 也可以表示 dp[i][j]。此时，</p>
 <!--<div align="center"><img src="https://latex.codecogs.com/gif.latex?dp[j]=max(dp[j],dp[j-w]+v)" class="mathjax-pic"/></div> <br>-->
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/9ae89f16-7905-4a6f-88a2-874b4cac91f4.jpg" width="300px"> </div><br>
+<div align="center"> <img src="/ext-images/9ae89f16-7905-4a6f-88a2-874b4cac91f4.jpg" width="300px"> </div><br>
 <p>因为 dp[j-w] 表示 dp[i-1][j-w]，因此不能先求 dp[i][j-w]，防止将 dp[i-1][j-w] 覆盖。也就是说要先计算 dp[i][j] 再计算 dp[i][j-w]，在程序实现时需要按倒序来循环求解。</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">knapsack</span><span class="o">(</span><span class="kt">int</span> <span class="n">W</span><span class="o">,</span> <span class="kt">int</span> <span class="n">N</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">weights</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">values</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">dp</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">W</span> <span class="o">+</span> <span class="n">1</span><span class="o">];</span>
@@ -11747,7 +11747,7 @@ Therefore the output is 7.
 </div><p>309. Best Time to Buy and Sell Stock with Cooldown(Medium)</p>
 <p><a class="gdoc-markdown__link" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/">Leetcode</a> / <a class="gdoc-markdown__link" href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/">力扣</a></p>
 <p>题目描述：交易之后需要有一天的冷却时间。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/ffd96b99-8009-487c-8e98-11c9d44ef14f.png" width="300px"> </div><br>
+<div align="center"> <img src="/ext-images/ffd96b99-8009-487c-8e98-11c9d44ef14f.png" width="300px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">maxProfit</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">prices</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">prices</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">prices</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">return</span> <span class="n">0</span><span class="o">;</span>
@@ -11785,7 +11785,7 @@ Buying at prices[4] = 4
 Selling at prices[5] = 9
 The total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.
 </code></pre></div><p>题目描述：每交易一次，都要支付一定的费用。</p>
-<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/1e2c588c-72b7-445e-aacb-d55dc8a88c29.png" width="300px"> </div><br>
+<div align="center"> <img src="/ext-images/1e2c588c-72b7-445e-aacb-d55dc8a88c29.png" width="300px"> </div><br>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">maxProfit</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">prices</span><span class="o">,</span> <span class="kt">int</span> <span class="n">fee</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="n">prices</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
     <span class="kt">int</span><span class="o">[]</span> <span class="n">buy</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">N</span><span class="o">];</span>

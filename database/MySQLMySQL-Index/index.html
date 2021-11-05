@@ -10796,8 +10796,8 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>MySQL的基本存储结构是页(记录都存在页里边)：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-10-2/28559421.jpg" alt="MySQL的基本存储结构是页"  /></p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-10-2/82053134.jpg" alt=""  /></p>
+<p><img src="/ext-images/28559421.jpg" alt="MySQL的基本存储结构是页"  /></p>
+<p><img src="/ext-images/82053134.jpg" alt=""  /></p>
 <ul>
 <li><strong>各个数据页可以组成一个双向链表</strong></li>
 <li><strong>每个数据页中的记录又可以组成一个单向链表</strong>
@@ -10821,9 +10821,9 @@ License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL
         </a>
     </h3>
 </div><p>索引做了些什么可以让我们查询加快速度呢？其实就是将无序的数据变成有序(相对)：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-10-2/5373082.jpg" alt=""  /></p>
+<p><img src="/ext-images/5373082.jpg" alt=""  /></p>
 <p>要找到id为8的记录简要步骤：</p>
-<p><img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/18-10-2/89338047.jpg" alt=""  /></p>
+<p><img src="/ext-images/89338047.jpg" alt=""  /></p>
 <p>很明显的是：没有用索引我们是需要遍历双向链表来定位对应的页，现在通过 <strong>“目录”</strong> 就可以很快地定位到对应的页上了！（二分查找，时间复杂度近似为O(logn)）</p>
 <p>其实底层结构就是B+树，B+树作为树的一种实现，能够让我们很快地查找出对应的记录。</p>
 <div class="gdoc-page__anchorwrap">
