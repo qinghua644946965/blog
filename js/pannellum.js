@@ -1063,7 +1063,7 @@ window.pannellum = function (E, g, p) {
                 d.href = I(a.WXURL, !0);
                 if (a.attributes)
                     for (e in a.attributes) d.setAttribute(e, a.attributes[e]);
-                else d.setAttribute("onclick", "pageJump(" + a.WXURL + ")")
+                else d.setAttribute("onclick", "pageJump(\"" + a.WXURL + "\")")
                 M.appendChild(d);
                 f.className += " pnlm-pointer";
                 c.className += " pnlm-pointer";
