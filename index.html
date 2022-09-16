@@ -106,6 +106,24 @@
             });
             player.attachMediaElement(element);
             player.load();
+            player.on(flvjs.Events.METADATA_ARRIVED, () => {
+                console.log('METADATA_ARRIVED')
+            })
+            player.on(flvjs.Events.STATISTICS_INFO, () => {
+                console.log('STATISTICS_INFO')
+            })
+            player.on(flvjs.Events.SCRIPTDATA_ARRIVED, () => {
+                console.log('SCRIPTDATA_ARRIVED')
+            })
+            player.on(flvjs.Events.MEDIA_INFO, () => {
+                console.log('MEDIA_INFO')
+            })
+            player.on(flvjs.Events.RECOVERED_EARLY_EOF, () => {
+                console.log('RECOVERED_EARLY_EOF')
+            })
+            player.on(flvjs.Events.LOADING_COMPLETE, () => {
+                console.log('LOADING_COMPLETE')
+            })
         }
 
         function flv_start() {
